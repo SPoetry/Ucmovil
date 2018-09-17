@@ -18,7 +18,7 @@ class CreateNotasTable extends Migration
             $table->integer('id_asignatura')->references('id_asignatura')->on('asignaturas');
             $table->float('nota');
             $table->integer('N_nota');
-            $table->primary('id_alumno', 'id_asignatura');
+            $table->primary(['id_alumno', 'id_asignatura']);
 
         });
     }

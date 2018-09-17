@@ -16,6 +16,7 @@ class CreateRamosActualesTable extends Migration
         Schema::create('ramos_actuales', function (Blueprint $table) {
             $table->integer('id_asignatura')->references('id_asignatura')->on('asignaturas');
             $table->integer('id_alumno')->references('id_alumno')->on('alumnos');
+            $table->primary(['id_asignatura','id_alumno']);
         });
     }
 

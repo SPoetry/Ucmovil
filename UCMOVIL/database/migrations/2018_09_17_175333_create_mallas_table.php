@@ -17,7 +17,7 @@ class CreateMallasTable extends Migration
             $table->string('id_asignatura', 10)->references('id_asignatura')->on('asignaturas');
             $table->integer('semestre');
             $table->string('nombre');
-            $table->primary('id_asignatura', 'semestre');
+            $table->primary(['id_asignatura', 'semestre']);
         });
     }
 
