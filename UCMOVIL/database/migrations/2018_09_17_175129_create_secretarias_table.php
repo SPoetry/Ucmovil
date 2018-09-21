@@ -16,7 +16,6 @@ class CreateSecretariasTable extends Migration
         Schema::create('secretarias', function (Blueprint $table) {
           $table->integer('id_secretaria')->references('id')->on('users');
           $table->string('nombre');
-          $table->string('email', 190);
           $table->string('telefono');
           $table->primary('id_secretaria');
         });

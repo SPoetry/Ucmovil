@@ -18,7 +18,6 @@ class CreateProfesoresTable extends Migration
           $table->integer('ano_ingreso');
           $table->string('especialidad');
           $table->string('nombre');
-          $table->string('email', 190);
           $table->string('telefono');
           $table->primary('id_profesor');
         });

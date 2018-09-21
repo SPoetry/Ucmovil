@@ -17,7 +17,6 @@ class CreateDirectoresCarrerasTable extends Migration
           $table->integer('id_director')->references('id')->on('users');
           $table->string('especialidad');
           $table->string('nombre');
-          $table->string('email', 190);
           $table->string('telefono');
           $table->primary('id_director');
         });

@@ -14,15 +14,21 @@ class Alumno extends Model
    * @var array
    */
   protected $fillable = [
-      'email', 'password', 'tipo',
+      'id_alumno', 'ano_ingreso', 'nombre',
+      'email', 'ano_nacimiento', 'telefono',
+      'direccion', 'semestre_actual', 'id_alumno',
   ];
 
-  /**
-   * The attributes that should be hidden for arrays.
-   *
-   * @var array
-   */
-  protected $hidden = [
-      'password', 'remember_token',
-  ];
+  public function user(){
+    return $this->hasOne('App\User');
+  }
+  public function historiale(){
+    return $this->hasMany('App\Historiale');
+  }
+  public function ramosactuale(){
+    return $this->hasMany('App\RamosAcetuale');
+  }
+  public function nota(){
+    return $this->hasMany('App\Nota');
+  }
 }

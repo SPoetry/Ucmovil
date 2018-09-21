@@ -15,7 +15,6 @@ class CreateAsignaturasTable extends Migration
     {
         Schema::create('asignaturas', function (Blueprint $table) {
           $table->string('id_asignatura',10)->primary();
-          $table->string('id_malla')->references('nombre')->on('mallas');
           $table->string('nombre');
           $table->integer('creditos');
           $table->string('pre-requisito');
