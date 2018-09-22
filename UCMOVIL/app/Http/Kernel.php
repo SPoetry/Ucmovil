@@ -51,12 +51,17 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
+        'alumno' => \App\Http\Middleware\Alumno::class,
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
+        'director' => \App\Http\Middleware\Director::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'profesor' => \App\Http\Middleware\Profesor::class,
+        'secretaria' => \App\Http\Middleware\Secretaria::class,
+        'seleccion' => \App\Http\Middleware\Seleccion::class,
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,

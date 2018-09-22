@@ -15,12 +15,8 @@
                     @endif
                     You are logged in!
                     <br><br>
-                    {{ Auth::user()}}
+                    {{ Auth::user()->email}}
                     <br><br>
-                    <input class="btn btn-primary" type="button" value="Alumno"></input>
-                    <input class="btn btn-success" type="button" value="Profesor"></input>
-                    <input class="btn btn-info" type="button" value="Secretaria" onclick="location.href='{{ url('http://www.google.com') }}'"></input>
-                    <input class="btn btn-danger" type="button" value="Director de Carrera" onclick="window.location='{{ route("d_escuela") }}'"></input>
                 </div>
             </div>
         </div>
