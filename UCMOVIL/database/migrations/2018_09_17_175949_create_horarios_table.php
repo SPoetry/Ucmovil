@@ -19,6 +19,7 @@ class CreateHorariosTable extends Migration
             $table->integer('modulo');
             $table->string('dia');
             $table->string('sala');
+            $table->timestamps();
         });
     }
 

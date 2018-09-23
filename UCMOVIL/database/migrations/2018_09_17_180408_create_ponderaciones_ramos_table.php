@@ -17,6 +17,7 @@ class CreatePonderacionesRamosTable extends Migration
           $table->integer('id_ramoimpartido')->references('id_ramoimpartido')->on('ramos_impartidos');
           $table->integer('N_nota');
           $table->float('P_nota');
+          $table->timestamps();
           $table->primary('id_ramoimpartido');
         });
     }

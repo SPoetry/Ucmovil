@@ -21,6 +21,7 @@ class CreateAlumnosTable extends Migration
             $table->string('telefono');
             $table->string('direccion');
             $table->integer('semestre_actual');
+            $table->timestamps();
             $table->primary('id_alumno');
         });
     }

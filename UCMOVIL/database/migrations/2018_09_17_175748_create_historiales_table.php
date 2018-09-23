@@ -19,6 +19,7 @@ class CreateHistorialesTable extends Migration
             $table->string('estado');
             $table->integer('semestre');
             $table->integer('nota_final');
+            $table->timestamps();
             $table->primary(['id_asignatura','id_alumno']);
         });
     }

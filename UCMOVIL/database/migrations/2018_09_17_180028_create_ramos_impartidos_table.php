@@ -17,6 +17,7 @@ class CreateRamosImpartidosTable extends Migration
             $table->increments('id_ramoimpartido');
             $table->integer('id_asignatura')->references('id_asignatura')->on('asignaturas');
             $table->integer('id_profesor')->references('id_profesor')->on('profesores');
+            $table->timestamps();
             $table->unique(['id_asignatura', 'id_profesor']);
         });
     }

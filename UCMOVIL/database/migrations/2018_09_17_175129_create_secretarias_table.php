@@ -17,6 +17,7 @@ class CreateSecretariasTable extends Migration
           $table->integer('id_secretaria')->references('id')->on('users');
           $table->string('nombre');
           $table->string('telefono');
+          $table->timestamps();
           $table->primary('id_secretaria');
         });
     }

@@ -6,13 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Alumno extends Model
 {
-  use Notifiable;
-
-  /**
-   * The attributes that are mass assignable.
-   *
-   * @var array
-   */
   protected $fillable = [
       'id_alumno', 'ano_ingreso', 'nombre',
       'email', 'ano_nacimiento', 'telefono',
@@ -20,15 +13,12 @@ class Alumno extends Model
   ];
 
   public function user(){
-    return $this->hasOne('App\User');
+    return $this->belongTo(User::class, 'id_alumno', 'id');
   }
   public function historiale(){
-    return $this->hasMany('App\Historiale');
+    return $this->hasMany(Historiale::class, 'id_alumno', 'id_alumno');
   }
   public function ramosactuale(){
-    return $this->hasMany('App\RamosAcetuale');
-  }
-  public function nota(){
-    return $this->hasMany('App\Nota');
+    return $this->hasMany(RamosActuales::class, 'id_alumno', 'id_alumno');
   }
 }

@@ -18,6 +18,7 @@ class CreateHorariosAtencionesTable extends Migration
             $table->string('tipo');
             $table->string('dia');
             $table->integer('modulo');
+            $table->timestamps();
             $table->primary('id_rut');
         });
     }
