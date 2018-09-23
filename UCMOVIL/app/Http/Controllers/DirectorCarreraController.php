@@ -36,6 +36,12 @@ class DirectorCarreraController extends Controller
       return view('DirectorIndex');
   }
 
+  public function mostrar_asignatura()  //entrega todos los datos de las asignaturas
+  {
+    $asignaturas = DB::table('asignaturas')->orderBy('nombre')->get();  //conexion a la base de datos y ordenados
+    return $asignaturas;  //entrega datos en forma de json
+  }
+
   public function anadir_asignatura()
   {
 
