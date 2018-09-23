@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/A\xF1adirAsignatura.unity"
+- path: "Assets/Escenas/A\xF1adirAsignatura.unity"
   isLoaded: 1
   isActive: 1
