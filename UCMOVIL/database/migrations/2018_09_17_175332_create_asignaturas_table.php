@@ -18,7 +18,7 @@ class CreateAsignaturasTable extends Migration
           $table->string('nombre');
           $table->integer('creditos');
           $table->timestamps();
-          $table->string('pre-requisito')->nullable();
+          $table->string('prerequisito')->nullable();
         });
     }
 

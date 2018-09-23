@@ -9,7 +9,7 @@ class Asignatura extends Model
 
   protected $fillable = [
       'id_asignatura', 'id_malla', 'nombre',
-      'creditos', 'requisito',
+      'creditos', 'prerequisito',
   ];
   public function historial(){
     return $this->hasMany(Hisotiale::class, 'id_asignatura', 'id_asignatura');

@@ -16,11 +16,11 @@ use app\RamosImpartido;
 
 class DirectorCarreraController extends Controller
 {
-  public function __construct()
-  {
-      $this->middleware('auth');      //revision del usuario conectado
-      $this->middleware('director');  //cortador de paso para usuarios distintos a director*/
-  }
+  //public function __construct()
+  //{
+  //    $this->middleware('auth');      //revision del usuario conectado
+  //    $this->middleware('director');  //cortador de paso para usuarios distintos a director*/
+  //}
     /*
     ❖	Creación malla curricular
         ➢	Manejo malla nueva
@@ -42,9 +42,15 @@ class DirectorCarreraController extends Controller
     return $asignaturas;  //entrega datos en forma de json
   }
 
-  public function anadir_asignatura()
+  public function anadir_asignatura(Request $request)
   {
-
+    $asignatura = new Asignatura;   //se crea una estructura para ingresar en Hotels
+    $asignatura->id_asignatura=$request->id_asignatura; //se ingresan los datos de los request
+    $asignatura->nombre=$request->nombre;
+    $asignatura->creditos=$request->creditos;
+    $asignatura->prerequisito=$request->prerequisito;
+    $asignatura->save(); //se guarda en la base de datos todos los valores de la variable
+    return "ok";
   }
 
   public function modificar_asignatura()
