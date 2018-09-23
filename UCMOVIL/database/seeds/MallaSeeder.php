@@ -12,7 +12,7 @@ class MallaSeeder extends Seeder
     public function run()
     {
       DB::table('mallas')->insert([
-        'id_asignatura' => 'ICI-400',
+        'id_asignatura' => 'ICI-114',
         'semestre' => '1'
       ]);
     }

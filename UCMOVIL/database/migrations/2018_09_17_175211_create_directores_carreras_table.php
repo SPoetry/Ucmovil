@@ -14,12 +14,13 @@ class CreateDirectoresCarrerasTable extends Migration
     public function up()
     {
         Schema::create('directores_carreras', function (Blueprint $table) {
-          $table->integer('id_director')->references('id')->on('users');
+          $table->integer('id_director')->unsigned();
           $table->string('especialidad');
           $table->string('nombre');
           $table->string('telefono');
           $table->timestamps();
           $table->primary('id_director');
+          $table->foreign('id_director')->references('id')->on('users');
         });
     }
 

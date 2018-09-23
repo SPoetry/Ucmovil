@@ -14,7 +14,7 @@ class CreateAlumnosTable extends Migration
     public function up()
     {
         Schema::create('alumnos', function (Blueprint $table) {
-            $table->integer('id_alumno')->references('id')->on('users');
+            $table->integer('id_alumno')->unsigned();
             $table->date('ano_ingreso');
             $table->string('nombre');
             $table->integer('ano_nacimiento');
@@ -23,6 +23,7 @@ class CreateAlumnosTable extends Migration
             $table->integer('semestre_actual');
             $table->timestamps();
             $table->primary('id_alumno');
+            $table->foreign('id_alumno')->references('id')->on('users');
         });
     }
 

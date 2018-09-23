@@ -14,12 +14,13 @@ class CreateHorariosAtencionesTable extends Migration
     public function up()
     {
         Schema::create('horarios_atenciones', function (Blueprint $table) {
-            $table->integer('id_rut')->references('id')->on('users');
+            $table->integer('id_rut')->unsigned();
             $table->string('tipo');
             $table->string('dia');
             $table->integer('modulo');
             $table->timestamps();
             $table->primary('id_rut');
+            $table->foreign('id_rut')->references('id')->on('users');
         });
     }
 

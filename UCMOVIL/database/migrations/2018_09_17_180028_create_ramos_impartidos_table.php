@@ -15,10 +15,12 @@ class CreateRamosImpartidosTable extends Migration
     {
         Schema::create('ramos_impartidos', function (Blueprint $table) {
             $table->increments('id_ramoimpartido');
-            $table->integer('id_asignatura')->references('id_asignatura')->on('asignaturas');
-            $table->integer('id_profesor')->references('id_profesor')->on('profesores');
+            $table->string('id_asignatura', 10);
+            $table->integer('id_profesor')->unsigned();
             $table->timestamps();
             $table->unique(['id_asignatura', 'id_profesor']);
+            $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
+            $table->foreign('id_profesor')->references('id_profesor')->on('profesores');
         });
     }
 

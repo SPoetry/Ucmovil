@@ -6,21 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Historiale extends Model
 {
-  use Notifiable;
 
-  /**
-   * The attributes that are mass assignable.
-   *
-   * @var array
-   */
   protected $fillable = [
       'id_asignatura', 'id_alumno', 'estado',
       'semestre', 'nota_final',
   ];
   public function asignatura(){
-    return $this->belongsTo('App\Asignatura');
+    return $this->belongsTo(Asignatura::class, 'id_asignatura', 'id_asignatura');
   }
   public function alumno(){
-    return $this->belongsTo('App\Alumno');
+    return $this->belongsTo(Alumno::class, 'id_alumno', 'id_alumno');
   }
 }

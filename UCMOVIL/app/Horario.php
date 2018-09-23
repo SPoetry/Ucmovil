@@ -11,6 +11,6 @@ class Horario extends Model
       'creditos',
   ];
   public function asignatura(){
-    return $this->belongsTo('App\Asignatura');
+    return $this->belongsTo(Asignatura::class, 'id_asignatura', 'id_asignatura');
   }
 }

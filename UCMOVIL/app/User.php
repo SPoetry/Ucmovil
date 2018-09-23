@@ -8,13 +8,6 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'id','email', 'password', 'tipo',
     ];
@@ -29,15 +22,15 @@ class User extends Authenticatable
     ];
 
     public function alumno(){
-      return $this->hasOne('App\Alumno');
+      return $this->hasOne(Alumno::class, 'id_alumno', 'id');
     }
     public function profesore(){
-      return $this->hasOne('App\Profesore');
+      return $this->hasOne(Profesore::class, 'id_profesor', 'id');
     }
     public function secretaria(){
-      return $this->hasOne('App\Secretaria');
+      return $this->hasOne(Secretaria::class, 'id_secretaria', 'id');
     }
     public function directorcarrera(){
-      return $this->hasOne('App\DirectoresCarrera');
+      return $this->hasOne(DirectoresCarrera::class, 'id_director', 'id');
     }
 }

@@ -14,12 +14,14 @@ class CreateRamosActualesTable extends Migration
     public function up()
     {
         Schema::create('ramos_actuales', function (Blueprint $table) {
-            $table->integer('id_asignatura')->references('id_asignatura')->on('asignaturas');
-            $table->integer('id_alumno')->references('id_alumno')->on('alumnos');
+            $table->string('id_asignatura', 10);
+            $table->integer('id_alumno')->unsigned();
             $table->float('nota');
             $table->integer('n_nota')->unique();
             $table->timestamps();
             $table->primary(['id_asignatura','id_alumno', 'n_nota']);
+            $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
+            $table->foreign('id_alumno')->references('id_alumno')->on('alumnos');
         });
     }
 

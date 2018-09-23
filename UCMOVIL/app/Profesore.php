@@ -12,7 +12,7 @@ class Profesore extends Model
   ];
 
   public function user(){
-    return $this->hasOne('App\User');
+    return $this->belongTo(User::class, 'id_profesor', 'id');
   }
   public function ramosimpartido(){
     return $this->hasMany('App\RamosImpartido');

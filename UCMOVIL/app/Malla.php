@@ -10,9 +10,6 @@ class Malla extends Model
       'id_asignatura', 'semestre', 'nombre',
   ];
   public function asignatura(){
-    return $this->belongsTo('App\Asignatura');
-  }
-  public function semestre(){
-    return $this->belongsTo('App\Semestre');
+    return $this->belongsTo(Asignatura::class, 'id_asignatura', 'id_asignatura');
   }
 }

@@ -14,13 +14,15 @@ class CreateHistorialesTable extends Migration
     public function up()
     {
         Schema::create('historiales', function (Blueprint $table) {
-            $table->integer('id_asignatura')->references('id_asignatura')->on('asignaturas');
-            $table->integer('id_alumno')->references('id_alumno')->on('alumnos');
+            $table->string('id_asignatura',10);
+            $table->integer('id_alumno')->unsigned();
             $table->string('estado');
             $table->integer('semestre');
             $table->integer('nota_final');
             $table->timestamps();
             $table->primary(['id_asignatura','id_alumno']);
+            $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
+            $table->foreign('id_alumno')->references('id_alumno')->on('alumnos');
         });
     }
 
