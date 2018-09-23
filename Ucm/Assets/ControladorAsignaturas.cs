@@ -7,7 +7,7 @@ public class ControladorAsignaturas : MonoBehaviour {
     public string postURL = "http://localhost:8000/gg";
     public string getURL = "http://127.0.0.1:8000/d_escuela/mostrar_asignatura";
 
-    public void Start()
+    public void ObtenerAsignaturas()
     {
         StartCoroutine("MostrarAsignaturas");
     }

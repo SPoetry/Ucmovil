@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="Assets\ControladorAsignaturas.cs" />
     <Compile Include="Assets\ControladorDirector.cs" />
+    <Compile Include="Assets\IngresoAsignaturas.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
