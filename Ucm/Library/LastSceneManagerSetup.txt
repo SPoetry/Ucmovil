@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/DirectorCarreraInicio.unity
+- path: Assets/Asignatura.unity
   isLoaded: 1
   isActive: 1
