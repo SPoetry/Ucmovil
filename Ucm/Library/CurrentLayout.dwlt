@@ -20,19 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-<<<<<<< HEAD
   m_MinSize: {x: 950, y: 300}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_MinSize: {x: 950, y: 542}
-=======
-  m_MinSize: {x: 950, y: 300}
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
-  m_MinSize: {x: 950, y: 300}
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -48,22 +36,6 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 0
-    y: 30
-    width: 1360
-    height: 636
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
-  vertical: 0
-  controlID: 102
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     x: 1024
     y: 0
     width: 342
@@ -99,15 +71,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-<<<<<<< HEAD
   controlID: 102
-=======
-  controlID: 110
-<<<<<<< HEAD
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -124,18 +88,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 268
-    height: 365
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     width: 247
     height: 357
   m_MinSize: {x: 202, y: 221}
@@ -160,20 +112,6 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    y: 365
-    width: 1083
-    height: 271
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 13}
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     y: 357
     width: 1024
     height: 278
@@ -204,17 +142,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 1360
-    height: 686
-  m_MinSize: {x: 950, y: 542}
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     width: 1366
     height: 685
   m_MinSize: {x: 950, y: 300}
@@ -278,18 +205,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 1083
-    height: 636
-  m_MinSize: {x: 404, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     width: 1024
     height: 635
   m_MinSize: {x: 406, y: 492}
@@ -314,18 +229,6 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 1083
-    height: 365
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     width: 1024
     height: 357
   m_MinSize: {x: 406, y: 221}
@@ -346,53 +249,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 268
-    y: 0
-    width: 815
-    height: 365
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     x: 247
     y: 0
     width: 777
     height: 357
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-<<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 1
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
-=======
-  m_Selected: 1
-  m_LastSelected: 0
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
-  m_Selected: 1
-  m_LastSelected: 0
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -468,38 +336,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
   - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\sak_p\Documents\GitHub\Ucmovil\Ucm
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
     m_SelectedIDs: 10260000
     m_LastClickedID: 9744
     m_ExpandedIDs: 000000001026000000ca9a3bffffff7f
-=======
-    m_SelectedIDs: 16260000
-    m_LastClickedID: 9750
-    m_ExpandedIDs: 000000000e26000000ca9a3bffffff7f
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
-  - Assets/Script
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Tiano\Documents\GitHub\Ucmovil\Ucm
-  m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 16260000
-    m_LastClickedID: 9750
-    m_ExpandedIDs: 000000000e26000000ca9a3bffffff7f
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -527,19 +372,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
     m_ExpandedIDs: 0000000010260000
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_ExpandedIDs: 00000000f8250000
-=======
-    m_ExpandedIDs: 000000000e260000
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
-    m_ExpandedIDs: 000000000e260000
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -564,24 +397,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-<<<<<<< HEAD
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-    m_SelectedInstanceIDs: 0a2a0000
-    m_LastClickedInstanceID: 10762
-    m_HadKeyboardFocusLastEvent: 0
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     m_ExpandedInstanceIDs: a626000028260000d426000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -631,30 +449,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: -30974
     y: -31951
     width: 340
     height: 614
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 1085
-    y: 91
-    width: 275
-    height: 615
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-    x: 1026
-    y: 92
-    width: 340
-    height: 614
-<<<<<<< HEAD
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
@@ -684,41 +482,15 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: -32000
     y: -31951
-=======
-    x: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-    y: 91
-    width: 266
-    height: 344
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 00260000
-    m_LastClickedID: 0
-    m_ExpandedIDs: c8d2ffff92d4ffff0ad6ffff9cd7ffff1ae6ffff18fcffff000000006026000078270000
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-    y: 92
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     width: 245
     height: 336
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
     m_ExpandedIDs: 1afcffff00000000
-=======
-    m_ExpandedIDs: 3ac1ffffc4caffff5ef4ffffcaf4ffff1afcffff00000000ee2700003e290000f8290000
-<<<<<<< HEAD
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -763,30 +535,10 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: -31751
     y: -31951
     width: 773
     height: 336
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 270
-    y: 91
-    width: 811
-    height: 344
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-    x: 249
-    y: 92
-    width: 773
-    height: 336
-<<<<<<< HEAD
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
   m_SceneLighting: 1
   lastFramingTime: 458.1158070431796
   m_2DMode: 1
@@ -857,29 +609,10 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    x: 270
-    y: 91
-    width: 811
-    height: 344
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     x: 249
     y: 92
     width: 773
     height: 336
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
@@ -908,52 +641,16 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      width: 811
-      height: 327
-    m_Scale: {x: 0.25546876, y: 0.25546876}
-    m_Translation: {x: 405.5, y: 163.5}
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
       width: 773
       height: 319
     m_Scale: {x: 0.3129277, y: 0.3129277}
     m_Translation: {x: 386.5, y: 159.49998}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      x: -1587.2782
-      y: -640
-      width: 3174.5564
-      height: 1280
-    m_MinimalGUI: 1
-  m_defaultScale: 0.25546876
-  m_TargetTexture: {fileID: 0}
-  m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 811, y: 344}
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
       x: -1235.1096
       y: -509.70236
       width: 2470.2192
@@ -963,13 +660,6 @@ MonoBehaviour:
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 773, y: 336}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
