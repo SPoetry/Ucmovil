@@ -21,6 +21,10 @@ public class ControladorLogin : MonoBehaviour {
         getURL = getURL + "&password=" + Contrasena.text;
         WWW getResultado = new WWW(getURL);
         yield return getResultado;
+        Debug.Log(getResultado.text);
+        string Datos = getResultado.text;
+        string[] values = Datos.Split(","[0]);
+        Debug.Log(values[1]);
 
         if (getResultado.text == "director_carrera")
         {

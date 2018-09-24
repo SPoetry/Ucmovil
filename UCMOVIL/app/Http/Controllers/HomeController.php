@@ -14,21 +14,18 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    /*public function __construct()
     {
         $this->middleware('auth');
         $this->middleware('director');
-    }
+    }*/
 
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
-    public function saber_tipo()
-    {
-        return Auth::user()->tipo;
-    }
+    
     public function index()
     {
         return view('home');
