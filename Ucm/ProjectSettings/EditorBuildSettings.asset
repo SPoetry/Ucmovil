@@ -5,18 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 82b2ce78dc985cd44b5df9a78ced1a8f
   - enabled: 1
     path: Assets/Escenas/Inicio.unity
-    guid: 3d359215435fe6c44b763a7315cafc7d
+    guid: edaa5f99d3607cb4ab4a2b7ecc73529c
+  - enabled: 1
+    path: Assets/Escenas/Perfil.unity
+    guid: 91b8aad7a050b4b4c816dd706396d76e
   - enabled: 1
     path: Assets/Escenas/DirectorCarreraInicio.unity
-    guid: b4df786f15e99ee40bd72e784f12fb55
-  - enabled: 1
-    path: Assets/Escenas/Asignatura.unity
-    guid: 86a3b9929f65bdb469c0587dcf78ad14
+    guid: 02d55f5e24bb5ff4882fbc0c5413ce06
   - enabled: 1
     path: "Assets/Escenas/A\xF1adirAsignatura.unity"
-    guid: 27d71b3ad653b074782a5d3779c0140d
+    guid: 7f0713a072f65c84ca51da1e8a724f15
+  - enabled: 1
+    path: Assets/Escenas/Asignatura.unity
+    guid: e2ef8e411968d5c4f8bdb3af11ee7823
