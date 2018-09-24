@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/A\xF1adirAsignatura.unity"
+- path: Assets/Profesor.unity
   isLoaded: 1
   isActive: 1
