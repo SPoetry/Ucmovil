@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ControladorLogin : MonoBehaviour {
@@ -24,7 +25,7 @@ public class ControladorLogin : MonoBehaviour {
         Debug.Log(getResultado.text);
         if (getResultado.text == "director_carrera")
         {
-            Application.LoadLevel(1);
+            SceneManager.LoadScene(1);
         }
     }
 }
