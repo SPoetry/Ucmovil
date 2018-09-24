@@ -21,7 +21,7 @@ public class ControladorLogin : MonoBehaviour {
         getURL = getURL + "&password=" + Contrasena.text;
         WWW getResultado = new WWW(getURL);
         yield return getResultado;
-
+        Debug.Log(getResultado.text);
         if (getResultado.text == "director_carrera")
         {
             SceneManager.LoadScene(1);

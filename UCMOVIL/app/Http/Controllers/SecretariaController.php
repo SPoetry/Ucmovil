@@ -9,11 +9,11 @@ use Auth;
 
 class SecretariaController extends Controller
 {
-  public function __construct()
+  /*public function __construct()
   {
       $this->middleware('auth');      //revision del usuario conectado
-      $this->middleware('secretaria');  //cortador de paso para usuarios distintos a secretaria*/
-  }
+      $this->middleware('secretaria');  //cortador de paso para usuarios distintos a secretaria
+  }*/
 
 
   public function index()

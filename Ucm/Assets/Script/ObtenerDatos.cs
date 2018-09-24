@@ -6,7 +6,7 @@ public class ObtenerDatos : MonoBehaviour {
 
     public string getURL = "http://localhost:8000/tipo_por_id";
 
-    private void Start()
+    public void Hola()
     {
         StartCoroutine("Consulta");
     }
