@@ -9,7 +9,7 @@ class Alumno extends Model
   protected $fillable = [
       'id', 'ano_ingreso', 'nombre',
       'email', 'ano_nacimiento', 'telefono',
-      'direccion', 'semestre_actual', 'id_alumno',
+      'direccion', 'semestre_actual'
   ];
 
   public function user(){
