@@ -9,11 +9,12 @@ use Auth;
 
 class AlumnoController extends Controller
 {
+	/*
   public function __construct()
   {
       $this->middleware('auth');      //revision del usuario conectado
       $this->middleware('alumno');    //cortador de paso para usuarios distintos a alumno
-  }
+  }*/
 
   public function index()
   {

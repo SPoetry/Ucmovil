@@ -16,7 +16,7 @@ class LoginController extends Controller
     		]);
 
     	if(Auth::attempt($credentials, true)){
-    		return Auth::user()->tipo;
+    		return Auth()->user()->tipo;
     	}
     	return "no";
     }

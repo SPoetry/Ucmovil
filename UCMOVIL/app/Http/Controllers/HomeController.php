@@ -14,17 +14,18 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    /*public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('seleccion');
-    }
+        $this->middleware('director');
+    }*/
 
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         return view('home');
