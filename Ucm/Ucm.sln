@@ -1,13 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 <<<<<<< HEAD
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucm.CSharp", "Ucm.CSharp.csproj", "{A2A2404C-C9A8-DECB-AF5C-37F765919CA1}"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Visual Studio 15
-=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 # Visual Studio 2015
@@ -15,13 +8,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucm.CSharp", "Ucm.CSharp.cs
 =======
 =======
 >>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-# Visual Studio 2017
->>>>>>> parent of b96787f... Merge branch 'master' of https://github.com/SPoetry/Ucmovil
 =======
-# Visual Studio 15
->>>>>>> parent of 12796d3... UCM APK Cambio de controlador
+>>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucm", "Ucm.csproj", "{B0785406-F2B3-22A4-C53C-43A0DABF55D0}"
->>>>>>> e5f9abf52e77e58dcb14c3156139c692d5ce0572
+>>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +20,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B0785406-F2B3-22A4-C53C-43A0DABF55D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0785406-F2B3-22A4-C53C-43A0DABF55D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0785406-F2B3-22A4-C53C-43A0DABF55D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0785406-F2B3-22A4-C53C-43A0DABF55D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A2404C-C9A8-DECB-AF5C-37F765919CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A2404C-C9A8-DECB-AF5C-37F765919CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A2404C-C9A8-DECB-AF5C-37F765919CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A2404C-C9A8-DECB-AF5C-37F765919CA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
