@@ -25,7 +25,7 @@ class ProfesorController extends Controller
 
   public function modificar_perfil(Request $request)
   {
-    $perfil = new Profesore;   //se crea una estructura para ingresar en Hotels
+    $perfil = new Profesore;   //se crea una estructura para ingresar los datos del profesor
     $perfil->id_profesor = auth()->user()->id;
     $perfil->ano_ingreso=$request->ano_ingreso; //se ingresan los datos de los request
     $perfil->especialidad=$request->especialidad;
