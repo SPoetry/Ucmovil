@@ -12,7 +12,7 @@ class AlumnoSeeder extends Seeder
     public function run()
     {
       DB::table('alumnos')->insert([
-        'id_alumno' => '1',
+        'id' => '1',
         'ano_ingreso' => '0001/01/01',
         'nombre' => 'Tiano',
         'ano_nacimiento' => '1995',

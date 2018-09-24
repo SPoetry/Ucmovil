@@ -12,7 +12,7 @@ class SecretariaSeeder extends Seeder
     public function run()
     {
       DB::table('secretarias')->insert([
-        'id_secretaria' => '3',
+        'id' => '3',
         'nombre' => 'Sergio',
         'telefono' => '+56977777777'
       ]);

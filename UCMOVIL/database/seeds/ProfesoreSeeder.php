@@ -12,7 +12,7 @@ class ProfesoreSeeder extends Seeder
     public function run()
     {
       DB::table('profesores')->insert([
-        'id_profesor' => '2',
+        'id' => '2',
         'ano_ingreso' => '2015',
         'especialidad' => 'Programador',
         'nombre' => 'Savio',

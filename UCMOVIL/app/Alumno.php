@@ -7,18 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 class Alumno extends Model
 {
   protected $fillable = [
-      'id_alumno', 'ano_ingreso', 'nombre',
+      'id', 'ano_ingreso', 'nombre',
       'email', 'ano_nacimiento', 'telefono',
       'direccion', 'semestre_actual', 'id_alumno',
   ];
 
   public function user(){
-    return $this->belongTo(User::class, 'id_alumno', 'id');
+    return $this->belongTo(User::class, 'id', 'id');
   }
   public function historiale(){
-    return $this->hasMany(Historiale::class, 'id_alumno', 'id_alumno');
+    return $this->hasMany(Historiale::class, 'id', 'id_alumno');
   }
   public function ramosactuale(){
-    return $this->hasMany(RamosActuales::class, 'id_alumno', 'id_alumno');
+    return $this->hasMany(RamosActuales::class, 'id', 'id_alumno');
   }
 }

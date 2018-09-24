@@ -14,12 +14,12 @@ class CreateSecretariasTable extends Migration
     public function up()
     {
         Schema::create('secretarias', function (Blueprint $table) {
-          $table->integer('id_secretaria')->unsigned();
+          $table->integer('id')->unsigned();
           $table->string('nombre');
           $table->string('telefono');
           $table->timestamps();
-          $table->primary('id_secretaria');
-          $table->foreign('id_secretaria')->references('id')->on('users');
+          $table->primary('id');
+          $table->foreign('id')->references('id')->on('users');
         });
     }
 

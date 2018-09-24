@@ -22,7 +22,7 @@ class CreateHistorialesTable extends Migration
             $table->timestamps();
             $table->primary(['id_asignatura','id_alumno']);
             $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
-            $table->foreign('id_alumno')->references('id_alumno')->on('alumnos');
+            $table->foreign('id_alumno')->references('id')->on('alumnos');
         });
     }
 
