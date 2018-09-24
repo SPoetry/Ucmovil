@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Secretaria extends Model
 {
   protected $fillable = [
-      'id_secretaria', 'nombre', 'email',
+      'id', 'nombre', 'email',
       'telefono',
   ];
 

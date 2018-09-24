@@ -22,15 +22,15 @@ class User extends Authenticatable
     ];
 
     public function alumno(){
-      return $this->hasOne(Alumno::class, 'id_alumno', 'id');
+      return $this->hasOne(Alumno::class, 'id', 'id');
     }
     public function profesore(){
-      return $this->hasOne(Profesore::class, 'id_profesor', 'id');
+      return $this->hasOne(Profesore::class, 'id', 'id');
     }
     public function secretaria(){
-      return $this->hasOne(Secretaria::class, 'id_secretaria', 'id');
+      return $this->hasOne(Secretaria::class, 'id', 'id');
     }
     public function directorcarrera(){
-      return $this->hasOne(DirectoresCarrera::class, 'id_director', 'id');
+      return $this->hasOne(DirectoresCarrera::class, 'i', 'id');
     }
 }

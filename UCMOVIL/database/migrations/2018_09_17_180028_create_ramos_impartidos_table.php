@@ -20,7 +20,7 @@ class CreateRamosImpartidosTable extends Migration
             $table->timestamps();
             $table->unique(['id_asignatura', 'id_profesor']);
             $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
-            $table->foreign('id_profesor')->references('id_profesor')->on('profesores');
+            $table->foreign('id_profesor')->references('id')->on('profesores');
         });
     }
 
