@@ -15,7 +15,8 @@ class DirectoresCarreraSeeder extends Seeder
         'id' => '4',
         'especialidad' => 'Programador',
         'nombre' => 'Erik',
-        'telefono' => '+56966666666'
+        'telefono' => '+56966666666',
+        'apodo'=>'ErikSempai'
       ]);
     }
 }

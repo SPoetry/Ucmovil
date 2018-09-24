@@ -78,6 +78,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Cambio.cs" />
+    <Compile Include="Assets\Script\CambioC.cs" />
+    <Compile Include="Assets\Script\CambioE.cs" />
+    <Compile Include="Assets\Script\CambioEscena.cs" />
     <Compile Include="Assets\Script\ControladorAsignaturas.cs" />
     <Compile Include="Assets\Script\ControladorDirector.cs" />
     <Compile Include="Assets\Script\ControladorLogin.cs" />
