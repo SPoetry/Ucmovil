@@ -14,7 +14,7 @@ Route::get('/alumno', 'AlumnoController@index')->name('c_alumno');
 Route::get('/d_escuela', 'DirectorCarreraController@index')->name('c_d_escuela');
 Route::get('/profesor', 'ProfesorController@index')->name('c_profesor');
 Route::get('/secretaria', 'SecretariaController@index')->name('c_secretaria');
-Route::get('/tipo_por_id', 'HomeController@saber_tipo')->name('s_tipo');
+Route::get('/datos_por_id', 'HomeController@saber_datos')->name('d_tipo');
 
 Route::get('/d_escuela/mostrar_asignatura', 'DirectorCarreraController@mostrar_asignatura')->name('mostrar_asignatura');
 Route::get('/d_escuela/anadir_asignatura', 'DirectorCarreraController@anadir_asignatura')->name('anadir_asignatura');

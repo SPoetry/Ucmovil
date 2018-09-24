@@ -30,4 +30,14 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function saber_datos(Request $request){
+        $id = $request->id;
+        $tipo = $request->tipo;
+        $usuario = DB::table($tipo)->where('id', $id)->get();
+        foreach($usuario as $user)
+            echo $user->especialidad. ",";
+            echo $user->nombre. ",";
+            echo $user->telefono. ",";
+            return;
+    }
 }

@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Escenas/Inicio.unity
-=======
-- path: Assets/Escenas/DirectorCarreraInicio.unity
->>>>>>> ffe444fcf2da3c1dbb6612b1fb0de74d046636e2
   isLoaded: 1
   isActive: 1
