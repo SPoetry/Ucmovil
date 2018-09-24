@@ -8,11 +8,11 @@ class DirectoresCarrera extends Model
 {
 
   protected $fillable = [
-      'id_director', 'especialidad', 'nombre',
-      'email', 'telefono', 'id_director',
+      'id', 'especialidad', 'nombre',
+      'email', 'telefono',
   ];
 
   public function user(){
-    return $this->belongTo(User::class, 'id_director', 'id');
+    return $this->belongTo(User::class, 'id', 'id');
   }
 }
