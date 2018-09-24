@@ -11,6 +11,9 @@ public class ControladorLogin : MonoBehaviour {
     public InputField Correo;
     public InputField Contrasena;
 
+    public static string Id;
+    public static string Tipo;
+
     public void EnvioDatos()
     {
         StartCoroutine("Logear");
@@ -24,9 +27,20 @@ public class ControladorLogin : MonoBehaviour {
         Debug.Log(getResultado.text);
         string Datos = getResultado.text;
         string[] values = Datos.Split(","[0]);
-        Debug.Log(values[1]);
 
-        if (getResultado.text == "director_carrera")
+        Id = values[0];
+        if(values[1] == "alumno"){
+            Tipo = "alumnos";
+        }else if(values[1] == "secretaria"){
+            Tipo = "secretarias";
+        }else if (values[1] == "profesor"){
+            Tipo = "profesores";
+        }else if (values[1] == "director_carrera"){
+            Tipo = "directores_carreras";
+        }
+
+
+        if (values[1] == "director_carrera")
         {
             SceneManager.LoadScene(1);
         }
