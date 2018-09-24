@@ -31,6 +31,6 @@ class User extends Authenticatable
       return $this->hasOne(Secretaria::class, 'id', 'id');
     }
     public function directorcarrera(){
-      return $this->hasOne(DirectoresCarrera::class, 'i', 'id');
+      return $this->hasOne(DirectoresCarrera::class, 'id', 'id');
     }
 }
