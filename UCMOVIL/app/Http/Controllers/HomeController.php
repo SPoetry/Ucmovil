@@ -17,7 +17,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('seleccion');
+        $this->middleware('director');
     }
 
     /**
@@ -25,6 +25,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function saber_tipo()
+    {
+        return Auth::user()->tipo;
+    }
     public function index()
     {
         return view('home');

@@ -83,6 +83,7 @@
     <Compile Include="Assets\Script\ControladorDirector.cs" />
     <Compile Include="Assets\Script\ControladorLogin.cs" />
     <Compile Include="Assets\Script\IngresoAsignaturas.cs" />
+    <Compile Include="Assets\Script\ObtenerDatos.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
