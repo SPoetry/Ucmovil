@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Profesor.unity
-=======
-- path: "Assets/A\xF1adirAsignatura.unity"
->>>>>>> parent of 12796d3... UCM APK Cambio de controlador
   isLoaded: 1
   isActive: 1
