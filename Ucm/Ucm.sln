@@ -1,18 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucm.CSharp", "Ucm.CSharp.csproj", "{A2A2404C-C9A8-DECB-AF5C-37F765919CA1}"
-=======
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-=======
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucm", "Ucm.csproj", "{B0785406-F2B3-22A4-C53C-43A0DABF55D0}"
->>>>>>> d4b2697c4453a6ddfd15e99da9c30641d2531fa1
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
