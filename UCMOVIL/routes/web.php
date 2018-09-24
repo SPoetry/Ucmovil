@@ -8,6 +8,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/log', 'LoginController@Login');
 
 Route::get('/alumno', 'AlumnoController@index')->name('c_alumno');
 Route::get('/d_escuela', 'DirectorCarreraController@index')->name('c_d_escuela');
