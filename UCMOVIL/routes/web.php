@@ -8,7 +8,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/log', 'LoginController@Login');
 
 Route::get('/alumno', 'AlumnoController@index')->name('c_alumno');
 Route::get('/d_escuela', 'DirectorCarreraController@index')->name('c_d_escuela');
@@ -19,8 +18,3 @@ Route::get('/d_escuela/mostrar_asignatura', 'DirectorCarreraController@mostrar_a
 Route::get('/d_escuela/anadir_asignatura', 'DirectorCarreraController@anadir_asignatura')->name('anadir_asignatura');
 Route::post('/d_escuela/modificar_asignatura', 'DirectorCarreraController@modificar_asignatura')->name('modificar_asignatura');
 Route::post('/d_escuela/borrar_asignatura', 'DirectorCarreraController@borrar_asignatura')->name('borrar_asignatura');
-
-
-Route::get('/secretaria','SecretariaController@index')->name('index_secretaria');
-Route::get('/Noticia','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
-Route::post('/secretaria/agregar_noticia','SecretariaController@agregar_noticia')->name('agregar_noticia');

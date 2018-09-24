@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -502,7 +502,6 @@ GameObject:
   - component: {fileID: 926825789}
   - component: {fileID: 926825788}
   - component: {fileID: 926825787}
-  - component: {fileID: 926825790}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -567,18 +566,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 926825788}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 926825790}
-        m_MethodName: EnvioDatos
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &926825788
@@ -614,20 +602,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 926825785}
---- !u!114 &926825790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 926825785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8682a935d149d42aada4f5537a9df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  getURL: http://localhost:8000/log
-  Correo: {fileID: 1688783131}
-  Contrasena: {fileID: 1907496372}
 --- !u!1 &1097111556
 GameObject:
   m_ObjectHideFlags: 0

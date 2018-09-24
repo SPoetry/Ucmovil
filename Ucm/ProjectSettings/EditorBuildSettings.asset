@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: 
     guid: 82b2ce78dc985cd44b5df9a78ced1a8f
   - enabled: 1
-    path: Assets/Escenas/Inicio.unity
+    path: Assets/Inicio.unity
     guid: 3d359215435fe6c44b763a7315cafc7d
   - enabled: 1
-    path: Assets/Escenas/DirectorCarreraInicio.unity
+    path: Assets/DirectorCarreraInicio.unity
     guid: b4df786f15e99ee40bd72e784f12fb55
   - enabled: 1
-    path: Assets/Escenas/Asignatura.unity
+    path: Assets/Asignatura.unity
     guid: 86a3b9929f65bdb469c0587dcf78ad14
   - enabled: 1
-    path: "Assets/Escenas/A\xF1adirAsignatura.unity"
+    path: "Assets/A\xF1adirAsignatura.unity"
     guid: 27d71b3ad653b074782a5d3779c0140d
