@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Escenas/Inicio.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Escenas/Asignatura.unity
+=======
+- path: Assets/Escenas/Perfil.unity
+>>>>>>> 803100d8330588a3df87d7c5e15f8936fae7934f
+>>>>>>> cd02a382b7736266585732477d540ad87338b5c8
   isLoaded: 1
   isActive: 1
