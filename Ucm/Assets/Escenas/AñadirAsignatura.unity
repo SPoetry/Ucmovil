@@ -738,10 +738,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 525095400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc19c76c4580297428365e44ca610eba, type: 3}
+  m_Script: {fileID: 11500000, guid: 984a9a76898f1a64a972be986e0ee58d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getURL: http://localhost:800/d_escuela/anadir_asignatura
+  CgetURL: http://localhost:8000/d_escuela/anadir_asignatura
+  pruebaURL: http://localhost:8000/d_escuela/anadir_asignatura?id_asignatura=ICI-400&nombre=hola&creditos=1000&prerequisito=ICI-200
   IdAsignatura: {fileID: 1886085335}
   Nombre: {fileID: 1509605121}
   Creditos: {fileID: 1848858586}

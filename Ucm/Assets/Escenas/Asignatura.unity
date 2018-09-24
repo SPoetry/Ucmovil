@@ -783,10 +783,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 593534422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 368d9dbb522d3054bb1c2085895cca8d, type: 3}
+  m_Script: {fileID: 11500000, guid: ba4a494d85df95b469ff4955d5b57eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postURL: 
+  postURL: http://localhost:8000/gg
   getURL: http://127.0.0.1:8000/d_escuela/mostrar_asignatura
 --- !u!224 &593534424
 RectTransform:
