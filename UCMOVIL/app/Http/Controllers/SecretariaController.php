@@ -18,6 +18,29 @@ class SecretariaController extends Controller
 
   public function index()
   {
-      return view('DirectorIndex'); //se debe cambiar la vista
+      return view('SecretariaIndex'); //se debe cambiar la vista
+  }
+
+  public function mostrar_noticia()
+  {
+    $noticia = DB::table('noticias')->orderBy('id_noticia')->get();
+    return $noticia;
+  }
+
+  public function agregar_noticia(Request $request)
+  {
+    $noticia = new Noticia;
+    $noticia ->titulo = $request->titulo;
+    $noticia ->texto = $request->titulo;
+    $noticia ->estado = $request->titulo;
+    $noticia ->propietario = $request->titulo;
+    $noticia->save();
+    return "ok";
+
+  }
+
+  public function editar_noticia()
+  {
+    //
   }
 }

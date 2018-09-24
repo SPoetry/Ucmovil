@@ -20,3 +20,9 @@ Route::get('/d_escuela/mostrar_asignatura', 'DirectorCarreraController@mostrar_a
 Route::get('/d_escuela/anadir_asignatura', 'DirectorCarreraController@anadir_asignatura')->name('anadir_asignatura');
 Route::post('/d_escuela/modificar_asignatura', 'DirectorCarreraController@modificar_asignatura')->name('modificar_asignatura');
 Route::post('/d_escuela/borrar_asignatura', 'DirectorCarreraController@borrar_asignatura')->name('borrar_asignatura');
+
+
+Route::get('/secretaria','SecretariaController@index')->name('vista_secretaria');
+Route::get('/secretaria','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
+Route::post('/secretaria','SecretariaController@agregar_noticia')->name('agregar_noticia');
+Route::post('/secretaria','SecretariaController@editar_noticia')->name('editar_noticia');
