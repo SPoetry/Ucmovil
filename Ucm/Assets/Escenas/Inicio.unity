@@ -502,7 +502,6 @@ GameObject:
   - component: {fileID: 926825789}
   - component: {fileID: 926825788}
   - component: {fileID: 926825787}
-  - component: {fileID: 926825790}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -568,7 +567,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 926825790}
+      - m_Target: {fileID: 1944638529}
         m_MethodName: EnvioDatos
         m_Mode: 1
         m_Arguments:
@@ -614,20 +613,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 926825785}
---- !u!114 &926825790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 926825785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8682a935d149d42aada4f5537a9df9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  getURL: http://localhost:8000/log
-  Correo: {fileID: 1688783131}
-  Contrasena: {fileID: 1907496372}
 --- !u!1 &1097111556
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1265,64 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1907496370}
+--- !u!1001 &1944638528
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4860988448012534, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 528.2494
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860988448012534, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 695.41144
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860988448012534, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860988448012534, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860988448012534, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860988448012534, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860988448012534, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4860988448012534, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114879094579201990, guid: 169cfbc78626e9b4d8c20273e28530fb,
+        type: 2}
+      propertyPath: Correo
+      value: 
+      objectReference: {fileID: 1688783131}
+    - target: {fileID: 114879094579201990, guid: 169cfbc78626e9b4d8c20273e28530fb,
+        type: 2}
+      propertyPath: Contrasena
+      value: 
+      objectReference: {fileID: 1907496372}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 169cfbc78626e9b4d8c20273e28530fb, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &1944638529 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114879094579201990, guid: 169cfbc78626e9b4d8c20273e28530fb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1944638528}
+  m_Script: {fileID: 11500000, guid: be8682a935d149d42aada4f5537a9df9, type: 3}
 --- !u!1 &1998297862
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,10 +12,11 @@ class DirectoresCarreraSeeder extends Seeder
     public function run()
     {
       DB::table('directores_carreras')->insert([
-        'id' => '1',
+        'id' => '4',
         'especialidad' => 'Programador',
         'nombre' => 'Erik',
-        'telefono' => '+56966666666'
+        'telefono' => '+56966666666',
+        'apodo'=>'ErikSempai'
       ]);
     }
 }

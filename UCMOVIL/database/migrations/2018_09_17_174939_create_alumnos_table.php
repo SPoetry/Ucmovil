@@ -20,6 +20,7 @@ class CreateAlumnosTable extends Migration
             $table->integer('ano_nacimiento');
             $table->string('telefono');
             $table->string('direccion');
+            $table->string('apodo');
             $table->integer('semestre_actual');
             $table->timestamps();
             $table->primary('id');

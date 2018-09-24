@@ -16,7 +16,8 @@ class ProfesoreSeeder extends Seeder
         'ano_ingreso' => '2015',
         'especialidad' => 'Programador',
         'nombre' => 'Savio',
-        'telefono' => '+56988888888'
+        'telefono' => '+56988888888',
+        'apodo'=>'Sak'
       ]);
     }
 }

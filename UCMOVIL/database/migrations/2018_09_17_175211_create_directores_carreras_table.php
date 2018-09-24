@@ -18,6 +18,7 @@ class CreateDirectoresCarrerasTable extends Migration
           $table->string('especialidad');
           $table->string('nombre');
           $table->string('telefono');
+          $table->string('apodo');
           $table->timestamps();
           $table->primary('id');
           $table->foreign('id')->references('id')->on('users');

@@ -14,7 +14,8 @@ class SecretariaSeeder extends Seeder
       DB::table('secretarias')->insert([
         'id' => '3',
         'nombre' => 'Sergio',
-        'telefono' => '+56977777777'
+        'telefono' => '+56977777777',
+        'apodo'=>'Xexo'
       ]);
     }
 }

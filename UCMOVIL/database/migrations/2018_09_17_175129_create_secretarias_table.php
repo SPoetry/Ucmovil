@@ -17,6 +17,7 @@ class CreateSecretariasTable extends Migration
           $table->integer('id')->unsigned();
           $table->string('nombre');
           $table->string('telefono');
+          $table->string('apodo');
           $table->timestamps();
           $table->primary('id');
           $table->foreign('id')->references('id')->on('users');
