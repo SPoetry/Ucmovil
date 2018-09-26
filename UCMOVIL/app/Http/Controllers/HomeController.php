@@ -66,17 +66,20 @@ class HomeController extends Controller
             echo $user->apodo. ",";
             return;
     }
-    public function Datos_p(Request $request){
+
+    public function datos_p(Request $request){
         $id = $request->id;
         $tipo = $request->tipo;
         $usuario = DB::table($tipo)->where('id', $id)->get();
-        foreach($usuario as $user)
+        foreach($usuario as $user){
             echo $user->especialidad. ",";
             echo $user->nombre. ",";
             echo $user->telefono. ",";
             echo $user->apodo. ",";
-            return;
+        }
+        return;
     }
+
     public function CambioC(Request $request){
         $id = $request->id;
         $password = $request->password;
@@ -86,6 +89,7 @@ class HomeController extends Controller
           ]);
         return "ok";
     }
+
     public function CambioA(Request $request){
         $id = $request->id;
         $apodo = $request->apodo;
@@ -95,6 +99,7 @@ class HomeController extends Controller
           ]);
         return "ok";
     }
+
     public function CambioE(Request $request){
         $id = $request->id;
         $email = $request->email;

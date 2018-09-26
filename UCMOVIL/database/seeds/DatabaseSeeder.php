@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
        $this->call('DirectoresCarreraSeeder');
        $this->call('AsignaturaSeeder');
        $this->call('MallaSeeder');
+       $this->call('NoticiaSeeder');
      }
 }
