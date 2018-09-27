@@ -25,6 +25,8 @@ public class ObtenerDatos : MonoBehaviour {
     {
         Id = ControladorLogin.Id;
         Tipo = ControladorLogin.Tipo;
+        Debug.Log(Tipo);
+
         if(Tipo == "secretarias"){
             UrlConsulta = "http://localhost:8000/datos_s";
         }
@@ -34,26 +36,33 @@ public class ObtenerDatos : MonoBehaviour {
         if(Tipo == "profesores"){
             UrlConsulta = "http://localhost:8000/datos_p";
         }
+
         UrlConsulta = UrlConsulta + "?id=" + Id;
         UrlConsulta = UrlConsulta + "&tipo=" + Tipo;
         WWW ResultadoConsulta = new WWW(UrlConsulta);
+        Debug.Log(UrlConsulta);
         yield return ResultadoConsulta;
 
         string Datos = ResultadoConsulta.text;
-        string[] values = Datos.Split(","[0]);
+        string [] values = Datos.Split(","[0]);
 
-        Dato1.text = values[0];
-        Dato2.text = values[1];
-        Dato3.text = values[2];
-        if (Tipo == "directores_escuelas" || Tipo == "profesores")
+        if(values[0] != null)
         {
-            Dato4.text = values[3];
+            Dato1.text = values[0];
+            Dato2.text = values[1];
+            Dato3.text = values[2];
+
+            if (Tipo == "directores_escuelas" || Tipo == "profesores")
+            {
+                Dato4.text = values[3];
+            }
+            if (Tipo == "alumnos")
+            {
+                Dato4.text = values[3];
+                Dato5.text = values[4];
+                Dato6.text = values[5];
+            }
         }
-        if (Tipo == "alumnos")
-        {
-            Dato4.text = values[3];
-            Dato5.text = values[4];
-            Dato6.text = values[5];
-        }
+        
     }
 }
