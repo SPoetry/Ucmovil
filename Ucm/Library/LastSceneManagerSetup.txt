@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Escenas/Lobby.unity
+- path: Assets/Escenas/Perfil.unity
   isLoaded: 1
   isActive: 1
