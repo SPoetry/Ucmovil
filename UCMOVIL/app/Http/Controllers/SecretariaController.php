@@ -30,10 +30,10 @@ class SecretariaController extends Controller
   public function agregar_noticia(Request $request)
   {
     $noticia = new Noticia;
-    $noticia ->titulo = $request->titulo;
-    $noticia ->texto = $request->titulo;
-    $noticia ->estado = $request->titulo;
-    $noticia ->propietario = $request->titulo;
+    $noticia->titulo=$request->titulo;
+    $noticia->texto=$request->texto;
+    $noticia->estado=$request->estado;
+    $noticia->propietario=$request->propietario;
     $noticia->save();
     return "ok";
 
