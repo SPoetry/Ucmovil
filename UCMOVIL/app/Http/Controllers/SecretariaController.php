@@ -26,7 +26,7 @@ class SecretariaController extends Controller
   {
     $noticias = Noticia::all()->where("estado","Aprobada");
     foreach ($noticias as $noticia) {
-      echo $noticia->id_noticia. "{";
+      echo $noticia->titulo. "{";
       echo $noticia->texto."{";
       echo $noticia->estado."{";
       echo $noticia->propietario."#";

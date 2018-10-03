@@ -7,11 +7,15 @@ public class Bienvenido : MonoBehaviour {
     public GameObject[] bienvenidos;
     public GameObject[] Botones;
 
-    void Start() {
+    void Start()
+    {
         if (ControladorLogin.Tipo == "alumnos")
             bienvenidos[0].SetActive(true);
         if (ControladorLogin.Tipo == "profesores")
+        {
             bienvenidos[2].SetActive(true);
+            Botones[4].SetActive(true);
+        }
         if (ControladorLogin.Tipo == "secretarias")
         {
             bienvenidos[1].SetActive(true);
@@ -24,6 +28,5 @@ public class Bienvenido : MonoBehaviour {
             bienvenidos[3].SetActive(true);
             Botones[0].SetActive(true);
         }
-	}
-	
+    }
 }
