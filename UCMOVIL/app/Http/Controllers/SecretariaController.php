@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Middleware\Secretaria;
 use Auth;
+use App\Noticia;
 
 class SecretariaController extends Controller
 {
@@ -24,7 +25,12 @@ class SecretariaController extends Controller
   public function mostrar_noticia()
   {
     $noticias = Noticia::all()->where("estado","Aprobada");
-    echo $noticias;
+    foreach ($noticias as $noticia) {
+      echo $noticia->id_noticia. "{";
+      echo $noticia->texto."{";
+      echo $noticia->estado."{";
+      echo $noticia->propietario."#";
+    }
     return;
   }
 

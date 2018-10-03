@@ -34,37 +34,40 @@ class HomeController extends Controller
         $id = $request->id;
         $tipo = $request->tipo;
         $usuario = DB::table($tipo)->where('id', $id)->get();
-        foreach($usuario as $user)
+        foreach($usuario as $user){
             echo $user->nombre. ",";
             echo $user->telefono. ",";
             echo $user->ano_nacimiento. ",";
             echo $user->direccion. ",";
             echo $user->ano_ingreso. ",";
             echo $user->apodo. ",";
-            return;
+        }
+        return;
     }
 
     public function Datos_s(Request $request){
         $id = $request->id;
         $tipo = $request->tipo;
         $usuario = DB::table($tipo)->where('id', $id)->get();
-        foreach($usuario as $user)
+        foreach($usuario as $user){
             echo $user->nombre. ",";
             echo $user->telefono. ",";
             echo $user->apodo. ",";
-            return;
+        }
+        return;
     }
 
     public function Datos_d(Request $request){
         $id = $request->id;
         $tipo = $request->tipo;
         $usuario = DB::table($tipo)->where('id', $id)->get();
-        foreach($usuario as $user)
+        foreach($usuario as $user){
             echo $user->especialidad. ",";
             echo $user->nombre. ",";
             echo $user->telefono. ",";
             echo $user->apodo. ",";
-            return;
+        }
+        return;
     }
 
     public function datos_p(Request $request){
