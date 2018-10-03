@@ -23,8 +23,9 @@ class SecretariaController extends Controller
 
   public function mostrar_noticia()
   {
-    $noticia = DB::table('noticias')->orderBy('id_noticia')->get();
-    return $noticia;
+    $noticias = Noticia::all()->where("estado","Aprobada");
+    echo $noticias;
+    return;
   }
 
   public function agregar_noticia(Request $request)
