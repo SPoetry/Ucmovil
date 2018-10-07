@@ -24,7 +24,7 @@ class SecretariaController extends Controller
 
   public function mostrar_noticia()
   {
-    $noticias["noticias"] = Noticia::all()->where("estado","Aprobada");
+    $noticias["noticias"] = Noticia::all()->where("estado","Aprobada")->get();
 
     return response()->json($noticias);
   }
