@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Response;
 use App\Http\Middleware\Director;
 
 //Todos los modelos que se requeriran para controlar las funciones
@@ -38,16 +39,8 @@ class DirectorCarreraController extends Controller
 
   public function mostrar_asignatura()  //entrega todos los datos de las asignaturas
   {
-    $asignaturas = DB::table('asignaturas')->orderBy('nombre')->get();  //conexion a la base de datos y ordenados
-    //entrega datos en forma de json
-    foreach ($asignaturas as $asignatura) {
-      echo $asignatura->id_asignatura. ".";
-      echo $asignatura->nombre. ".";
-      echo $asignatura->creditos. ".";
-      echo $asignatura->prerequisito.".";
-      echo "/";
-    }
-    return ;
+    $asignaturas["Asignatura"] = DB::table('asignaturas')->orderBy('nombre')->get();  //conexion a la base de datos y ordenados
+    return response()->json($asignaturas);  //entrega datos en forma de objeto json
   }
 
   public function anadir_asignatura(Request $request)

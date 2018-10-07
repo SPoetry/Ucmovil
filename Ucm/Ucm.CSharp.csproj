@@ -80,11 +80,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\AgregarNoticia.cs" />
+    <Compile Include="Assets\Script\Bienvenido.cs" />
+    <Compile Include="Assets\Script\Cambio.cs" />
+    <Compile Include="Assets\Script\CambioC.cs" />
+    <Compile Include="Assets\Script\CambioE.cs" />
+    <Compile Include="Assets\Script\CambioEscena.cs" />
     <Compile Include="Assets\Script\ControladorAsignaturas.cs" />
     <Compile Include="Assets\Script\ControladorDirector.cs" />
     <Compile Include="Assets\Script\ControladorLogin.cs" />
     <Compile Include="Assets\Script\IngresoAsignaturas.cs" />
     <Compile Include="Assets\Script\ObtenerDatos.cs" />
+    <Compile Include="Assets\Script\Ver_Ramos.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
