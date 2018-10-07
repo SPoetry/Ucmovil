@@ -10,6 +10,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/log', 'LoginController@Login');
 
+Route::get('/ramos_impartidos', 'ProfesorController@mostrar_impartidos');
 Route::get('/alumno', 'AlumnoController@index')->name('c_alumno');
 Route::get('/d_escuela', 'DirectorCarreraController@index')->name('c_d_escuela');
 Route::get('/profesor', 'ProfesorController@index')->name('c_profesor');
