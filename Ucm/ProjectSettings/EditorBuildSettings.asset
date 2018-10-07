@@ -41,3 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Profesor.unity
     guid: 8e514b5f136a7f4418cf46593c7d9807
+  - enabled: 1
+    path: Assets/Escenas/VerRamos.unity
+    guid: c5fba1a73d9c54c4e8d423a634746aed

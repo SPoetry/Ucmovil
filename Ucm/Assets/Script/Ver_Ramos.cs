@@ -7,18 +7,22 @@ public class Ver_Ramos : MonoBehaviour
 {
 
     public string UrlConsulta = "http://localhost:8000/ramos_impartidos?id=2";
+    public string Id;
+    public Text CuadroRamos;
 
-    public void Ver(){
+    public void Awake(){
         StartCoroutine("consulta");
     }
 
     private IEnumerator consulta()
     {
+        Id = ControladorLogin.Id;
+        UrlConsulta = UrlConsulta + "?id=" + Id;
         WWW ResultadoConsulta = new WWW(UrlConsulta);
         yield return ResultadoConsulta;
         string Datos = ResultadoConsulta.text;
         ListaRamos lista = JsonUtility.FromJson<ListaRamos>(Datos);
-        lista.Listar();
+        CuadroRamos.text = lista.Listar();
     }
 }
 
@@ -43,11 +47,13 @@ public class ListaRamos
 {
     public List<Impartido> impartidos;
     
-    public void Listar()
+    public string Listar()
     {
+        string texto ="";
         foreach (Impartido ramo in impartidos)
         {
-            Debug.Log(ramo);
+            texto = texto+"\n ID: "+ramo.id_ramoimpartido+" Codigo Ramo: "+ramo.id_asignatura;
         }
+        return texto;
     }
 }
