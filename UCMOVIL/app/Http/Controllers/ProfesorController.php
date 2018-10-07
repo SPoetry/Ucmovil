@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Middleware\Profesor;
+use App\RamosImpartido;
 use Auth;
 
 class ProfesorController extends Controller
@@ -18,8 +19,8 @@ class ProfesorController extends Controller
 
   	public function mostrar_impartidos(Request $request)  //entrega todos los datos de los ramos impartidos
   	{
-	    $impartidos =   RamosImpartido::all()->where('id_profesor', $request->id);  //conexion a la base de datos y ordenados
-	    return $impartidos;  //entrega datos en forma de json
+	    $impartidos["impartidos"] =   RamosImpartido::all()->where('id_profesor', $request->id);  //conexion a la base de datos y ordenados
+      return response()->json($impartidos);  //entrega datos en forma de json
 	}
 
    	public function modificar_perfil(Request $request)
