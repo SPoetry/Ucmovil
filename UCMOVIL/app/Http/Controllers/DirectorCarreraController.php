@@ -39,7 +39,7 @@ class DirectorCarreraController extends Controller
 
   public function mostrar_asignatura()  //entrega todos los datos de las asignaturas
   {
-    $asignaturas["Asignatura"] = DB::table('asignaturas')->orderBy('nombre')->get();  //conexion a la base de datos y ordenados
+    $asignaturas["asignatura"] = DB::table('asignaturas')->orderBy('nombre')->get();  //conexion a la base de datos y ordenados
     return response()->json($asignaturas);  //entrega datos en forma de objeto json
   }
 
