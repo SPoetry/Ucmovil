@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucm", "Ucm.csproj", "{B0785406-F2B3-22A4-C53C-43A0DABF55D0}"
 EndProject
 Global

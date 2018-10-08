@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ObtenerDatos : MonoBehaviour {
 
-    public string UrlConsulta = "http://localhost:8000/datos_d";
+    public string UrlDatos = "http://localhost:8000/datos_d";
 
     public Text Dato1;
     public Text Dato2;
@@ -28,19 +28,19 @@ public class ObtenerDatos : MonoBehaviour {
         Debug.Log(Tipo);
 
         if(Tipo == "secretarias"){
-            UrlConsulta = "http://localhost:8000/datos_s";
+            UrlDatos = "http://localhost:8000/datos_s";
         }
         if(Tipo == "alumnos"){
-            UrlConsulta = "http://localhost:8000/datos_a";
+            UrlDatos = "http://localhost:8000/datos_a";
         }
         if(Tipo == "profesores"){
-            UrlConsulta = "http://localhost:8000/datos_p";
+            UrlDatos = "http://localhost:8000/datos_p";
         }
 
-        UrlConsulta = UrlConsulta + "?id=" + Id;
-        UrlConsulta = UrlConsulta + "&tipo=" + Tipo;
-        WWW ResultadoConsulta = new WWW(UrlConsulta);
-        Debug.Log(UrlConsulta);
+        UrlDatos = UrlDatos + "?id=" + Id;
+        UrlDatos = UrlDatos + "&tipo=" + Tipo;
+        WWW ResultadoConsulta = new WWW(UrlDatos);
+
         yield return ResultadoConsulta;
 
         string Datos = ResultadoConsulta.text;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class IngresoAsignaturas : MonoBehaviour {
@@ -21,12 +22,15 @@ public class IngresoAsignaturas : MonoBehaviour {
 
     private IEnumerator GuardarAsignatura()
     {
-        Debug.Log ("llego hasta aca");
         CgetURL = CgetURL + "?id_asignatura=" + IdAsignatura.text;
         CgetURL = CgetURL + "&nombre=" + Nombre.text + "&creditos=" + Creditos.text + "&prerequisito=" + PreRequisitos.text;
-        Debug.Log (CgetURL);
+
         WWW getResultado = new WWW (CgetURL);
         yield return getResultado;
-        Debug.Log (getResultado.text);
+
+        if (getResultado.text == "ok")
+        {
+            SceneManager.LoadScene("Lobby");
+        }
     }
 }
