@@ -10,7 +10,7 @@ public class ControladorAsignaturas : MonoBehaviour
     [SerializeField]
     private GameObject ComponenteAsignatura;
     [SerializeField]
-    private GameObject LugarListado;
+    private Transform LugarListado;
 
     public void Awake()
     {
@@ -24,17 +24,15 @@ public class ControladorAsignaturas : MonoBehaviour
         yield return getAsignatura;
         string JsonAsignatura = getAsignatura.text;
         ListaAsignatura lista = JsonUtility.FromJson<ListaAsignatura>(JsonAsignatura);
-        //lista.Listar();
-
-        /*ComponenteAsignatura.transform.DetachChildren();
-        LugarListado.transform.SetParent(ComponenteAsignatura.transform);*/
-
+        lista.Listar();
 
         for (int i = 0; i < 5; i++)
         {
+            
             GameObject nuevaAsignatura = Instantiate(ComponenteAsignatura) as GameObject;
+            nuevaAsignatura.transform.SetParent(LugarListado.transform);
+            nuevaAsignatura.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 200);
         }
-
     }
 
 }
