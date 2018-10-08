@@ -14,7 +14,8 @@ public class Ver_Ramos : MonoBehaviour
         StartCoroutine("consulta");
     }
 
-    private IEnumerator consulta()
+
+    public IEnumerator consulta()
     {
         Id = ControladorLogin.Id;
         UrlConsulta = UrlConsulta + "?id=" + Id;
@@ -23,6 +24,7 @@ public class Ver_Ramos : MonoBehaviour
         string Datos = ResultadoConsulta.text;
         ListaRamos lista = JsonUtility.FromJson<ListaRamos>(Datos);
         CuadroRamos.text = lista.Listar();
+        
     }
 }
 
