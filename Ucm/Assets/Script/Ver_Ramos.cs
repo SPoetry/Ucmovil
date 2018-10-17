@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Ver_Ramos : MonoBehaviour
 {
 
-    public string UrlConsulta = "http://localhost:8000/ramos_impartidos?id=2";
+    public string UrlRamos = "http://localhost:8000/ramos_impartidos";
     public string Id;
     public Text CuadroRamos;
 
@@ -18,8 +18,10 @@ public class Ver_Ramos : MonoBehaviour
     public IEnumerator consulta()
     {
         Id = ControladorLogin.Id;
-        UrlConsulta = UrlConsulta + "?id=" + Id;
-        WWW ResultadoConsulta = new WWW(UrlConsulta);
+        Debug.Log(Id);
+        UrlRamos = UrlRamos + "?id=" + Id;
+        WWW ResultadoConsulta = new WWW(UrlRamos);
+        Debug.Log(UrlRamos);
         yield return ResultadoConsulta;
         string Datos = ResultadoConsulta.text;
         ListaRamos lista = JsonUtility.FromJson<ListaRamos>(Datos);

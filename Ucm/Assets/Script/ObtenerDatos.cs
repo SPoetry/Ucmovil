@@ -48,13 +48,13 @@ public class ObtenerDatos : MonoBehaviour {
 
         if(values[0] != null)
         {
-            Dato1.text = values[1];
-            Dato2.text = values[3];
+            Dato1.text = values[0];
+            Dato2.text = values[1];
             Dato3.text = values[2];
 
             if (Tipo == "directores_escuelas" || Tipo == "profesores")
             {
-                Dato4.text = values[0];
+                Dato4.text = values[4];
             }
             if (Tipo == "alumnos")
             {

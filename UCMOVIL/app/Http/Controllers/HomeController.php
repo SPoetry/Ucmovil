@@ -36,11 +36,11 @@ class HomeController extends Controller
         $usuario = DB::table($tipo)->where('id', $id)->get();
         foreach($usuario as $user){
             echo $user->nombre. ",";
+            echo $user->apodo. ",";
             echo $user->telefono. ",";
+            echo $user->ano_ingreso. ",";
             echo $user->ano_nacimiento. ",";
             echo $user->direccion. ",";
-            echo $user->ano_ingreso. ",";
-            echo $user->apodo. ",";
         }
         return;
     }
@@ -51,8 +51,8 @@ class HomeController extends Controller
         $usuario = DB::table($tipo)->where('id', $id)->get();
         foreach($usuario as $user){
             echo $user->nombre. ",";
-            echo $user->telefono. ",";
             echo $user->apodo. ",";
+            echo $user->telefono. ",";
         }
         return;
     }
@@ -62,10 +62,10 @@ class HomeController extends Controller
         $tipo = $request->tipo;
         $usuario = DB::table($tipo)->where('id', $id)->get();
         foreach($usuario as $user){
-            echo $user->especialidad. ",";
             echo $user->nombre. ",";
-            echo $user->telefono. ",";
             echo $user->apodo. ",";
+            echo $user->telefono. ",";
+            echo $user->especialidad. ",";
         }
         return;
     }
@@ -75,10 +75,10 @@ class HomeController extends Controller
         $tipo = $request->tipo;
         $usuario = DB::table($tipo)->where('id', $id)->get();
         foreach($usuario as $user){
-            echo $user->especialidad. ",";
             echo $user->nombre. ",";
-            echo $user->telefono. ",";
             echo $user->apodo. ",";
+            echo $user->telefono. ",";
+            echo $user->especialidad. ",";
         }
         return;
     }
