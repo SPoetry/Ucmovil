@@ -29,36 +29,76 @@ public class ControladorLogin : MonoBehaviour {
         Debug.Log(getURL);
         yield return getResultado;
         getURL = "http://localhost:8000/log";
-        Debug.Log(getResultado.text);
-        string Datos = getResultado.text;
-        string[] values = Datos.Split(","[0]);
 
-        if (values[0] != "no")
+        Debug.Log(getResultado.text);
+
+        string UsuariosJson = getResultado.text;
+        Debug.Log(UsuariosJson);
+
+        if (UsuariosJson != "no")
         {
-            Id = values[0];
-            if (values[1] == "alumno")
+            ListaUsuario listaUsuario = JsonUtility.FromJson<ListaUsuario>(UsuariosJson);
+            listaUsuario.Listar();
+
+            if (Tipo == "alumno")
             {
                 Tipo = "alumnos";
                 SceneManager.LoadScene("Lobby");
             }
-            else if (values[1] == "secretaria")
+            else if (Tipo == "secretaria")
             {
                 Tipo = "secretarias";
                 SceneManager.LoadScene("Lobby");
             }
-            else if (values[1] == "profesor")
+            else if (Tipo == "profesor")
             {
                 Tipo = "profesores";
                 SceneManager.LoadScene("Lobby");
             }
-            else if (values[1] == "director_carrera")
+            else if (Tipo == "director_carrera")
             {
                 Tipo = "directores_carreras";
                 SceneManager.LoadScene("Lobby");
             }
-        }else
+        }
+        else
         {
             ErrorLogin.SetActive(true);
         }
+    }
+}
+
+
+[System.Serializable]
+public class Usuario
+{
+    public string id;
+    public string email;
+    public string tipo;
+    public string created_at;
+    public string updated_at;
+
+    public override string ToString()
+    {
+        return string.Format("Id: {1}   Email: {2}   tipo:  {3}", id, email, tipo);
+    }
+}
+
+public class ListaUsuario
+{
+    public List<Usuario> usuarios;
+
+    public string Listar()
+    {
+
+        foreach (Usuario CadaUsuario in usuarios)
+        {
+            ControladorLogin.Id = CadaUsuario.id;
+            ControladorLogin.Tipo = CadaUsuario.tipo;
+            Debug.Log(ControladorLogin.Id);
+            return "";
+        }
+
+        return "";
     }
 }

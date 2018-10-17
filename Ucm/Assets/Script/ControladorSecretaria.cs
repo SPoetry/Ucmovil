@@ -35,10 +35,6 @@ public class ControladorSecretaria : MonoBehaviour {
 	public void CambioEscena(string escena) {
 		SceneManager.LoadScene(escena);
 	}
-
-	public void Salir() {
-		Application.Quit();
-	}
 }
 
 [System.Serializable]

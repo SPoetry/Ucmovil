@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\Session;
+use App\User;
 
 class LoginController extends Controller
 {
@@ -15,10 +16,10 @@ class LoginController extends Controller
     		]);
 
     	if(Auth::attempt($credentials, true)){
-            echo(Auth()->user()->id);
-            echo(",");
-            echo(Auth()->user()->tipo);
-            return;
+
+            $Usuarios["usuarios"] =   User::all()->where('email', Auth()->user()->email);
+            //conexion a la base de datos y ordenados
+            return response()->json($Usuarios);//entrega datos en forma de objeto json
     	}
     	return "no";
     }
