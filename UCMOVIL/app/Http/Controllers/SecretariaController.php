@@ -41,8 +41,19 @@ class SecretariaController extends Controller
 
   }
 
-  public function editar_noticia()
+    public function editar_noticia(Request $request)
   {
-    //
+    $id_noticia = $request ->id_noticia;
+    $titulo= $request ->titulo;
+    $texto= $request ->texto;
+    $estado= $request ->estado;
+    $propietario= $request ->propietario;
+    DB::table("noticias")->where('id_noticia',$id_noticia)->update([
+      'titulo'=>$titulo,
+      'texto'=>$texto,
+      'estado'=>$estado,
+      'propietario'=>$propietario
+    ]);
+    return "ok";
   }
 }

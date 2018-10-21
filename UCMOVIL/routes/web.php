@@ -32,4 +32,4 @@ Route::post('/d_escuela/borrar_asignatura', 'DirectorCarreraController@borrar_as
 
 Route::get('/secretaria/mostrar_noticia','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
 Route::get('/secretaria/agregar_noticia','SecretariaController@agregar_noticia')->name('agregar_noticia');
-Route::post('/secretaria/editar_noticia','SecretariaController@editar_noticia')->name('editar_noticia');
+Route::get('/secretaria/editar_noticia','SecretariaController@editar_noticia')->name('editar_noticia');
