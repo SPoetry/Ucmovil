@@ -30,6 +30,7 @@ public class ControladorAsignaturas : MonoBehaviour
         {
             
             GameObject nuevaAsignatura = Instantiate(ComponenteAsignatura) as GameObject;
+            //AGREGAR MOVERSE EN EL VECTOR X, Y;
             nuevaAsignatura.transform.SetParent(LugarListado.transform);
             nuevaAsignatura.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 200);
         }

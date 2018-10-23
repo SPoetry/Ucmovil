@@ -30,7 +30,8 @@ class NoticiaSeeder extends Seeder
         'titulo'=>'Noticia1',
         'texto' => 'Esta noticia 2',
         'estado' => 'Aprobada',
-        'propietario' => 'Profesor Y'
+        'propietario' => 'Profesor Y',
+        'updated_at' => '2018-10-22 14:57:29',
       ]);
       DB::table('noticias')->insert([
         'id_noticia' => '3',
@@ -44,7 +45,8 @@ class NoticiaSeeder extends Seeder
         'titulo'=>'Noticia1',
         'texto' => 'Esta noticia 5',
         'estado' => 'Aprobada',
-        'propietario' => 'Profesor Y'
+        'propietario' => 'Profesor Y',
+        'updated_at' => '2018-10-22 14:57:29',
       ]);
       DB::table('noticias')->insert([
         'id_noticia' => '6',

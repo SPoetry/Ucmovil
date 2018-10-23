@@ -46,11 +46,11 @@ public class Noticia
 	public string estado;
 	public string propietario;
 	public object created_at; 
-	public object updated_at;
+	public string updated_at;
 
 	public override string ToString ()
 	{
-		return string.Format ("Titulo: {1}   Texto:  {2}   Propietario:  {4}   Fecha:  {6}", titulo, texto, propietario,updated_at);
+		return string.Format ("Titulo: {1}   Texto:  {2}   Propietario:  {4}   Fecha:  {7}", titulo, texto, propietario,updated_at);
 	}
 }
 
@@ -64,7 +64,7 @@ public class ListaNoticia
 
 		foreach (Noticia listaN in noticias)
 		{
-			texto = texto+"\n Titulo : "+listaN.titulo+"\n Texto: "+listaN.texto+"  \n Propietario:"+listaN.propietario+" \n   Fecha: "+listaN.updated_at+" " ;
+			texto = texto+"\n Titulo : "+listaN.titulo+"\n Texto: "+listaN.texto+"  \n Propietario:"+listaN.propietario+" \n   Fecha: "+listaN.updated_at+"\n" ;
 		}
 
 		return texto;

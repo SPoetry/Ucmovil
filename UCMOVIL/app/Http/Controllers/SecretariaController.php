@@ -41,7 +41,7 @@ class SecretariaController extends Controller
 
   }
 
-    public function editar_noticia(Request $request)
+  public function editar_noticia(Request $request)
   {
     $id_noticia = $request ->id_noticia;
     $titulo= $request ->titulo;
