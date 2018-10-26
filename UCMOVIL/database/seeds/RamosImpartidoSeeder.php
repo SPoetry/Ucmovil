@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RamosImpartidos extends Seeder
+class RamosImpartidoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
