@@ -24,6 +24,10 @@ Route::get('/cambioA', 'HomeController@cambioA')->name('cambioA');
 Route::get('/cambioE', 'HomeController@cambioE')->name('cambioE');
 
 
+
+Route::get('/RamosA', 'AlumnoController@RamosA')->name('RamosA');
+
+
 Route::get('/d_escuela/mostrar_asignatura', 'DirectorCarreraController@mostrar_asignatura')->name('mostrar_asignatura');
 Route::get('/d_escuela/anadir_asignatura', 'DirectorCarreraController@anadir_asignatura')->name('anadir_asignatura');
 Route::post('/d_escuela/modificar_asignatura', 'DirectorCarreraController@modificar_asignatura')->name('modificar_asignatura');

@@ -14,7 +14,6 @@ public class Ver_Ramos : MonoBehaviour
         StartCoroutine("consulta");
     }
 
-
     public IEnumerator consulta()
     {
         Id = ControladorLogin.Id;
