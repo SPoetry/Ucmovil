@@ -4,13 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RamosActuale extends Model
+class RamosImpartido extends Model
 {
   protected $fillable = [
-      'id_asignatura', 'id_alumno',
+      'id_asignatura', 'id_profesor',
   ];
-  public function alumno(){
-    return $this->belongsTo('App\Alumno');
+  public function profesore(){
+    return $this->belongsTo('App\Profesor');
   }
   public function asignatura(){
     return $this->belongsTo('App\Asignatura');
