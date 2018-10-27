@@ -12,7 +12,7 @@ class RamosActuale extends Model
   public function alumno(){
     return $this->belongsTo('App\Alumno');
   }
-  public function asignatura(){
-    return $this->belongsTo('App\Asignatura');
+  public function versionramo(){
+    return $this->belongsTo('App\VersionRamo');
   }
 }
