@@ -50,6 +50,8 @@ class DirectorCarreraController extends Controller
     $asignatura->nombre=$request->nombre;
     $asignatura->creditos=$request->creditos;
     $asignatura->prerequisito=$request->prerequisito;
+    $asignatura->posicion_x=$request->posicion_x;
+    $asignatura->posicion_y=$request->posicion_y;
     $asignatura->save(); //se guarda en la base de datos todos los valores de la variable
     return "ok";
   }
