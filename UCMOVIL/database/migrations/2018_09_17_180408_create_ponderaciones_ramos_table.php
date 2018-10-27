@@ -14,12 +14,12 @@ class CreatePonderacionesRamosTable extends Migration
     public function up()
     {
         Schema::create('ponderaciones_ramos', function (Blueprint $table) {
-          $table->integer('id_ramo')->unsigned();
+          $table->integer('id_ramoimpartido')->unsigned();
           $table->integer('N_nota');
           $table->float('P_nota');
           $table->timestamps();
-          $table->primary(['id_ramo','N_nota']);
-          $table->foreign('id_ramo')->references('id_ramo')->on('version_ramos');
+          $table->primary('id_ramoimpartido');
+          $table->foreign('id_ramoimpartido')->references('id_ramoimpartido')->on('ramos_impartidos');
         });
     }
 
