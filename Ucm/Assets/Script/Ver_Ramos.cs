@@ -8,7 +8,11 @@ public class Ver_Ramos : MonoBehaviour
 
     public string UrlRamos = "http://localhost:8000/ramos_impartidos";
     public string Id;
-    public Text CuadroRamos;
+
+    [SerializeField]
+    private GameObject PanelCurso;
+    [SerializeField]
+    private Transform Contenedor;
 
     public void Awake(){
         StartCoroutine("consulta");
@@ -18,13 +22,20 @@ public class Ver_Ramos : MonoBehaviour
     {
         Id = ControladorLogin.Id;
         Debug.Log(Id);
-        UrlRamos = UrlRamos + "?id=" + Id;
+        UrlRamos = UrlRamos + "?id=2";
         WWW ResultadoConsulta = new WWW(UrlRamos);
         Debug.Log(UrlRamos);
         yield return ResultadoConsulta;
         string Datos = ResultadoConsulta.text;
         ListaRamos lista = JsonUtility.FromJson<ListaRamos>(Datos);
-        CuadroRamos.text = lista.Listar();
+
+        foreach (Impartido ramo in lista.Enumerar()) {
+             GameObject CuadroRamo = Instantiate(PanelCurso) as GameObject;
+             CuadroRamo.transform.SetParent(Contenedor.transform);
+            CuadroRamo.GetComponent<RectTransform>().localScale = new Vector2(1.0F, 1.0F);
+            Debug.Log(ramo.ToString());
+        }
+
         
     }
 }
@@ -51,7 +62,12 @@ public class Impartido
 public class ListaRamos
 {
     public List<Impartido> impartidos;
-    
+
+    public List<Impartido> Enumerar() {
+        return impartidos;
+    }
+
+
     public string Listar()
     {
         string texto ="";
