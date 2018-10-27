@@ -12,6 +12,16 @@ public class ControladorAsignaturas : MonoBehaviour
     [SerializeField]
     private Transform LugarListado;
 
+    [SerializeField]
+    private GameObject NombreAsignatura;
+    [SerializeField]
+    private GameObject CreditoAsignatura;
+    [SerializeField]
+    private GameObject CodigoAsignatura;
+    //private GameObject EditarAsignatura;
+    //private GameObject BorrarAsignatura;
+
+
     public void Awake()
     {
         StartCoroutine("MostrarAsignaturas");
@@ -24,15 +34,23 @@ public class ControladorAsignaturas : MonoBehaviour
         yield return getAsignatura;
         string JsonAsignatura = getAsignatura.text;
         ListaAsignatura lista = JsonUtility.FromJson<ListaAsignatura>(JsonAsignatura);
-        lista.Listar();
+        //lista.Listar();
 
-        for (int i = 0; i < 5; i++)
+        float valor;
+        valor = 1.0F;
+
+        foreach (Asignatura asign in lista.ObtenerLista())
         {
-            
+            NombreAsignatura.GetComponent<Text>().text = asign.nombre;
+            CreditoAsignatura.GetComponent<Text>().text = asign.creditos.ToString();
+            CodigoAsignatura.GetComponent<Text>().text = asign.id_asignatura;
+
             GameObject nuevaAsignatura = Instantiate(ComponenteAsignatura) as GameObject;
-            //AGREGAR MOVERSE EN EL VECTOR X, Y;
             nuevaAsignatura.transform.SetParent(LugarListado.transform);
-            nuevaAsignatura.GetComponent<RectTransform>().sizeDelta = new Vector2(400, 200);
+            nuevaAsignatura.GetComponent<RectTransform>().localScale = new Vector2(valor, valor);
+
+            //GAMEOBJECT.GetComponent<ClassName>().VariableName = 4;
+            nuevaAsignatura.name    = asign.nombre;
         }
     }
 
@@ -47,6 +65,8 @@ public class Asignatura
     public object created_at;
     public object updated_at;
     public string prerequisito;
+    public string posicion_x;
+    public string posicion_y;
 
 
     public override string ToString()
@@ -60,6 +80,11 @@ public class Asignatura
 public class ListaAsignatura
 {
     public List<Asignatura> asignatura;
+
+    public List<Asignatura> ObtenerLista()
+    {
+        return asignatura;
+    }
 
     public void Listar()
     {

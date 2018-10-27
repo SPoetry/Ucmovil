@@ -328,8 +328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getURL: http://127.0.0.1:8000/d_escuela/mostrar_asignatura
-  ComponenteAsignatura: {fileID: 1450402902379392, guid: 3cca98ce945752e4db225c9674dbc334,
+  ComponenteAsignatura: {fileID: 1773754944422942, guid: 3cca98ce945752e4db225c9674dbc334,
     type: 2}
+  LugarListado: {fileID: 0}
 --- !u!114 &114344593538471814
 MonoBehaviour:
   m_ObjectHideFlags: 1
