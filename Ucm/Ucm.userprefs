@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Ucm.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\AsignaturasActuales.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Ver_Ramos.cs">
     <Files>
-      <File FileName="Assets\Script\CambioEscena.cs" Line="19" Column="1" />
+      <File FileName="Assets\Script\CambioEscena.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\AgregarNoticia.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\AsignaturasActuales.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Ver_Ramos.cs" Line="12" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
