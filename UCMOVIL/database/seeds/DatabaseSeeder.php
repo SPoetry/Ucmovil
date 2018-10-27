@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
        $this->call('DirectoresCarreraSeeder');
        $this->call('AsignaturaSeeder');
        $this->call('HorarioSeeder');
-       $this->call('RamosImpartidoSeeder');
+       $this->call('VersionRamoSeeder');
        $this->call('RamosActualeSeeder');
        $this->call('MallaSeeder');
        $this->call('NoticiaSeeder');

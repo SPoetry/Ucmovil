@@ -12,7 +12,7 @@ class RamosActualeSeeder extends Seeder
     public function run()
     {
     	DB::table('ramos_actuales')->insert([
-	        'id_asignatura' => 'ICI-114',
+	        'id_ramo' => '1',
 	        'id_alumno' => '1',
 	        'nota' => '4.1',
 	        'n_nota' => '4',

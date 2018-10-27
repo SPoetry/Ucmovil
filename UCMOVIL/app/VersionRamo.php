@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RamosImpartido extends Model
+class VersionRamo extends Model
 {
   protected $fillable = [
-      'id_asignatura', 'id_profesor',
+      'id_asignatura', 'id_profesor', 'year', 'semestre',
   ];
   public function profesore(){
     return $this->belongsTo('App\Profesore');
@@ -15,4 +15,8 @@ class RamosImpartido extends Model
   public function asignatura(){
     return $this->belongsTo('App\Asignatura');
   }
+  public function ramosactuale(){
+    return $this->hasMany(RamosActuale::class, 'id_ramo', 'id_ramo');
+  }
+
 }
