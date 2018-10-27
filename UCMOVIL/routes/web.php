@@ -26,6 +26,9 @@ Route::get('/cambioE', 'HomeController@cambioE')->name('cambioE');
 
 
 Route::get('/RamosA', 'AlumnoController@RamosA')->name('RamosA');
+Route::get('/NameA', 'AsignaturaController@NameA')->name('NameA');
+Route::get('/ProfesorA', 'AsignaturaController@ProfesorA')->name('ProfesorA');
+Route::get('/HorarioA', 'AsignaturaController@HorarioA')->name('HorarioA');
 
 
 Route::get('/d_escuela/mostrar_asignatura', 'DirectorCarreraController@mostrar_asignatura')->name('mostrar_asignatura');

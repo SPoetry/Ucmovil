@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RamosActuales extends Seeder
+class RamosActualeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,11 +12,11 @@ class RamosActuales extends Seeder
     public function run()
     {
     	DB::table('ramos_actuales')->insert([
-	        'id_asignatura' => 'ICI-427',
+	        'id_ramo' => '1',
 	        'id_alumno' => '1',
-	        'nota' => '4',
+	        'nota' => '4.1',
 	        'n_nota' => '4',
-	        'created_at' => '2018-10-24'
+	        'created_at' => '2018-10-24 14:57:29'
 	    ]);
     }
 }
