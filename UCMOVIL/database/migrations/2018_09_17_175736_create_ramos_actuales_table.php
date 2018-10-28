@@ -17,7 +17,7 @@ class CreateRamosActualesTable extends Migration
             $table->integer('id_ramo')->unsigned();
             $table->integer('id_alumno')->unsigned();
             $table->float('nota');
-            $table->integer('n_nota')->unique();
+            $table->integer('n_nota');
             $table->timestamps();
             $table->primary(['id_ramo','id_alumno', 'n_nota']);
             $table->foreign('id_ramo')->references('id_ramo')->on('version_ramos');
