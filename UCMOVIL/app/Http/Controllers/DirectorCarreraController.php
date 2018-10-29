@@ -45,7 +45,7 @@ class DirectorCarreraController extends Controller
 
   public function anadir_asignatura(Request $request)
   {
-    $asignatura = new Asignatura;   //se crea una estructura para ingresar en Asignatura
+    $asignatura = new Asignatura;   //se crea una estructura para ingresar en Hotels
     $asignatura->id_asignatura=$request->id_asignatura; //se ingresan los datos de los request
     $asignatura->nombre=$request->nombre;
     $asignatura->creditos=$request->creditos;
@@ -56,31 +56,13 @@ class DirectorCarreraController extends Controller
     return "ok";
   }
 
-  public function modificar_asignatura(Request $request)
+  public function modificar_asignatura()
   {
-    $id_asignatura=$request->id_asignatura; //se ingresan los datos de los request
-    $nombre=$request->nombre;
-    $creditos=$request->creditos;
-    $prerequisito=$request->prerequisito;
-    if ($prerequisito == '' ){
-      $prerequisito = null;
-    }
-    $posicion_x=$request->posicion_x;
-    $posicion_y=$request->posicion_y;
-    DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->update([
-          'nombre'=>$nombre,
-          'creditos'=>$creditos,
-          'prerequisito'=>$prerequisito,
-          'posicion_x'=>$posicion_x,
-          'posicion_y'=>$posicion_y
-        ]);
-    return "ok";
+
   }
 
-  public function borrar_asignatura(Request $request)
+  public function borrar_asignatura()
   {
-    $id_asignatura=$request->id_asignatura; //se ingresan los datos de los request
-    DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->delete();
-    return "ok";
+
   }
 }

@@ -7,55 +7,20 @@ using UnityEngine.SceneManagement;
 public class AsignaturaEditDelet : MonoBehaviour {
 
     [SerializeField]
-    private GameObject TextoIdObjeto;
+    private GameObject NombreAsignatura;
     [SerializeField]
-    private GameObject TextoNombreObjeto;
+    private GameObject CreditoAsignatura;
     [SerializeField]
-    private GameObject TextoCreditosObjeto;
-    [SerializeField]
-    private GameObject TextoPreRequisitoObjeto;
-    [SerializeField]
-    private GameObject TextoPosicionXObjeto;
-    [SerializeField]
-    private GameObject TextoPosicionYObjeto;
+    private GameObject CodigoAsignatura;
 
-
-    public static Text Id;
-    public static Text Nombre;
-    public static Text Creditos;
-    public static Text PreRequisito;
-    public static Text PosicionX;
-    public static Text PosicionY;
-
-    public void CambioEditar()
+    public void Editar(string escena)
     {
-        Id = TextoIdObjeto.GetComponent<Text>();
-        Nombre = TextoNombreObjeto.GetComponent<Text>();
-        Creditos = TextoCreditosObjeto.GetComponent<Text>();
-        PreRequisito = TextoPreRequisitoObjeto.GetComponent<Text>();
-        PosicionX = TextoPosicionXObjeto.GetComponent<Text>();
-        PosicionY = TextoPosicionYObjeto.GetComponent<Text>();
-        SceneManager.LoadScene("AsignaturaEditar");
+        SceneManager.LoadScene(escena);
+        StartCoroutine("EnviosEditar");
     }
 
-    public void EnvioEliminar()
+    /*private IEnumerator EnviosEditar()
     {
-        StartCoroutine("EliminarAsignatura");
-    }
-
-    public IEnumerator EliminarAsignatura()
-    {
-        Id = TextoIdObjeto.GetComponent<Text>();
-        string DelGetURL = "http://localhost:8000/d_escuela/borrar_asignatura";
-
-        DelGetURL = DelGetURL + "?id_asignatura=" + Id.text;
-        WWW getResultado = new WWW(DelGetURL);
-        yield return getResultado;
-
-        if (getResultado.text == "ok")
-        {
-            SceneManager.LoadScene("Asignatura");
-        }
-    }
-
+        GameObject.f
+    } */
 }

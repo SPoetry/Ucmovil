@@ -13,10 +13,8 @@ public class IngresoAsignaturas : MonoBehaviour {
     public InputField Nombre;
     public InputField Creditos;
     public InputField PreRequisitos;
-    public InputField PosicionX;
-    public InputField PosicionY;
-
-
+    
+    
     public void EnvioDatos()
     {
         StartCoroutine ("GuardarAsignatura");
@@ -26,14 +24,13 @@ public class IngresoAsignaturas : MonoBehaviour {
     {
         CgetURL = CgetURL + "?id_asignatura=" + IdAsignatura.text;
         CgetURL = CgetURL + "&nombre=" + Nombre.text + "&creditos=" + Creditos.text + "&prerequisito=" + PreRequisitos.text;
-        CgetURL = CgetURL + "&posicion_x=" + PosicionX.text + "&posicion_y=" + PosicionY.text;
 
         WWW getResultado = new WWW (CgetURL);
         yield return getResultado;
 
         if (getResultado.text == "ok")
         {
-            SceneManager.LoadScene("Asignatura");
+            SceneManager.LoadScene("Lobby");
         }
     }
 }

@@ -82,7 +82,6 @@
   <ItemGroup>
     <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Script\AgregarNoticia.cs" />
-    <Compile Include="Assets\Script\AsignaturaEditDelet.cs" />
     <Compile Include="Assets\Script\AsignaturasActuales.cs" />
     <Compile Include="Assets\Script\Bienvenido.cs" />
     <Compile Include="Assets\Script\Cambio.cs" />
@@ -94,7 +93,6 @@
     <Compile Include="Assets\Script\ControladorLogin.cs" />
     <Compile Include="Assets\Script\ControladorSecretaria.cs" />
     <Compile Include="Assets\Script\IngresoAsignaturas.cs" />
-    <Compile Include="Assets\Script\ObtencionEditar.cs" />
     <Compile Include="Assets\Script\ObtenerDatos.cs" />
     <Compile Include="Assets\Script\RamosActuales.cs" />
     <Compile Include="Assets\Script\UpdateNoticia.cs" />
