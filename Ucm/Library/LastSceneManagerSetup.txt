@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Escenas/VerRamos.unity
+=======
+- path: Assets/Escenas/VerNotas.unity
+>>>>>>> 624acaddaffc03ae12d8c66779370d2595a7fae8
   isLoaded: 1
   isActive: 1

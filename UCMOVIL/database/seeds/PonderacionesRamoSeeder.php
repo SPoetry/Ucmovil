@@ -11,6 +11,7 @@ class PonderacionesRamoSeeder extends Seeder
      */
     public function run()
     {
+
       for ($i=1; $i <= 10; $i++) {
         DB::table('ponderaciones_ramos')->insert([
             'id_ramo' => '1',
@@ -26,6 +27,12 @@ class PonderacionesRamoSeeder extends Seeder
             'P_nota' => '0'
           ]);
       }
+
+        DB::table('ponderaciones_ramos')->insert([
+	        'id_ramo' => '1',
+	        'N_nota' => '1',
+	        'P_nota' => '0.20'
+	    ]);
 
     }
 }
