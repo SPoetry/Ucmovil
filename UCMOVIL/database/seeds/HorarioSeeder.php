@@ -18,7 +18,7 @@ class HorarioSeeder extends Seeder
 	        'sala' => '24',
 	    ]);
 	    DB::table('horarios')->insert([
-	        'id_asignatura' => 'ICI-114',
+	        'id_asignatura' => 'ICI-115',
 	        'modulo' => '2',
 	        'dia' => 'lunes',
 	        'sala' => '24',
