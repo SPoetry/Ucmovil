@@ -8,6 +8,7 @@ public class Ver_Ramos : MonoBehaviour
 
     public string UrlRamos = "http://localhost:8000/ramos_impartidos";
     public string Id;
+    public Text[] Componentes;
 
     [SerializeField]
     private GameObject PanelCurso;
@@ -30,10 +31,16 @@ public class Ver_Ramos : MonoBehaviour
         ListaRamos lista = JsonUtility.FromJson<ListaRamos>(Datos);
 
         foreach (Impartido ramo in lista.Enumerar()) {
-             GameObject CuadroRamo = Instantiate(PanelCurso) as GameObject;
-             CuadroRamo.transform.SetParent(Contenedor.transform);
+            GameObject CuadroRamo = Instantiate(PanelCurso) as GameObject;
+            CuadroRamo.transform.SetParent(Contenedor.transform);
+
+            Componentes = CuadroRamo.GetComponentsInChildren<Text>();
+
+            Componentes[0].text = ramo.id_ramo.ToString();
+            Componentes[1].text=ramo.id_asignatura;
+ 
+
             CuadroRamo.GetComponent<RectTransform>().localScale = new Vector2(1.0F, 1.0F);
-            Debug.Log(ramo.ToString());
         }
 
         

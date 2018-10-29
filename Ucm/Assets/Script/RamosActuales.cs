@@ -10,14 +10,14 @@ public class RamosActuales : MonoBehaviour {
     public GameObject AsignaturaPrefab;
     public Transform Ubicacion;
     public Text[] componentes;
-    string Id;
+    string Ids;
 
+    string codigo;
     string nombre;
     string profesor;
     string horario;
 
     float x = 497, y = 910.59f;
-
 
     int Fecha_actualA;
     int Fecha_actualM;
@@ -25,20 +25,21 @@ public class RamosActuales : MonoBehaviour {
     int Semestre1m = 8;
 
     void Start () {
-        Id = "1";
+        Ids = ControladorLogin.Id;
         Fecha_actualA = DateTime.Now.Year;
         Fecha_actualM = DateTime.Now.Month;
 
         if (Fecha_actualM > Semestre1m && Fecha_actualM >= Semestre2m)
         {
-            UrlRamosActuales = UrlRamosActuales + "?id=" + Id + "&anio=" + Fecha_actualA + "-08-01";
+            UrlRamosActuales = UrlRamosActuales + "?id=" + Ids + "&anio=" + Fecha_actualA + "-08-01";
         }
         else
         {
-            UrlRamosActuales = UrlRamosActuales + "?id=" + Id + "&anio=" + Fecha_actualA + "-03-01";
+            UrlRamosActuales = UrlRamosActuales + "?id=" + Ids + "&anio=" + Fecha_actualA + "-03-01";
         }
         StartCoroutine("RamosA");
     }
+
     public IEnumerator RamosA()
     {
         WWW ResultadoRamos = new WWW(UrlRamosActuales);
@@ -52,24 +53,28 @@ public class RamosActuales : MonoBehaviour {
         {
             GameObject nuevaAsignatura = Instantiate(AsignaturaPrefab, new Vector3(0,0), Quaternion.identity, Ubicacion) as GameObject;
             nuevaAsignatura.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
-            y -= 994;
+            y -= 480;
             componentes = nuevaAsignatura.GetComponentsInChildren<Text>();
             foreach (Text a in componentes)
             {
-                if (a.name == "Codigo") a.text += ramo.id_asignatura;
+                if (a.name == "Codigo")
+                {
+                    yield return StartCoroutine(Casig(ramo.id_ramo));
+                    a.text += codigo;
+                }
                 if (a.name == "Nombre")
                 {
-                    yield return StartCoroutine(Nasig(ramo.id_asignatura));
+                    yield return StartCoroutine(Nasig(ramo.id_ramo));
                     a.text += nombre;
                 }
                 if(a.name == "Profesor")
                 {
-                    yield return StartCoroutine(Nprofe(ramo.id_asignatura));
+                    yield return StartCoroutine(Nprofe(ramo.id_ramo));
                     a.text += profesor;
                 }
                 if(a.name == "Horario")
                 {
-                    yield return StartCoroutine(Horario(ramo.id_asignatura));
+                    yield return StartCoroutine(Horario(ramo.id_ramo));
                     a.text += horario;
                     Debug.Log(a.text);
                 }
@@ -77,13 +82,25 @@ public class RamosActuales : MonoBehaviour {
         }
         
     }
+
+    public IEnumerator Casig(string id)
+    {
+        string consultas = "http://localhost:8000/CodigoA?id=" + id;
+        WWW ResultadoRamos = new WWW(consultas);
+        yield return ResultadoRamos;
+        Debug.Log(ResultadoRamos.text);
+        codigo = ResultadoRamos.text;
+    }
+
     public IEnumerator Nasig(string name)
     {
         string consultas = "http://localhost:8000/NameA?id=" + name;
         WWW ResultadoRamos = new WWW(consultas);
         yield return ResultadoRamos;
+        Debug.Log(ResultadoRamos.text);
         nombre = ResultadoRamos.text;
     }
+
     public IEnumerator Nprofe(string id)
     {
         string nprofe = "http://localhost:8000/ProfesorA?id=" + id;
@@ -92,6 +109,7 @@ public class RamosActuales : MonoBehaviour {
         yield return ResultadoRamos;
         profesor = ResultadoRamos.text;
     }
+
     public IEnumerator Horario(string id)
     {
         string ConsultaHorario = "http://localhost:8000/HorarioA?id=" + id;
@@ -109,7 +127,7 @@ public class RamosActuales : MonoBehaviour {
 [System.Serializable]
 public class Ramosactuale
 {
-    public string id_asignatura;
+    public string id_ramo;
     public int id_alumno;
     public float nota;
     public int n_nota;
@@ -118,7 +136,7 @@ public class Ramosactuale
 
     public override string ToString()
     {
-        return string.Format("el codigo es: {0} su nombre: {1}", id_asignatura, id_alumno);
+        return string.Format("el codigo es: {0} su nombre: {1}", id_ramo, id_alumno);
     }
 }
 

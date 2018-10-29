@@ -25,5 +25,26 @@ class VersionRamoSeeder extends Seeder
           'year' => '2018',
           'semestre' => '2'
       	]);
+        DB::table('version_ramos')->insert([
+          'id_ramo' => '3',
+        	'id_asignatura' => 'ICI-116',
+        	'id_profesor' => '2',
+          'year' => '2018',
+          'semestre' => '2'
+      	]);
+        DB::table('version_ramos')->insert([
+          'id_ramo' => '4',
+        	'id_asignatura' => 'ICI-117',
+        	'id_profesor' => '2',
+          'year' => '2018',
+          'semestre' => '2'
+      	]);
+        DB::table('version_ramos')->insert([
+          'id_ramo' => '5',
+        	'id_asignatura' => 'ICI-118',
+        	'id_profesor' => '2',
+          'year' => '2018',
+          'semestre' => '2'
+      	]);
     }
 }

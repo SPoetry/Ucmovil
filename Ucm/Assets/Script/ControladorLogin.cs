@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class ControladorLogin : MonoBehaviour {
 
-    public string getURL = "http://localhost:8000/log";
+    public static string InicioUrl = "http://localhost:8000/";
+    public string getURL = InicioUrl + "log";
 
     public InputField Correo;
     public InputField Contrasena;
