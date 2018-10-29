@@ -51,6 +51,7 @@ public class AsignaturaEditDelet : MonoBehaviour {
         DelGetURL = DelGetURL + "?id_asignatura=" + Id.text;
         WWW getResultado = new WWW(DelGetURL);
         yield return getResultado;
+        Debug.Log(getResultado.text);
 
         if (getResultado.text == "ok")
         {
