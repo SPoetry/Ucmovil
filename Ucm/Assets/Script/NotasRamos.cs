@@ -19,7 +19,8 @@ public class NotasRamos : MonoBehaviour {
     int id_alumno;
     int Nota;
 
-    int moverse = 0;
+    int mover = 0;
+    int mover2 = 0;
 
     float x = 0, y = 840;
 
@@ -43,8 +44,8 @@ public class NotasRamos : MonoBehaviour {
         {
             GameObject nuevaAsignatura = Instantiate(NombrePrefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
             nuevaAsignatura.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
-            moverse -= 132;
-            y += moverse;
+            mover = 130;
+            y -= mover;
             ComponentesNombre = nuevaAsignatura.GetComponentsInChildren<Text>();
             id_alumno = ramo.id_alumno;
 
@@ -52,10 +53,10 @@ public class NotasRamos : MonoBehaviour {
             {
                 if (componente.name == "Nombre")
                 {
+                    
                     yield return StartCoroutine(CodigoA(ramo.id_ramo));
                     componente.text += Nombre;
                     yield return StartCoroutine(NotasA(ramo.id_ramo));
-                    
                     Debug.Log("Paso");
                 }
             }
@@ -73,19 +74,23 @@ public class NotasRamos : MonoBehaviour {
 
     public IEnumerator NotasA(string id)
     {
+        i = 0;
         string NotasA = ControladorLogin.InicioUrl + "NotasAsignatura?id=" +id + "&alumno=" + id_alumno;
         WWW NotasResultado = new WWW(NotasA);
+        Debug.Log(NotasA);
         yield return NotasResultado;
         string Notas = NotasResultado.text;
         Listaramosactuales Actual = JsonUtility.FromJson<Listaramosactuales>(Notas);
         List<Ramosactuale> Notastotales = Actual.Actuales();
+        Debug.Log(Notastotales.Count);
 
         foreach(Ramosactuale nota in Notastotales)
         {
             GameObject NuevaNota = Instantiate(NotaPrefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
             NuevaNota.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
-            moverse -= 66;
-            y += moverse;
+            mover2 = 130;
+            y -= mover2;
+
             ComponentesNota = NuevaNota.GetComponentsInChildren<Text>();
 
             foreach (Text componente in ComponentesNota)
@@ -93,7 +98,9 @@ public class NotasRamos : MonoBehaviour {
                 i ++;
                 if (componente.name == "Numero")
                 {
+                    
                     componente.text += "Nota "+ i.ToString()+": " + nota.nota.ToString();
+                    NotasA = "";
                 }
             }
         }

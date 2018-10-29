@@ -131,8 +131,7 @@ public class Ramosactuale
     public int id_alumno;
     public float nota;
     public int n_nota;
-    public object created_at;
-    public object updated_at;
+
 
     public override string ToString()
     {
