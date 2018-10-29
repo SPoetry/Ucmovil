@@ -66,4 +66,10 @@ class AsignaturaController extends Controller
   
     return response()->json($ObtenerNotas);
   }
+
+  public function HistorialA(Request $request){
+    $ObtenerDatos ['historial'] = DB::table('historiales')->where('id_alumno', $request->id)->get();
+  
+    return response()->json($ObtenerDatos);
+  }
 }

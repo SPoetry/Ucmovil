@@ -25,7 +25,7 @@ public class NotasRamos : MonoBehaviour {
     float x = 0, y = 840;
 
     void Start () {
-        Id = "1";
+        Id = ControladorLogin.Id;
 
         UrlNotas += "?id=" + Id;
 

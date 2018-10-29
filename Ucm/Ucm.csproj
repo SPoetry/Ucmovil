@@ -96,6 +96,8 @@
     <Compile Include="Assets\Script\ObtenerDatos.cs" />
     <Compile Include="Assets\Script\Ponderaciones.cs" />
     <Compile Include="Assets\Script\RamosActuales.cs" />
+    <Compile Include="Assets\Script\RamosAnteriores.cs" />
+    <Compile Include="Assets\Script\Solicitud.cs" />
     <Compile Include="Assets\Script\UpdateNoticia.cs" />
     <Compile Include="Assets\Script\Ver_Ponderaciones.cs" />
     <Compile Include="Assets\Script\Ver_Ramos.cs" />
