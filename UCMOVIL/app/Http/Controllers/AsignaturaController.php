@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Asignatura;
+use App\RamosActuale;
 
 class AsignaturaController extends Controller
 {
@@ -12,6 +13,7 @@ class AsignaturaController extends Controller
   {
       return view('DirectorIndex');   //se debe cambiar la vista
   }
+
   public function CodigoA(Request $request){
     $nombre = DB::table('version_ramos')->where('id_ramo', $request->id)->get();
 
@@ -22,6 +24,7 @@ class AsignaturaController extends Controller
     }
     return;
   }
+
   public function NameA(Request $request){
     $nombre = DB::table('version_ramos')->where('id_ramo', $request->id)->get();
 
@@ -50,5 +53,17 @@ class AsignaturaController extends Controller
   	$horarios["horario"] = DB::table('horarios')->where('id_asignatura', $obtenerRamo->id_asignatura)->get();
 	
 	return response()->json($horarios);
+  }
+
+  public function NotasA(Request $request){
+    $obtenerRamos ['ramosactuale'] = RamosActuale::all()->where('id_alumno', $request->id);
+  
+    return response()->json($obtenerRamos);
+  }
+
+  public function NotasAsignatura(Request $request){
+    $ObtenerNotas ['ramosactuale'] = RamosActuale::all()->where('id_alumno', $request->alumno)->where('id_ramo', $request->id);
+  
+    return response()->json($ObtenerNotas);
   }
 }

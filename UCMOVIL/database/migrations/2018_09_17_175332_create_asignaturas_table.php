@@ -21,6 +21,7 @@ class CreateAsignaturasTable extends Migration
           $table->integer('posicion_y');
           $table->timestamps();
           $table->string('prerequisito')->nullable();
+          $table->unique(['posicion_x','posicion_y']);
         });
     }
 
