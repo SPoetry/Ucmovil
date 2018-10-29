@@ -62,8 +62,14 @@ class AsignaturaController extends Controller
   }
 
   public function NotasAsignatura(Request $request){
-    $ObtenerNotas ['ramosactuale'] = RamosActuale::all()->where('id_alumno', $request->alumno)->where('id_ramo', $request->id);
+    $ObtenerNotas ['ramosactuale'] = DB::table('ramos_actuales')->where('id_alumno', $request->alumno)->where('id_ramo', $request->id)->get();
   
     return response()->json($ObtenerNotas);
+  }
+
+  public function HistorialA(Request $request){
+    $ObtenerDatos ['historial'] = DB::table('historiales')->where('id_alumno', $request->id)->get();
+  
+    return response()->json($ObtenerDatos);
   }
 }

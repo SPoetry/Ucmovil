@@ -112,4 +112,18 @@ class HomeController extends Controller
           ]);
         return "ok";
     }
+
+    public function Solicitud(Request $request){
+        $id = $request->id;
+        $solicitar = $request->solicitud;
+        $text = $request->texto;
+        $estado = $request->estado;
+        DB::table('solicitudes')->insert([
+            'id_solicitante'=>$id,
+            'solicitud'=>$solicitar,
+            'texto'=>$text,
+            'estado'=>$estado
+          ]);
+        return "ok";
+    }
 }
