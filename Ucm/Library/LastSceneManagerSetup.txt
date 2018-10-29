@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Escenas/Asignatura.unity
+- path: Assets/Escenas/Malla.unity
   isLoaded: 1
   isActive: 1

@@ -18,8 +18,12 @@ public class ControladorAsignaturas : MonoBehaviour
     private GameObject CreditoAsignatura;
     [SerializeField]
     private GameObject CodigoAsignatura;
-    //private GameObject EditarAsignatura;
-    //private GameObject BorrarAsignatura;
+    [SerializeField]
+    private GameObject PosicionX;
+    [SerializeField]
+    private GameObject PosicionY;
+    [SerializeField]
+    private GameObject PreRequisito;
 
 
     public void Awake()
@@ -35,21 +39,29 @@ public class ControladorAsignaturas : MonoBehaviour
         string JsonAsignatura = getAsignatura.text;
         ListaAsignatura lista = JsonUtility.FromJson<ListaAsignatura>(JsonAsignatura);
         //lista.Listar();
+        Text[] Componente;
 
         float valor;
         valor = 1.0F;
 
         foreach (Asignatura asign in lista.ObtenerLista())
         {
-            NombreAsignatura.GetComponent<Text>().text = asign.nombre;
+            /*NombreAsignatura.GetComponent<Text>().text = asign.nombre;
             CreditoAsignatura.GetComponent<Text>().text = asign.creditos.ToString();
-            CodigoAsignatura.GetComponent<Text>().text = asign.id_asignatura;
+            CodigoAsignatura.GetComponent<Text>().text = asign.id_asignatura;*/
 
             GameObject nuevaAsignatura = Instantiate(ComponenteAsignatura) as GameObject;
             nuevaAsignatura.transform.SetParent(LugarListado.transform);
             nuevaAsignatura.GetComponent<RectTransform>().localScale = new Vector2(valor, valor);
             
             nuevaAsignatura.name    = asign.nombre;
+            Componente = nuevaAsignatura.GetComponentsInChildren<Text>();
+            Componente[2].text = asign.nombre;
+            Componente[3].text = asign.creditos.ToString();
+            Componente[4].text = asign.id_asignatura;
+            Componente[5].text = asign.posicion_x.ToString();
+            Componente[6].text = asign.posicion_y.ToString();
+            Componente[7].text = asign.prerequisito;
         }
     }
 
@@ -61,11 +73,11 @@ public class Asignatura
     public string id_asignatura;
     public string nombre;
     public int creditos;
+    public int posicion_x;
+    public int posicion_y;
     public object created_at;
     public object updated_at;
     public string prerequisito;
-    public string posicion_x;
-    public string posicion_y;
 
 
     public override string ToString()
