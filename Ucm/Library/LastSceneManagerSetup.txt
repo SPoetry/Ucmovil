@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Escenas/VerNotas.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Escenas/VerRamos.unity
+=======
+- path: Assets/Escenas/Malla.unity
+>>>>>>> 7a9d6c1affdc30cf4984df0b183c275c25f0fe1d
+>>>>>>> d96954dcd96d4666265537b6f785a73ae57a79b6
   isLoaded: 1
   isActive: 1

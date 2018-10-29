@@ -429,6 +429,10 @@ MonoBehaviour:
     type: 2}
   CodigoAsignatura: {fileID: 1878681142948100, guid: 3cca98ce945752e4db225c9674dbc334,
     type: 2}
+  PosicionX: {fileID: 1172199946709352, guid: 3cca98ce945752e4db225c9674dbc334, type: 2}
+  PosicionY: {fileID: 1545105599055612, guid: 3cca98ce945752e4db225c9674dbc334, type: 2}
+  PreRequisito: {fileID: 1476663623873766, guid: 3cca98ce945752e4db225c9674dbc334,
+    type: 2}
 --- !u!114 &225589131
 MonoBehaviour:
   m_ObjectHideFlags: 0
