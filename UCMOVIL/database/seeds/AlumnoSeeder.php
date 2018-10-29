@@ -21,5 +21,16 @@ class AlumnoSeeder extends Seeder
         'semestre_actual' => '9',
         'apodo'=>'Tiano'
       ]);
+
+      DB::table('alumnos')->insert([
+        'id' => '6',
+        'ano_ingreso' => '0001/01/01',
+        'nombre' => 'Savioo',
+        'ano_nacimiento' => '1995',
+        'telefono' => '9997878',
+        'direccion' => 'Mi casa',
+        'semestre_actual' => '1',
+        'apodo'=>'Sak'
+      ]);
     }
 }

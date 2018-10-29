@@ -38,6 +38,12 @@ class UserSeeder extends Seeder
         'password' => bcrypt('directorcarrera'),
         'tipo' => 'director_carrera'
       ]);
+      DB::table('users')->insert([
+        'id' => '6',
+        'email' => 'sak.kancer@gmail.com',
+        'password' => bcrypt('savio'),
+        'tipo' => 'alumno'
+      ]);
     }
 
 }

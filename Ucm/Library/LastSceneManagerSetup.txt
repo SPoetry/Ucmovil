@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Escenas/VerRamos.unity
-=======
-- path: Assets/Escenas/Malla.unity
->>>>>>> 67ee0d8a0a2b0f3ee8c18ffc1c4a51c2724630ac
   isLoaded: 1
   isActive: 1

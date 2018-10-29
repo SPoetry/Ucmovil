@@ -79,7 +79,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Script\AgregarNoticia.cs" />
     <Compile Include="Assets\Script\AlumNotas.cs" />
     <Compile Include="Assets\Script\AsignaturaEditDelet.cs" />
@@ -92,6 +91,7 @@
     <Compile Include="Assets\Script\ControladorAsignaturas.cs" />
     <Compile Include="Assets\Script\ControladorDirector.cs" />
     <Compile Include="Assets\Script\ControladorLogin.cs" />
+    <Compile Include="Assets\Script\ControladorMalla.cs" />
     <Compile Include="Assets\Script\ControladorSecretaria.cs" />
     <Compile Include="Assets\Script\IngresarNotas.cs" />
     <Compile Include="Assets\Script\IngresoAsignaturas.cs" />
@@ -100,6 +100,8 @@
     <Compile Include="Assets\Script\ObtenerDatos.cs" />
     <Compile Include="Assets\Script\Ponderaciones.cs" />
     <Compile Include="Assets\Script\RamosActuales.cs" />
+    <Compile Include="Assets\Script\RamosAnteriores.cs" />
+    <Compile Include="Assets\Script\Solicitud.cs" />
     <Compile Include="Assets\Script\UpdateNoticia.cs" />
     <Compile Include="Assets\Script\Ver_ListaAlumnos.cs" />
     <Compile Include="Assets\Script\Ver_Ponderaciones.cs" />
