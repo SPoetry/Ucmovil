@@ -22,5 +22,6 @@ class DatabaseSeeder extends Seeder
        $this->call('RamosActualeSeeder');
        $this->call('MallaSeeder');
        $this->call('NoticiaSeeder');
+       $this->call('PonderacionesRamoSeeder');
      }
 }
