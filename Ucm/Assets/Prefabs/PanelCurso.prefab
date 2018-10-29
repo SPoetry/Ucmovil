@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 222704965292369866}
   - component: {fileID: 114410467315479724}
   - component: {fileID: 114342269820042660}
+  - component: {fileID: 114497854483588974}
   m_Layer: 8
   m_Name: PanelCurso
   m_TagString: Untagged
@@ -317,6 +318,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114497854483588974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1316994950342198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf1513495d705ed41849bf20966736e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: {fileID: 114045190368544836}
 --- !u!114 &114498298026659748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,7 +368,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114803332063222438}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114497854483588974}
+        m_MethodName: CambioVista
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 114899855351337908}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114803332063222438

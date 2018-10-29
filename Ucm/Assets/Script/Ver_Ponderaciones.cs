@@ -36,7 +36,7 @@ public class Ver_Ponderaciones : MonoBehaviour {
     public IEnumerator Precarga()
     {
         string Id = Ponderaciones.id;
-        UrlPonderacion = UrlPonderacion + "?id=" + 1;
+        UrlPonderacion = UrlPonderacion + "?id=" + Id;
         WWW ResultadoConsulta = new WWW(UrlPonderacion);
         Debug.Log(UrlPonderacion);
         yield return ResultadoConsulta;
@@ -65,7 +65,7 @@ public class Ver_Ponderaciones : MonoBehaviour {
     public IEnumerator Ingreso()
     {
         string Id = Ponderaciones.id;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "?id=" + 1;
+        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "?id=" + Id;
         UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota1=" + Nota1.text;
         UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota2=" + Nota2.text;
         UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota3=" + Nota3.text;

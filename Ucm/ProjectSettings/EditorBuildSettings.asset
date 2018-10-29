@@ -56,3 +56,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Malla.unity
     guid: 3c011d9a61e35e342a262da838a95033
+  - enabled: 1
+    path: Assets/Escenas/Ponderaciones.unity
+    guid: 981477dda6eb30149b0a6382efd1dac4
+  - enabled: 1
+    path: Assets/Escenas/ListaAlumnos.unity
+    guid: 8b419cd9215d0314e94bec05c3bf2a5a
+  - enabled: 1
+    path: Assets/Escenas/IngresarNotas.unity
+    guid: 27df84bc9f1df934ea61da70ae336c59

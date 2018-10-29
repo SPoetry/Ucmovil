@@ -50,3 +50,4 @@ Route::get('/secretaria/editar_noticia','SecretariaController@editar_noticia')->
 Route::get('/ramos_impartidos', 'ProfesorController@mostrar_impartidos');
 Route::get('/ponderaciones', 'ProfesorController@mostrar_ponderaciones');
 Route::get('/ingresoponderaciones', 'ProfesorController@ingresar_ponderaciones');
+Route::get('/ListaAlumnos', 'ProfesorController@mostrar_lista');

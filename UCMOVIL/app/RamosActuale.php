@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class RamosActuale extends Model
 {
   protected $fillable = [
-      'id_asignatura', 'id_alumno',
+      'id_ramo', 'id_alumno',
   ];
   public function alumno(){
-    return $this->belongsTo('App\Alumno');
+    return $this->belongsTo(Alumno::class, 'id_alumno', 'id');
   }
   public function versionramo(){
-    return $this->belongsTo('App\VersionRamo');
+    return $this->belongsTo(VersionRamo::class, 'id_ramo', 'id_ramo');
   }
 }

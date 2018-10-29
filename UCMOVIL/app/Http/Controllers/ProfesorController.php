@@ -24,10 +24,18 @@ class ProfesorController extends Controller
       return response()->json($impartidos);  //entrega datos en forma de json
 	  }
 
-    public function mostrar_ponderaciones(Request $request)  //entrega todos los datos de los ramos impartidos
+    public function mostrar_ponderaciones(Request $request)  //entrega todos los datos de las ponderaciones
     {
-      $ponderaciones["ponderaciones"] =   PonderacionesRamo::all()->where('id_ramo', $request->id);  //conexion a la base de datos y ordenados
+      $ponderaciones["ponderaciones"] = PonderacionesRamo::all()->where('id_ramo', $request->id);  //conexion a la base de datos y ordenados
       return response()->json($ponderaciones);  //entrega datos en forma de json
+    }
+
+    public function mostrar_lista(Request $request)  //entrega la lista de alumnos pertenecientes a un curso
+    {
+      $AlumnosArray = DB::table('ramos_actuales')->select('id_alumno')->where('id_ramo', $request->id)->distinct()->get();
+
+      $alumnos["alumnos"] =   DB::table('alumnos')->select('id','nombre')->whereIn('id', $AlumnosArray->pluck('id_alumno'))->get();  //conexion a la base de datos y ordenados
+      return response()->json($alumnos);  //entrega datos en forma de json
     }
 
     public function ingresar_ponderaciones(Request $request)  //entrega todos los datos de los ramos impartidos
