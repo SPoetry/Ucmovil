@@ -94,8 +94,10 @@
     <Compile Include="Assets\Script\IngresoAsignaturas.cs" />
     <Compile Include="Assets\Script\NotasRamos.cs" />
     <Compile Include="Assets\Script\ObtenerDatos.cs" />
+    <Compile Include="Assets\Script\Ponderaciones.cs" />
     <Compile Include="Assets\Script\RamosActuales.cs" />
     <Compile Include="Assets\Script\UpdateNoticia.cs" />
+    <Compile Include="Assets\Script\Ver_Ponderaciones.cs" />
     <Compile Include="Assets\Script\Ver_Ramos.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

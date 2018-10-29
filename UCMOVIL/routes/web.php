@@ -10,7 +10,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/log', 'LoginController@Login');
 
-Route::get('/ramos_impartidos', 'ProfesorController@mostrar_impartidos');
+
 Route::get('/alumno', 'AlumnoController@index')->name('c_alumno');
 Route::get('/d_escuela', 'DirectorCarreraController@index')->name('c_d_escuela');
 Route::get('/profesor', 'ProfesorController@index')->name('c_profesor');
@@ -45,3 +45,8 @@ Route::post('/d_escuela/borrar_asignatura', 'DirectorCarreraController@borrar_as
 Route::get('/secretaria/mostrar_noticia','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
 Route::get('/secretaria/agregar_noticia','SecretariaController@agregar_noticia')->name('agregar_noticia');
 Route::get('/secretaria/editar_noticia','SecretariaController@editar_noticia')->name('editar_noticia');
+
+
+Route::get('/ramos_impartidos', 'ProfesorController@mostrar_impartidos');
+Route::get('/ponderaciones', 'ProfesorController@mostrar_ponderaciones');
+Route::get('/ingresoponderaciones', 'ProfesorController@ingresar_ponderaciones');

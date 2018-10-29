@@ -50,3 +50,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/VerRamos.unity
     guid: c5fba1a73d9c54c4e8d423a634746aed
+  - enabled: 1
+    path: Assets/Escenas/Ponderaciones.unity
+    guid: 981477dda6eb30149b0a6382efd1dac4
