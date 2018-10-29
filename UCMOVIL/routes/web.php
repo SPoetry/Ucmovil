@@ -32,6 +32,10 @@ Route::get('/ProfesorA', 'AsignaturaController@ProfesorA')->name('ProfesorA');
 Route::get('/HorarioA', 'AsignaturaController@HorarioA')->name('HorarioA');
 
 
+Route::get('/NotasA', 'AsignaturaController@NotasA')->name('NotasA');
+Route::get('/NotasAsignatura', 'AsignaturaController@NotasAsignatura')->name('NotasAsignatura');
+
+
 Route::get('/d_escuela/mostrar_asignatura', 'DirectorCarreraController@mostrar_asignatura')->name('mostrar_asignatura');
 Route::get('/d_escuela/anadir_asignatura', 'DirectorCarreraController@anadir_asignatura')->name('anadir_asignatura');
 Route::post('/d_escuela/modificar_asignatura', 'DirectorCarreraController@modificar_asignatura')->name('modificar_asignatura');

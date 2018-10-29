@@ -19,7 +19,6 @@ public class RamosActuales : MonoBehaviour {
 
     float x = 497, y = 910.59f;
 
-
     int Fecha_actualA;
     int Fecha_actualM;
     int Semestre2m = 1;
@@ -40,6 +39,7 @@ public class RamosActuales : MonoBehaviour {
         }
         StartCoroutine("RamosA");
     }
+
     public IEnumerator RamosA()
     {
         WWW ResultadoRamos = new WWW(UrlRamosActuales);
@@ -82,6 +82,7 @@ public class RamosActuales : MonoBehaviour {
         }
         
     }
+
     public IEnumerator Casig(string id)
     {
         string consultas = "http://localhost:8000/CodigoA?id=" + id;
@@ -90,6 +91,7 @@ public class RamosActuales : MonoBehaviour {
         Debug.Log(ResultadoRamos.text);
         codigo = ResultadoRamos.text;
     }
+
     public IEnumerator Nasig(string name)
     {
         string consultas = "http://localhost:8000/NameA?id=" + name;
@@ -98,6 +100,7 @@ public class RamosActuales : MonoBehaviour {
         Debug.Log(ResultadoRamos.text);
         nombre = ResultadoRamos.text;
     }
+
     public IEnumerator Nprofe(string id)
     {
         string nprofe = "http://localhost:8000/ProfesorA?id=" + id;
@@ -106,6 +109,7 @@ public class RamosActuales : MonoBehaviour {
         yield return ResultadoRamos;
         profesor = ResultadoRamos.text;
     }
+
     public IEnumerator Horario(string id)
     {
         string ConsultaHorario = "http://localhost:8000/HorarioA?id=" + id;
