@@ -13,6 +13,9 @@ public class Bienvenido : MonoBehaviour {
         {
             bienvenidos[0].SetActive(true);
             Botones[5].SetActive(true);
+            Botones[6].SetActive(true);
+            Botones[7].SetActive(true);
+            Botones[8].SetActive(true);
         }
         if (ControladorLogin.Tipo == "profesores")
         {

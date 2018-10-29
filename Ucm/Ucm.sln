@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucm", "Ucm.csproj", "{B0785406-F2B3-22A4-C53C-43A0DABF55D0}"
+=======
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ucm.CSharp", "Ucm.CSharp.csproj", "{A2A2404C-C9A8-DECB-AF5C-37F765919CA1}"
+>>>>>>> 67ee0d8a0a2b0f3ee8c18ffc1c4a51c2724630ac
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

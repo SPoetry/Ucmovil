@@ -331,6 +331,12 @@ MonoBehaviour:
   ComponenteAsignatura: {fileID: 1773754944422942, guid: 3cca98ce945752e4db225c9674dbc334,
     type: 2}
   LugarListado: {fileID: 0}
+  NombreAsignatura: {fileID: 0}
+  CreditoAsignatura: {fileID: 0}
+  CodigoAsignatura: {fileID: 0}
+  PosicionX: {fileID: 0}
+  PosicionY: {fileID: 0}
+  PreRequisito: {fileID: 0}
 --- !u!114 &114344593538471814
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -691,7 +697,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000091791, y: 550}
+  m_AnchoredPosition: {x: 400.00018, y: 550}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!224 &224451029602446406
