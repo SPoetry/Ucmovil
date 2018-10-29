@@ -33,6 +33,7 @@ Route::get('/HorarioA', 'AsignaturaController@HorarioA')->name('HorarioA');
 
 
 Route::get('/NotasA', 'AsignaturaController@NotasA')->name('NotasA');
+Route::get('/HistorialA', 'AsignaturaController@HistorialA')->name('HistorialA');
 Route::get('/NotasAsignatura', 'AsignaturaController@NotasAsignatura')->name('NotasAsignatura');
 
 

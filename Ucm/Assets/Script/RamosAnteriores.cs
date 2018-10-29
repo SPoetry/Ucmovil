@@ -20,7 +20,7 @@ public class RamosAnteriores : MonoBehaviour {
     public IEnumerator ConsultaHistorial()
     {
         WWW ResultadoHistorial = new WWW(UrlHistorial);
-        Debug.Log(ResultadoHistorial);
+        Debug.Log(UrlHistorial);
         yield return ResultadoHistorial;
         string DatosH = ResultadoHistorial.text;
         Listahistorial Completo = JsonUtility.FromJson<Listahistorial>(DatosH);
