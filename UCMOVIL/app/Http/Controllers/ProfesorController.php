@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Middleware\Profesor;
 use App\VersionRamo;
 use App\PonderacionesRamo;
+use App\RamosActuale;
 use Auth;
 
 class ProfesorController extends Controller
@@ -36,6 +37,16 @@ class ProfesorController extends Controller
 
       $alumnos["alumnos"] =   DB::table('alumnos')->select('id','nombre')->whereIn('id', $AlumnosArray->pluck('id_alumno'))->get();  //conexion a la base de datos y ordenados
       return response()->json($alumnos);  //entrega datos en forma de json
+    }
+
+    public function obtener_notas(Request $request) // Obtiene las notas de un alumno y las ponderaciones correspondientes al ramo.
+    {
+      $id_ramo =  $request->id_c;
+      $id_alumno = $request->id_a;
+      
+      $ponderaciones = PonderacionesRamo::all()->where('id_ramo', 1)->pluck('P_nota');
+      $notas = RamosActuale::all()->where('id_ramo', $id_ramo)->where('id_alumno', $id_alumno);
+      return $notas;
     }
 
     public function ingresar_ponderaciones(Request $request)  //entrega todos los datos de los ramos impartidos
