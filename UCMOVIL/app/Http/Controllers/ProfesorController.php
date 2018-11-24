@@ -74,33 +74,4 @@ class ProfesorController extends Controller
   	{
    		return view('DirectorIndex'); //se debe cambiar la vista
   	}
-
-    public function Mensajeria(Request $request)
-    {
-      $ProfesoresResultado["profesores"] = DB::table('secretarias')->get();
-
-      return response()->json($ProfesoresResultado);
-    }
-
-    public function Mensajes(Request $request)
-    {
-      $MensajesChat["chat"] = DB::table('chat')->where('id_remitente', $request->id_remitente)->where('id_destinatario', $request->id_destinatario)->orwhere('id_remitente', $request->id_destinatario)->where('id_destinatario', $request->id_remitente)->get();
-
-      return response()->json($MensajesChat);
-    }
-    public function MensajesC(Request $request)
-    {
-      $MensajesChat["chat"] = DB::table('chat')->where('id_destinatario', $request->id_destinatario)->get();
-      
-      return response()->json($MensajesChat);
-    }
-
-    public function MensajeriaC(Request $request)
-    {
-      $ids= DB::table('version_ramos')->where('id_profesor', $request->id)->pluck('id_asignatura');
-      
-      $ramos["ramos"] = DB::table('asignaturas')->whereIn('id_asignatura', $ids)->get();
-
-      return response()->json($ramos);
-    }
 }

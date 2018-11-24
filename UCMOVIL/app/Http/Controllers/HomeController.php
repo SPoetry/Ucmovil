@@ -126,13 +126,4 @@ class HomeController extends Controller
           ]);
         return "ok";
     }
-
-    public function Mensaje(Request $request){
-        DB::table('chat')->insert([
-            'id_remitente'=>$request->id_remitente,
-            'id_destinatario'=>$request->id_destinatario,
-            'texto'=>$request->texto
-        ]);
-        return "ok";
-    }
 }

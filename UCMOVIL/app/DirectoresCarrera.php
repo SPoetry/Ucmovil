@@ -11,7 +11,7 @@ class DirectoresCarrera extends Model
       'id', 'especialidad', 'nombre',
       'email', 'telefono',
   ];
-  
+
   public function user(){
     return $this->belongTo(User::class, 'id', 'id');
   }
