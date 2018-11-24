@@ -18,6 +18,8 @@ public class AsignaturaEditDelet : MonoBehaviour {
     private GameObject TextoPosicionXObjeto;
     [SerializeField]
     private GameObject TextoPosicionYObjeto;
+    [SerializeField]
+    private GameObject TextoIdMalla;
 
 
     public static Text Id;
@@ -26,6 +28,7 @@ public class AsignaturaEditDelet : MonoBehaviour {
     public static Text PreRequisito;
     public static Text PosicionX;
     public static Text PosicionY;
+    public static Text IdMalla;
 
     public void CambioEditar()
     {
@@ -35,6 +38,7 @@ public class AsignaturaEditDelet : MonoBehaviour {
         PreRequisito = TextoPreRequisitoObjeto.GetComponent<Text>();
         PosicionX = TextoPosicionXObjeto.GetComponent<Text>();
         PosicionY = TextoPosicionYObjeto.GetComponent<Text>();
+        IdMalla = TextoIdMalla.GetComponent<Text>();
         SceneManager.LoadScene("AsignaturaEditar");
     }
 

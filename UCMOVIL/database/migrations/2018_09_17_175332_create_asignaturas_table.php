@@ -19,9 +19,11 @@ class CreateAsignaturasTable extends Migration
           $table->integer('creditos');
           $table->integer('posicion_x');
           $table->integer('posicion_y');
+          $table->string('id_malla',3);
           $table->timestamps();
           $table->string('prerequisito')->nullable();
-          $table->unique(['posicion_x','posicion_y']);
+          $table->foreign('id_malla')->references('id_malla')->on('mallas');
+          $table->unique(['posicion_x','posicion_y','id_malla']);
         });
     }
 
