@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVersionRamosTable extends Migration
+class CreateMallasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateVersionRamosTable extends Migration
      */
     public function up()
     {
-        Schema::create('version_ramos', function (Blueprint $table) {
-            $table->increments('id_ramo');
-            $table->string('id_asignatura', 10);
-            $table->integer('id_profesor')->unsigned();
-            $table->integer('year');
+        Schema::create('mallas', function (Blueprint $table) {
+            $table->string('id_asignatura',10);
             $table->integer('semestre');
             $table->timestamps();
+            $table->primary(['id_asignatura', 'semestre']);
             $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
-            $table->foreign('id_profesor')->references('id')->on('profesores');
         });
     }
 
@@ -32,6 +29,6 @@ class CreateVersionRamosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('version_ramos');
+        Schema::dropIfExists('mallas');
     }
 }

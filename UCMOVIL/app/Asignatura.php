@@ -14,10 +14,13 @@ class Asignatura extends Model
   public function historial(){
     return $this->hasMany(Hisotiale::class, 'id_asignatura', 'id_asignatura');
   }
+  public function malla(){
+    return $this->hasMany(Malla::class, 'id_asignatura', 'id_asignatura');
+  }
   public function horario(){
     return $this->hasMany(Horario::class, 'id_asignatura', 'id_asignatura');
   }
-  public function versionramo(){
-    return $this->hasMany(VersionRamo::class, 'id_asignatura', 'id_asignatura');
+  public function ramosimpartido(){
+    return $this->hasMany(RamosImpartido::class, 'id_asignatura', 'id_asignatura');
   }
 }

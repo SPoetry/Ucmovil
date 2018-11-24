@@ -60,9 +60,4 @@ Route::get('/secretarias/Mensajes', 'SecretariaController@Mensajes')->name('mens
 Route::get('/ramos_impartidos', 'ProfesorController@mostrar_impartidos');
 Route::get('/ponderaciones', 'ProfesorController@mostrar_ponderaciones');
 Route::get('/ingresoponderaciones', 'ProfesorController@ingresar_ponderaciones');
-<<<<<<< HEAD
 Route::get('/ListaAlumnos', 'ProfesorController@mostrar_lista');
-=======
-Route::get('/ListaAlumnos', 'ProfesorController@mostrar_lista');
-Route::get('/ObtenerNotas', 'ProfesorController@obtener_notas');
->>>>>>> e4e2ce4e620814f1e4e4ec454be2d588eb0805ea

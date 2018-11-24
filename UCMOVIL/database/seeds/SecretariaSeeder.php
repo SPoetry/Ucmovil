@@ -11,10 +11,6 @@ class SecretariaSeeder extends Seeder
      */
     public function run()
     {
-      DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-      DB::table('secretarias')->truncate();
-      DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-
       DB::table('secretarias')->insert([
         'id' => '3',
         'nombre' => 'Sergio',
