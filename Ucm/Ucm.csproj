@@ -87,6 +87,8 @@
     <Compile Include="Assets\Script\CambioC.cs" />
     <Compile Include="Assets\Script\CambioE.cs" />
     <Compile Include="Assets\Script\CambioEscena.cs" />
+    <Compile Include="Assets\Script\CargarChat.cs" />
+    <Compile Include="Assets\Script\CargarChatC.cs" />
     <Compile Include="Assets\Script\ControladorAsignaturas.cs" />
     <Compile Include="Assets\Script\ControladorDirector.cs" />
     <Compile Include="Assets\Script\ControladorLogin.cs" />
@@ -94,6 +96,8 @@
     <Compile Include="Assets\Script\ControladorSecretaria.cs" />
     <Compile Include="Assets\Script\IngresarNotas.cs" />
     <Compile Include="Assets\Script\IngresoAsignaturas.cs" />
+    <Compile Include="Assets\Script\Mensajeria.cs" />
+    <Compile Include="Assets\Script\MensajeriaC.cs" />
     <Compile Include="Assets\Script\NotasRamos.cs" />
     <Compile Include="Assets\Script\ObtencionEditar.cs" />
     <Compile Include="Assets\Script\ObtenerDatos.cs" />
@@ -102,6 +106,7 @@
     <Compile Include="Assets\Script\RamosAnteriores.cs" />
     <Compile Include="Assets\Script\Solicitud.cs" />
     <Compile Include="Assets\Script\UpdateNoticia.cs" />
+    <Compile Include="Assets\Script\Utilidad.cs" />
     <Compile Include="Assets\Script\Ver_ListaAlumnos.cs" />
     <Compile Include="Assets\Script\Ver_Ponderaciones.cs" />
     <Compile Include="Assets\Script\Ver_Ramos.cs" />

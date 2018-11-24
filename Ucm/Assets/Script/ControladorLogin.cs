@@ -27,14 +27,10 @@ public class ControladorLogin : MonoBehaviour {
         Correo.text = "";
         Contrasena.text = "";
         WWW getResultado = new WWW(getURL);
-        Debug.Log(getURL);
         yield return getResultado;
         getURL = "http://localhost:8000/log";
 
-        Debug.Log(getResultado.text);
-
         string UsuariosJson = getResultado.text;
-        Debug.Log(UsuariosJson);
 
         if (UsuariosJson != "no")
         {
@@ -96,7 +92,6 @@ public class ListaUsuario
         {
             ControladorLogin.Id = CadaUsuario.id;
             ControladorLogin.Tipo = CadaUsuario.tipo;
-            Debug.Log(ControladorLogin.Id);
             return "";
         }
 
