@@ -39,7 +39,7 @@ public class IngresarNotas : MonoBehaviour {
                 UrlEnvioNotas = UrlEnvioNotas + "&" + nota.name + "=0";
             } else
             {
-                UrlEnvioNotas = UrlEnvioNotas + "&" + nota.name + "=" + nota.text;
+                UrlEnvioNotas = UrlEnvioNotas + "&" + nota.name + "=" + nota.text.Replace(",",".");
             }
         }
         Debug.Log(UrlEnvioNotas);

@@ -11,6 +11,9 @@ class PonderacionesRamoSeeder extends Seeder
      */
     public function run()
     {
+      DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+      DB::table('ponderaciones_ramos')->truncate();
+      DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
       for ($i=1; $i <= 10; $i++) {
         DB::table('ponderaciones_ramos')->insert([

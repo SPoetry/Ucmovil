@@ -57,7 +57,7 @@ class ProfesorController extends Controller
       for ($i=0; $i < 10; $i++) { 
         $nota = $request->$i;
         $ramoactual = RamosActuale::firstOrNew(['id_ramo' => $request->id_ramo, 'id_alumno' => $request->id_alumno, 'n_nota'=>$i+1]);
-        $ramoactual->nota = $request->$i;
+        $ramoactual->nota = floatval($request->$i);
         $ramoactual->save();
       }
      return "ok";
