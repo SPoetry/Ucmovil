@@ -12,6 +12,7 @@ public class ObtencionEditar : MonoBehaviour {
     public InputField CampoPreRequisito;
     public InputField CampoPosicionX;
     public InputField CampoPosicionY;
+    public InputField CampoIdMalla;
 
     private Text Id;
     private Text Nombre;
@@ -19,6 +20,7 @@ public class ObtencionEditar : MonoBehaviour {
     private Text PreRequisito;
     private Text PosicionX;
     private Text PosicionY;
+    private Text IdMalla;
 
     void Awake () {
         Id = AsignaturaEditDelet.Id;
@@ -27,6 +29,7 @@ public class ObtencionEditar : MonoBehaviour {
         PreRequisito = AsignaturaEditDelet.PreRequisito;
         PosicionX = AsignaturaEditDelet.PosicionX;
         PosicionY = AsignaturaEditDelet.PosicionY;
+        IdMalla = AsignaturaEditDelet.IdMalla;
 
         CampoId.text = Id.text;
         CampoNombre.text = Nombre.text;
@@ -34,6 +37,7 @@ public class ObtencionEditar : MonoBehaviour {
         CampoPreRequisito.text = PreRequisito.text;
         CampoPosicionX.text = PosicionX.text;
         CampoPosicionY.text = PosicionY.text;
+        CampoIdMalla.text = IdMalla.text;
     }
 
     public void EnvioEditarAsignatura()
@@ -45,7 +49,7 @@ public class ObtencionEditar : MonoBehaviour {
     {
         string EditargetURL = "http://localhost:8000/d_escuela/modificar_asignatura";
         EditargetURL = EditargetURL + "?id_asignatura=" + CampoId.text + "&nombre=" + CampoNombre.text + "&creditos=" + CampoCreditos.text;
-        EditargetURL = EditargetURL + "&prerequisito=" + CampoPreRequisito.text;
+        EditargetURL = EditargetURL + "&prerequisito=" + CampoPreRequisito.text + "&id_malla=" + CampoIdMalla.text;
         EditargetURL = EditargetURL + "&posicion_x=" + CampoPosicionX.text + "&posicion_y=" + CampoPosicionY.text;
 
         WWW getResultado = new WWW(EditargetURL);

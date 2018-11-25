@@ -11,10 +11,6 @@ class AlumnoSeeder extends Seeder
      */
     public function run()
     {
-      DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-      DB::table('alumnos')->truncate();
-      DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-
       DB::table('alumnos')->insert([
         'id' => '1',
         'ano_ingreso' => '0001/01/01',

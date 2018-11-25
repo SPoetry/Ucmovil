@@ -20,7 +20,7 @@ class CreateVersionRamosTable extends Migration
             $table->integer('year');
             $table->integer('semestre');
             $table->timestamps();
-            $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas')->onDelete('cascade');
+            $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
             $table->foreign('id_profesor')->references('id')->on('profesores');
         });
     }

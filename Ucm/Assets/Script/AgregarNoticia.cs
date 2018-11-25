@@ -8,6 +8,7 @@ public class AgregarNoticia : MonoBehaviour {
 
 	public string postURL2 = "http://localhost:8000/secretaria/agregar_noticia";
 
+    public Text EstaId;
 	public InputField Titulo;
 	public InputField Texto;
 	public InputField Estado;
@@ -36,7 +37,17 @@ public class AgregarNoticia : MonoBehaviour {
         }
 	}
 
+    public void AccederAChat()
+    {
+        Mensajeria.id_destinatario = EstaId.text;
+        Debug.Log(Mensajeria.id_destinatario);
+        SceneManager.LoadScene("Chat");
+    }
 
-
-
+    public void AccederAChatCurso()
+    {
+        Mensajeria.id_destinatario = EstaId.text;
+        Debug.Log(Mensajeria.id_destinatario);
+        SceneManager.LoadScene("ChatCurso");
+    }
 }

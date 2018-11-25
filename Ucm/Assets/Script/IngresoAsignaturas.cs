@@ -15,6 +15,7 @@ public class IngresoAsignaturas : MonoBehaviour {
     public InputField PreRequisitos;
     public InputField PosicionX;
     public InputField PosicionY;
+    public InputField IdMalla;
 
 
     public void EnvioDatos()
@@ -26,7 +27,7 @@ public class IngresoAsignaturas : MonoBehaviour {
     {
         CgetURL = CgetURL + "?id_asignatura=" + IdAsignatura.text;
         CgetURL = CgetURL + "&nombre=" + Nombre.text + "&creditos=" + Creditos.text + "&prerequisito=" + PreRequisitos.text;
-        CgetURL = CgetURL + "&posicion_x=" + PosicionX.text + "&posicion_y=" + PosicionY.text;
+        CgetURL = CgetURL + "&posicion_x=" + PosicionX.text + "&posicion_y=" + PosicionY.text + "&id_malla=" + IdMalla.text;
 
         WWW getResultado = new WWW (CgetURL);
         yield return getResultado;

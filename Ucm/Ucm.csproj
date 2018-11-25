@@ -14,7 +14,6 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2017.1.0f3</UnityVersion>
@@ -51,31 +50,31 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEditor">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Timeline">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\UnityEngine.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
-      <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -88,13 +87,18 @@
     <Compile Include="Assets\Script\CambioC.cs" />
     <Compile Include="Assets\Script\CambioE.cs" />
     <Compile Include="Assets\Script\CambioEscena.cs" />
+    <Compile Include="Assets\Script\CargarChat.cs" />
+    <Compile Include="Assets\Script\CargarChatC.cs" />
     <Compile Include="Assets\Script\ControladorAsignaturas.cs" />
     <Compile Include="Assets\Script\ControladorDirector.cs" />
     <Compile Include="Assets\Script\ControladorLogin.cs" />
     <Compile Include="Assets\Script\ControladorMalla.cs" />
     <Compile Include="Assets\Script\ControladorSecretaria.cs" />
+    <Compile Include="Assets\Script\InformacionAsignatura.cs" />
     <Compile Include="Assets\Script\IngresarNotas.cs" />
     <Compile Include="Assets\Script\IngresoAsignaturas.cs" />
+    <Compile Include="Assets\Script\Mensajeria.cs" />
+    <Compile Include="Assets\Script\MensajeriaC.cs" />
     <Compile Include="Assets\Script\NotasRamos.cs" />
     <Compile Include="Assets\Script\ObtencionEditar.cs" />
     <Compile Include="Assets\Script\ObtenerDatos.cs" />
@@ -103,6 +107,7 @@
     <Compile Include="Assets\Script\RamosAnteriores.cs" />
     <Compile Include="Assets\Script\Solicitud.cs" />
     <Compile Include="Assets\Script\UpdateNoticia.cs" />
+    <Compile Include="Assets\Script\Utilidad.cs" />
     <Compile Include="Assets\Script\Ver_ListaAlumnos.cs" />
     <Compile Include="Assets\Script\Ver_Ponderaciones.cs" />
     <Compile Include="Assets\Script\Ver_Ramos.cs" />

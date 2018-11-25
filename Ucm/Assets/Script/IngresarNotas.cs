@@ -22,21 +22,8 @@ public class IngresarNotas : MonoBehaviour {
 
     public void Awake()
     {
+        titulo.text = AlumNotas.nombre + ": Notas del alumno " + AlumNotas.nombre_alumno;
         StartCoroutine("precarga");
-        /*      titulo.text = AlumNotas.nombre + ": Notas del alumno " + AlumNotas.nombre_alumno;
-        notas = panelNotas.GetComponentsInChildren<InputField>();
-        foreach (InputField cuadroNota in notas)
-        {
-            cuadroNota.text="0";
-        }
-        ponderaciones = panelNotas.GetComponentsInChildren<Text>();
-        foreach (Text cuadroPonderacion in ponderaciones){
-            if (cuadroPonderacion.CompareTag("Notas"))
-            {
-                cuadroPonderacion.text = "0";
-            }
-        }
-*/
 
     }
 

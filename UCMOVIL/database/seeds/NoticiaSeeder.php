@@ -11,10 +11,6 @@ class NoticiaSeeder extends Seeder
      */
     public function run()
     {
-      DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-      DB::table('noticias')->truncate();
-      DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-
       DB::table('noticias')->insert([
         'id_noticia' => '1',
         'titulo'=>'Noticia1',

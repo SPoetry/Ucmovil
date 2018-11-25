@@ -14,10 +14,6 @@ class UserSeeder extends Seeder
 
     public function run()
     {
-      DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-      DB::table('users')->truncate();
-      DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-
       DB::table('users')->insert([
         'id' => '1',
         'email' => 'alumno@gmail.com',
