@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Middleware\Profesor;
 use App\VersionRamo;
 use App\PonderacionesRamo;
+use App\RamosActuale;
 use Auth;
 
 class ProfesorController extends Controller
@@ -37,6 +38,31 @@ class ProfesorController extends Controller
       $alumnos["alumnos"] =   DB::table('alumnos')->select('id','nombre')->whereIn('id', $AlumnosArray->pluck('id_alumno'))->get();  //conexion a la base de datos y ordenados
       return response()->json($alumnos);  //entrega datos en forma de json
     }
+
+    public function obtener_notas(Request $request) // Obtiene las notas de un alumno y las ponderaciones correspondientes al ramo.
+    {
+      $id_ramo =  $request->id_c;
+      $id_alumno = $request->id_a;
+      
+      $notas["prenotas"] = DB::table('ramos_actuales')
+                  ->join('ponderaciones_ramos', ['ramos_actuales.id_ramo' => 'ponderaciones_ramos.id_ramo', 
+                                                  'ramos_actuales.N_nota' => 'ponderaciones_ramos.n_nota'])
+                  ->select('ramos_actuales.n_nota', 'nota', 'P_nota')
+                  ->where(['id_alumno' => $id_alumno, 'ramos_actuales.id_ramo'=>$id_ramo])->get();
+
+      return $notas;
+    } 
+
+    public function ingresar_notas(Request $request){
+      for ($i=0; $i < 10; $i++) { 
+        $nota = $request->$i;
+        $ramoactual = RamosActuale::firstOrNew(['id_ramo' => $request->id_ramo, 'id_alumno' => $request->id_alumno, 'n_nota'=>$i+1]);
+        $ramoactual->nota = $request->$i;
+        $ramoactual->save();
+      }
+     return "ok";
+    }
+
 
     public function ingresar_ponderaciones(Request $request)  //entrega todos los datos de los ramos impartidos
     {
