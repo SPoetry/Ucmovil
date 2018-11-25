@@ -44,9 +44,22 @@ class ProfesorController extends Controller
       $id_ramo =  $request->id_c;
       $id_alumno = $request->id_a;
       
-      $ponderaciones = PonderacionesRamo::all()->where('id_ramo', 1)->pluck('P_nota');
-      $notas = RamosActuale::all()->where('id_ramo', $id_ramo)->where('id_alumno', $id_alumno);
+      $notas["prenotas"] = DB::table('ramos_actuales')
+                  ->join('ponderaciones_ramos', ['ramos_actuales.id_ramo' => 'ponderaciones_ramos.id_ramo', 
+                                                  'ramos_actuales.N_nota' => 'ponderaciones_ramos.n_nota'])
+                  ->select('ramos_actuales.n_nota', 'nota', 'P_nota')
+                  ->where(['id_alumno' => $id_alumno, 'ramos_actuales.id_ramo'=>$id_ramo])->get();
+
       return $notas;
+    } 
+
+    public function ingresar_notas(Request $request){
+      for ($i=0; $i < 10; $i++) { 
+        $nota = $request->$i;
+        $ramoactual = RamosActuale::firstOrNew(['id_ramo' => $request->id_ramo, 'id_alumno' => $request->id_alumno, 'n_nota'=>$i, 'nota' => $request->$i]);
+        $ramoactual->save();
+      }
+     return "ok";
     }
 
     public function ingresar_ponderaciones(Request $request)  //entrega todos los datos de los ramos impartidos
