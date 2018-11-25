@@ -16,7 +16,7 @@ class PonderacionesRamoSeeder extends Seeder
         DB::table('ponderaciones_ramos')->insert([
             'id_ramo' => '1',
             'N_nota' => $i,
-            'P_nota' => '0.2'
+            'P_nota' => rand(0, 10) / 10
           ]);
         }
 
@@ -24,7 +24,7 @@ class PonderacionesRamoSeeder extends Seeder
         DB::table('ponderaciones_ramos')->insert([
             'id_ramo' => '2',
             'N_nota' => $i,
-            'P_nota' => '0.2'
+            'P_nota' => rand(0, 10) / 10
           ]);
         }
     }
