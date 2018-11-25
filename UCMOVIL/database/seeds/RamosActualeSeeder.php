@@ -15,6 +15,7 @@ class RamosActualeSeeder extends Seeder
         DB::table('ramos_actuales')->truncate();
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
+        
         for ($i=1; $i <= 10; $i++) {
             DB::table('ramos_actuales')->insert([
                 'id_ramo' => '1',

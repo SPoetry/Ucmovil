@@ -56,7 +56,8 @@ class ProfesorController extends Controller
     public function ingresar_notas(Request $request){
       for ($i=0; $i < 10; $i++) { 
         $nota = $request->$i;
-        $ramoactual = RamosActuale::firstOrNew(['id_ramo' => $request->id_ramo, 'id_alumno' => $request->id_alumno, 'n_nota'=>$i, 'nota' => $request->$i]);
+        $ramoactual = RamosActuale::firstOrNew(['id_ramo' => $request->id_ramo, 'id_alumno' => $request->id_alumno, 'n_nota'=>$i]);
+        $ramoactual->nota = $request->$i;
         $ramoactual->save();
       }
      return "ok";

@@ -69,7 +69,7 @@ public class IngresarNotas : MonoBehaviour {
     }
    
     public IEnumerator precarga(){
-        UrlObtencionNotas = UrlObtencionNotas + "?id_a=1&id_c=1";
+        UrlObtencionNotas = UrlObtencionNotas + "?id_a=" + id_alumno + "&id_c=" + id_ramo;
         WWW ResultadoConsulta = new WWW(UrlObtencionNotas);
         Debug.Log(UrlObtencionNotas);
         yield return ResultadoConsulta;
