@@ -23,6 +23,7 @@ public class IngresarNotas : MonoBehaviour {
     public void Awake()
     {
         titulo.text = AlumNotas.nombre + ": Notas del alumno " + AlumNotas.nombre_alumno;
+        StartCoroutine("precarga");
 
     }
 

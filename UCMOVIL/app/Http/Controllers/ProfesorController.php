@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Middleware\Profesor;
 use App\VersionRamo;
 use App\PonderacionesRamo;
+use App\RamosActuale;
 use Auth;
 
 class ProfesorController extends Controller
