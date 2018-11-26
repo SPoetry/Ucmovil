@@ -37,9 +37,15 @@ class DirectorCarreraController extends Controller
       return view('DirectorIndex');
   }
 
-  public function mostrar_asignatura()  //entrega todos los datos de las asignaturas
+  public function mostrar_asignatura(Request $request)  //entrega todos los datos de las asignaturas
   {
-    $asignaturas["asignatura"] = DB::table('asignaturas')->orderBy('nombre')->get();  //conexion a la base de datos y ordenados
+    $busqueda_malla = $request->id_malla;
+    $asignaturas["asignatura"] = DB::table('asignaturas')
+                                    ->join('mallas', 'asignaturas.id_malla','mallas.id_malla')
+                                    ->select('asignaturas.*')
+                                    ->where('asignaturas.id_malla',$busqueda_malla)
+                                    ->orderBy('nombre')
+                                    ->get();  //conexion a la base de datos y ordenados
     return response()->json($asignaturas);  //entrega datos en forma de objeto json
   }
 
@@ -52,6 +58,7 @@ class DirectorCarreraController extends Controller
     $asignatura->prerequisito=$request->prerequisito;
     $asignatura->posicion_x=$request->posicion_x;
     $asignatura->posicion_y=$request->posicion_y;
+    $asignatura->id_malla=$request->id_malla;
     $asignatura->save(); //se guarda en la base de datos todos los valores de la variable
     return "ok";
   }
@@ -67,12 +74,14 @@ class DirectorCarreraController extends Controller
     }
     $posicion_x=$request->posicion_x;
     $posicion_y=$request->posicion_y;
+    $id_malla=$request->id_malla;
     DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->update([
           'nombre'=>$nombre,
           'creditos'=>$creditos,
           'prerequisito'=>$prerequisito,
           'posicion_x'=>$posicion_x,
-          'posicion_y'=>$posicion_y
+          'posicion_y'=>$posicion_y,
+          'id_malla'=>$id_malla
         ]);
     return "ok";
   }
