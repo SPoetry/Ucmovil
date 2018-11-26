@@ -141,4 +141,12 @@ class DirectorCarreraController extends Controller
     DB::table("version_ramos")->where('id_ramo',$id_borrar)->delete();
     return "ok";
   }
+
+  public function busqueda_sala(Request $request){
+    $sala = $request->numero_sala;
+    $horario["horario"]= DB::table('horarios')
+                                    ->where(['horarios.sala'=>$sala, 'estado'=>'Aceptada'])
+                                    ->get();  //conexion a la base de datos y ordenados
+    return response()->json($horario);  //entrega datos en forma de objeto json
+  }
 }

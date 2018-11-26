@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class ControladorSalaRamoHorario : MonoBehaviour {
+    public int zeteo;
     private string getURL;
     private string TipoMalla;
 
@@ -13,6 +14,20 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
     private GameObject ComponenteVersionRamo;
     [SerializeField]
     private Transform LugarListado;
+    [SerializeField]
+    private InputField TextoBusquedaAsignatura;
+    [SerializeField]
+    private InputField TextoBusquedaProfesor;
+    [SerializeField]
+    private InputField TextoBusquedaYear;
+    [SerializeField]
+    private InputField TextoBusquedaSemestre;
+    [SerializeField]
+    private InputField IngresoSala;
+    [SerializeField]
+    private GameObject IngresoIdVersionRamo;
+    private GameObject ImagenPanel;
+    private GameObject Panel;
     public static GameObject Excepcion;
 
 
@@ -24,34 +39,56 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         }
     }
 
-    public void LimpiezaExcepcion()
+    public void busqueda()
     {
-        LugarListado = GameObject.FindWithTag("ListaProfesor").transform;
-        Excepcion = GameObject.Find(EventSystem.current.currentSelectedGameObject.name);
+        string Asignatura = TextoBusquedaAsignatura.text;
+        string Profesor = TextoBusquedaProfesor.text;
+        string Year = TextoBusquedaYear.text;
+        string Semestre = TextoBusquedaSemestre.text;
+        Text[] Componente;
         foreach (Transform child in LugarListado)
         {
-            if (Excepcion != child.gameObject)
+            Componente = child.GetComponentsInChildren<Text>();
+            if (Componente[0].text == Asignatura || Asignatura == "")
+            {
+                if (Componente[2].text == Profesor || Profesor == "")
+                {
+                    if (Componente[4].text == Year || Year == "")
+                    {
+                        if (Componente[5].text == Semestre || Semestre == "")
+                        {
+                        }
+                        else
+                        {
+                            Destroy(child.gameObject);
+                        }
+                    }
+                    else
+                    {
+                        Destroy(child.gameObject);
+                    }
+                }
+                else
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+            else
             {
                 Destroy(child.gameObject);
             }
+            LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, zeteo);
         }
-        LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, 450);
     }
 
-    public void LimpiezaMuestraProfesor()
-    {
-        limpieza();
-        StartCoroutine("MostrarProfesores");
-    }
-
-    private void ICI()
+    public void ICI()
     {
         limpieza();
         TipoMalla = "?id_malla=ICI";
         StartCoroutine("MostrarVersionRamo");
     }
 
-    private void INF()
+    public void INF()
     {
         limpieza();
         TipoMalla = "?id_malla=INF";
@@ -84,7 +121,83 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
             Componente[3].text = VerRam.id_profesor.ToString();
             Componente[4].text = VerRam.year.ToString();
             Componente[5].text = VerRam.semestre.ToString();
-            Componente[11].text = VerRam.id_ramo.ToString();
+            Componente[6].text = VerRam.id_ramo.ToString();
         }
+    }
+
+    public void LimpiezaExcepcion()
+    {
+        LugarListado = GameObject.FindWithTag("ListaVersionRamo").transform;
+        Excepcion = GameObject.Find(EventSystem.current.currentSelectedGameObject.name);
+        foreach (Transform child in LugarListado)
+        {
+            if (Excepcion != child.gameObject)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+        LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, zeteo);
+    }
+
+    public void CerrarPestaña()
+    {
+        ImagenPanel = GameObject.Find("PanelEspecificacionHorario");
+        ImagenPanel.GetComponent<RectTransform>().localScale = new Vector2(0, 0);
+    }
+
+    public void AbrirPestaña()
+    {
+        ImagenPanel = GameObject.Find("PanelEspecificacionHorario");
+        ImagenPanel.GetComponent<RectTransform>().localScale = new Vector2(1, 1);
+        LugarListado = GameObject.FindWithTag("ListaVersionRamo").transform;
+        Transform LugarListadoPadre = LugarListado.transform.parent.gameObject.transform;
+        ImagenPanel.transform.SetParent(LugarListadoPadre.transform);
+    }
+
+    public void ConsultaDisponibilidad()
+    {
+        AbrirPestaña();
+        StartCoroutine("ConsultaSala");
+    }
+
+    private IEnumerator ConsultaSala()
+    {
+        string ConsultaSala = "http://127.0.0.1:8000/d_escuela/busqueda_sala?numero_sala=" + IngresoSala;
+        WWW getResultadoSalas = new WWW(ConsultaSala);
+        yield return getResultadoSalas;
+        string JsonResultadoSalas = getResultadoSalas.text;
+        ListaHorarioSerializado lista = JsonUtility.FromJson<ListaHorarioSerializado>(JsonResultadoSalas);
+        Text[] Componente;
+
+        float valor;
+        valor = 1.0F;
+
+        foreach (HorarioSerializado HorSer in lista.ObtenerLista())
+        {
+            
+        }
+    }
+}
+
+[System.Serializable]
+public class HorarioSerializado
+{
+    public int id_asignatura;
+    public int modulo;
+    public string dia;
+    public int sala;
+    public string estado;
+    public object created_at;
+    public object updated_at;
+}
+
+[System.Serializable]
+public class ListaHorarioSerializado
+{
+    public List<HorarioSerializado> version_ramo;
+
+    public List<HorarioSerializado> ObtenerLista()
+    {
+        return version_ramo;
     }
 }

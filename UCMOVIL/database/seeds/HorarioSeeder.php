@@ -20,18 +20,21 @@ class HorarioSeeder extends Seeder
 	        'modulo' => '1',
 	        'dia' => 'lunes',
 	        'sala' => '24',
+          'estado'=> 'Aceptada'
 	    ]);
 	    DB::table('horarios')->insert([
 	        'id_asignatura' => 'ICI-115',
 	        'modulo' => '2',
 	        'dia' => 'lunes',
 	        'sala' => '24',
+          'estado'=> 'Aceptada'
 	    ]);
 	    DB::table('horarios')->insert([
 	        'id_asignatura' => 'ICI-612',
 	        'modulo' => '2',
 	        'dia' => 'martes',
 	        'sala' => '24',
+          'estado'=> 'Aceptada'
 	    ]);
     }
 }
