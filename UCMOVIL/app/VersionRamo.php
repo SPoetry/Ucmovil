@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class VersionRamo extends Model
 {
+  protected $primaryKey = 'id_ramo';
   protected $fillable = [
-      'id_asignatura', 'id_profesor', 'year', 'semestre',
+      'id_ramo' ,'id_asignatura', 'id_profesor', 'year', 'semestre'
   ];
   public function profesore(){
     return $this->belongsTo('App\Profesore');

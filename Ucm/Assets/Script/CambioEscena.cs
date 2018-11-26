@@ -4,11 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CambioEscena : MonoBehaviour {
-
-    public InputField MensajeInput;
-    public Text Mensaje;
-
+public class CambioEscena : MonoBehaviour { 
+    
     public void CambioE()
     {
         SceneManager.LoadScene("Perfil");
@@ -18,21 +15,4 @@ public class CambioEscena : MonoBehaviour {
     {
         SceneManager.LoadScene(Escena);
     }
-
-    public void EnviarMensaje()
-    {
-        string URLmensaje = ControladorLogin.InicioUrl + "Mensaje";
-        StartCoroutine(EnvioMensaje(URLmensaje));
-    }
-
-    public IEnumerator EnvioMensaje(string UrlMensaje)
-    {
-        UrlMensaje += "?id_remitente=" + ControladorLogin.Id + "&id_destinatario=" + Mensajeria.id_destinatario + "&texto=" + MensajeInput.text;
-        WWW ResultadoMensaje = new WWW(UrlMensaje);
-        Debug.Log(UrlMensaje);
-        MensajeInput.text = "";
-        yield return ResultadoMensaje;
-        //LimpiarInput();
-    }
-
 }
