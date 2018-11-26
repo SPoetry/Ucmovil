@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 114939880015975344}
   - component: {fileID: 114743128255944544}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Busqueda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enviar
+  m_Text: Buscar
 --- !u!114 &114353626536345446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -924,7 +924,7 @@ RectTransform:
   m_LocalScale: {x: 1.0000023, y: 1.0000023, z: 1.0000023}
   m_Children: []
   m_Father: {fileID: 224141008783487536}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -945,8 +945,8 @@ RectTransform:
   - {fileID: 224409326459508758}
   - {fileID: 224662482236892958}
   - {fileID: 224608117691084684}
-  - {fileID: 224037965226467008}
   - {fileID: 224875485283954208}
+  - {fileID: 224037965226467008}
   - {fileID: 224008973254023474}
   - {fileID: 224534567250560626}
   - {fileID: 224230119190565002}
@@ -1153,7 +1153,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224141008783487536}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
