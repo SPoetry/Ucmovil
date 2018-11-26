@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224526088463924166}
-  - component: {fileID: 114451878380725244}
   - component: {fileID: 114367045121244950}
   m_Layer: 5
   m_Name: ControladorAsignacionProfesor
@@ -42,17 +41,6 @@ MonoBehaviour:
   getURL: 
   ComponenteProfesor: {fileID: 0}
   LugarListado: {fileID: 0}
---- !u!114 &114451878380725244
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1480757847162234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &224526088463924166
 RectTransform:
   m_ObjectHideFlags: 1
