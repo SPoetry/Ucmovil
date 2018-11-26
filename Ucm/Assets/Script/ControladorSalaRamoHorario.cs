@@ -169,13 +169,14 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
     }
 
     List<string> ModulosDisponible;
+    Text[] ComponenteTexto;
     public IEnumerator ConsultaDiaSala()
     {
         DropdownModuloInicial.ClearOptions();
         LugarListado = GameObject.FindGameObjectWithTag("ListaVersionRamo").transform;
         Component[] ComponenteObjeto = LugarListado.GetComponentsInChildren<Component>();//se obtienen los componentes de el lugar listado
         GameObject OpcionSeleccionada = ComponenteObjeto[0].gameObject; //busco el boton seleccionado a través del componente y lo transformo a gameobject
-        Text[] ComponenteTexto = ComponenteObjeto[0].GetComponentsInChildren<Text>();
+        ComponenteTexto = ComponenteObjeto[0].GetComponentsInChildren<Text>();
 
         string ConsultaSala = "http://127.0.0.1:8000/d_escuela/busqueda_sala?numero_sala=" + ComponenteTexto[8].text + "&dia=" + DropdownDia.options[DropdownDia.value].text;
         //Debug.Log(ConsultaSala);
@@ -252,16 +253,29 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
 
     public IEnumerator EnviarHorarioIterador()
     {
-
-        for (int i=0; i<cantidad; i++)
+        int ModuloInicial = int.Parse(DropdownModuloInicial.options[DropdownModuloInicial.value].text);
+        int CantidadModulo = int.Parse(DropdownCantidadModulo.options[DropdownCantidadModulo.value].text);
+        int CalculoModulo = ModuloInicial + CantidadModulo;
+        int error=0;
+        for (int i= ModuloInicial; i<CalculoModulo; i++)
         {
-
+            string EnviarHorario = "http://127.0.0.1:8000/d_escuela/enviar_horario";
+            EnviarHorario = EnviarHorario + "?id_asignatura=" + ComponenteTexto[1].text + "&modulo=" + i.ToString();
+            EnviarHorario = EnviarHorario + "&dia=" + DropdownDia.options[DropdownDia.value].text + "&sala=" + ComponenteTexto[8].text;
+            EnviarHorario = EnviarHorario + "&estado=" + DropdownEstado.options[DropdownEstado.value].text;
+            Debug.Log(EnviarHorario);
+            WWW getResultadoEnvio = new WWW(EnviarHorario);
+            yield return getResultadoEnvio;
+            if(getResultadoEnvio.text != "ok")
+            {
+                //Debug.Log(getResultadoEnvio.text);
+                error++;
+            }
         }
-        string EnviarHorario = "http://127.0.0.1:8000/d_escuela/enviar_horario";
-        WWW getResultadoEnvio = new WWW(EnviarHorario);
-
-        yield return getResultadoEnvio;
-        string JsonResultadoEnvio = getResultadoEnvio.text;
+        if (error == 0)
+        {
+            SceneManager.LoadScene("AsignacionSalas");
+        }
     }
 }
 

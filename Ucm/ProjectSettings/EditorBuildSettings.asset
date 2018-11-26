@@ -71,7 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Perfil.unity
     guid: ac53c9cda74bd0149bf5604f6891820b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Escenas/Profesor.unity
     guid: 8e514b5f136a7f4418cf46593c7d9807
   - enabled: 1

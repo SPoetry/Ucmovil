@@ -12,6 +12,7 @@ use Auth; //Los valores de user estan en auth
 use App\VersionRamo;
 use App\Asignatura;
 use App\DirectoresCarrera;
+use App\Horario;
 use App\Malla;
 use App\Profesore;
 
@@ -154,6 +155,12 @@ class DirectorCarreraController extends Controller
   }
 
   public function enviar_horario(Request $request){
-    
+    $horario = Horario::create([  'id_asignatura' => $request->id_asignatura,
+                                  'modulo' => $request->modulo,
+                                  'dia' => $request->dia,
+                                  'sala' => $request->sala,
+                                  'estado' => $request->estado]);
+    $horario->save();
+    return "ok";
   }
 }
