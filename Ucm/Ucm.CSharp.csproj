@@ -83,7 +83,6 @@
     <Compile Include="Assets\Script\AgregarNoticia.cs" />
     <Compile Include="Assets\Script\AlumNotas.cs" />
     <Compile Include="Assets\Script\AsignaturaEditDelet.cs" />
-    <Compile Include="Assets\Script\AsignaturasActuales.cs" />
     <Compile Include="Assets\Script\Bienvenido.cs" />
     <Compile Include="Assets\Script\Cambio.cs" />
     <Compile Include="Assets\Script\CambioC.cs" />
@@ -91,11 +90,17 @@
     <Compile Include="Assets\Script\CambioEscena.cs" />
     <Compile Include="Assets\Script\CargarChat.cs" />
     <Compile Include="Assets\Script\CargarChatC.cs" />
+    <Compile Include="Assets\Script\controladorAsignarProfesorCurso.cs" />
+    <Compile Include="Assets\Script\ControladorAsignaturaAsignacion.cs" />
     <Compile Include="Assets\Script\ControladorAsignaturas.cs" />
+    <Compile Include="Assets\Script\ControladorBorrarVersionRamo.cs" />
+    <Compile Include="Assets\Script\ControladorBusquedaVersionRamo.cs" />
     <Compile Include="Assets\Script\ControladorDirector.cs" />
     <Compile Include="Assets\Script\ControladorLogin.cs" />
     <Compile Include="Assets\Script\ControladorMalla.cs" />
+    <Compile Include="Assets\Script\ControladorProfesorAsignacion.cs" />
     <Compile Include="Assets\Script\ControladorSecretaria.cs" />
+    <Compile Include="Assets\Script\ControladorVersionRamoBorrar.cs" />
     <Compile Include="Assets\Script\InformacionAsignatura.cs" />
     <Compile Include="Assets\Script\IngresarNotas.cs" />
     <Compile Include="Assets\Script\IngresoAsignaturas.cs" />

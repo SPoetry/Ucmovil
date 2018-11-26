@@ -49,6 +49,10 @@ Route::get('/d_escuela/mostrar_asignatura', 'DirectorCarreraController@mostrar_a
 Route::get('/d_escuela/anadir_asignatura', 'DirectorCarreraController@anadir_asignatura')->name('anadir_asignatura');
 Route::get('/d_escuela/modificar_asignatura', 'DirectorCarreraController@modificar_asignatura')->name('modificar_asignatura');
 Route::get('/d_escuela/borrar_asignatura', 'DirectorCarreraController@borrar_asignatura')->name('borrar_asignatura');
+Route::get('/d_escuela/mostrar_profesor', 'DirectorCarreraController@mostrar_profesores')->name('mostrar_profesores');
+Route::get('/d_escuela/anadir_profesor_ramo', 'DirectorCarreraController@anadir_profesor_ramo')->name('anadir_profesor_ramo');
+Route::get('/d_escuela/mostrar_version_ramo', 'DirectorCarreraController@mostrar_version_ramo')->name('mostrar_version_ramo');
+Route::get('/d_escuela/borrar_version_ramo', 'DirectorCarreraController@borrar_version_ramo')->name('borrar_version_ramo');
 
 
 Route::get('/secretaria/mostrar_noticia','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
