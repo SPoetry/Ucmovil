@@ -252,7 +252,6 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
 
     public IEnumerator EnviarHorarioIterador()
     {
-
         for (int i=0; i<cantidad; i++)
         {
 
