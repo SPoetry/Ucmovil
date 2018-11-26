@@ -23,7 +23,7 @@ public class Ver_Ramos : MonoBehaviour
     {
         Id = ControladorLogin.Id;
         Debug.Log(Id);
-        UrlRamos = UrlRamos + "?id=2";
+        UrlRamos = UrlRamos + "?id="+Id;
         WWW ResultadoConsulta = new WWW(UrlRamos);
         Debug.Log(UrlRamos);
         yield return ResultadoConsulta;
