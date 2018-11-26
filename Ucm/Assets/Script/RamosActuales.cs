@@ -6,7 +6,7 @@ using System;
 
 public class RamosActuales : MonoBehaviour {
 
-    public string UrlRamosActuales = "http://localhost:8000/RamosA";
+    public string UrlRamosActuales = ControladorLogin.InicioUrl + "RamosA";
     public GameObject AsignaturaPrefab;
     public Transform Ubicacion;
     public Text[] componentes;
@@ -85,7 +85,7 @@ public class RamosActuales : MonoBehaviour {
 
     public IEnumerator Casig(string id)
     {
-        string consultas = "http://localhost:8000/CodigoA?id=" + id;
+        string consultas = ControladorLogin.InicioUrl + "CodigoA?id=" + id;
         WWW ResultadoRamos = new WWW(consultas);
         yield return ResultadoRamos;
         Debug.Log(ResultadoRamos.text);
@@ -94,7 +94,7 @@ public class RamosActuales : MonoBehaviour {
 
     public IEnumerator Nasig(string name)
     {
-        string consultas = "http://localhost:8000/NameA?id=" + name;
+        string consultas = ControladorLogin.InicioUrl + "NameA?id=" + name;
         WWW ResultadoRamos = new WWW(consultas);
         yield return ResultadoRamos;
         Debug.Log(ResultadoRamos.text);
@@ -103,7 +103,7 @@ public class RamosActuales : MonoBehaviour {
 
     public IEnumerator Nprofe(string id)
     {
-        string nprofe = "http://localhost:8000/ProfesorA?id=" + id;
+        string nprofe = ControladorLogin.InicioUrl + "ProfesorA?id=" + id;
         WWW ResultadoRamos = new WWW(nprofe);
         Debug.Log(nprofe);
         yield return ResultadoRamos;
@@ -112,7 +112,7 @@ public class RamosActuales : MonoBehaviour {
 
     public IEnumerator Horario(string id)
     {
-        string ConsultaHorario = "http://localhost:8000/HorarioA?id=" + id;
+        string ConsultaHorario = ControladorLogin.InicioUrl + "HorarioA?id=" + id;
         WWW ResultadoRamos = new WWW(ConsultaHorario);
         Debug.Log(ConsultaHorario);
         yield return ResultadoRamos;
