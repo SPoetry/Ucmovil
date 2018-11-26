@@ -64,7 +64,7 @@ class SecretariaController extends Controller
     return "ok";
   }
 
-<<<<<<< HEAD
+
   public function aceptar(Request $request)
 {
   $id_noticia = $request ->id_noticia;
@@ -114,7 +114,7 @@ class SecretariaController extends Controller
 
 
 
-=======
+
   public function Mensajeria(Request $request)
   {
     $ProfesoresResultado["profesores"] = DB::table('profesores')->get();
@@ -128,5 +128,5 @@ class SecretariaController extends Controller
 
     return response()->json($MensajesChat);
   }
->>>>>>> master
+
 }
