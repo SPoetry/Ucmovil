@@ -89,3 +89,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/IngresarNotas.unity
     guid: 27df84bc9f1df934ea61da70ae336c59
+  - enabled: 1
+    path: Assets/Escenas/AsignacionProfesorRamo.unity
+    guid: a5df79b7c0aeccb40be76dca9c3eeb52
+  - enabled: 1
+    path: Assets/Escenas/AsignacionProfesorRamoEditar.unity
+    guid: 38a3b202ff023b048a73a82be169c64c
+  - enabled: 1
+    path: Assets/Escenas/AsignacionSalas.unity
+    guid: 82f0cd99b41c24149add089dfc40cb87
+  - enabled: 1
+    path: Assets/Escenas/Chat.unity
+    guid: c318a1aa0622f1c408b4795822c0e153
+  - enabled: 1
+    path: Assets/Escenas/ChatCurso.unity
+    guid: d1d4f425695f75d4bb079ac4ba70b9b1
+  - enabled: 1
+    path: Assets/Escenas/Historial.unity
+    guid: 96aa99d4463011b478eafb64c1f8eb67
+  - enabled: 1
+    path: Assets/Escenas/Mensajeria.unity
+    guid: c63ad911e9dd290458aba643428a7c29
+  - enabled: 1
+    path: Assets/Escenas/MensajeriaCurso.unity
+    guid: 1792920c3cbdee4469f01cf53f7834a1

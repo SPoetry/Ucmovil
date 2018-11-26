@@ -14,11 +14,11 @@ class CreateMallasTable extends Migration
     public function up()
     {
         Schema::create('mallas', function (Blueprint $table) {
-            $table->string('id_asignatura',10);
+            $table->string('id_malla',3);
+            $table->string('nombre_carrera');
             $table->integer('semestre');
             $table->timestamps();
-            $table->primary(['id_asignatura', 'semestre']);
-            $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
+            $table->primary(['id_malla']);
         });
     }
 

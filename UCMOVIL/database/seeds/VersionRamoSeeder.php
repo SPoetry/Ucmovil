@@ -17,7 +17,7 @@ class VersionRamoSeeder extends Seeder
 
     	DB::table('version_ramos')->insert([
         	'id_ramo' => '1',
-        	'id_asignatura' => 'ICI-114',
+        	'id_asignatura' => 'ICI-612',
         	'id_profesor' => '2',
           'year' => '2018',
           'semestre' => '1'
