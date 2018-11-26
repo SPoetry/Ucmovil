@@ -8,6 +8,8 @@ use App\Http\Middleware\Profesor;
 use App\VersionRamo;
 use App\PonderacionesRamo;
 use App\RamosActuale;
+use App\Boletine;
+use App\Profesore;
 use Auth;
 
 class ProfesorController extends Controller
@@ -61,6 +63,13 @@ class ProfesorController extends Controller
         $ramoactual->save();
       }
      return "ok";
+    }
+
+     public function enviar_boletin(Request $request)
+    {
+      $profe = Profesore::find($request->id_profe)->nombre;
+      Boletine::create(['asunto' => $request->asunto, 'contenido' => $request->contenido, 'propietario' => $profe, 'estado' => 0]);
+      return "ok";
     }
 
 

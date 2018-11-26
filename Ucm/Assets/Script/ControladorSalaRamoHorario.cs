@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class ControladorSalaRamoHorario : MonoBehaviour {
+    public int zeteo;
     private string getURL;
     private string TipoMalla;
 
@@ -13,6 +14,28 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
     private GameObject ComponenteVersionRamo;
     [SerializeField]
     private Transform LugarListado;
+    [SerializeField]
+    private InputField TextoBusquedaAsignatura;
+    [SerializeField]
+    private InputField TextoBusquedaProfesor;
+    [SerializeField]
+    private InputField TextoBusquedaYear;
+    [SerializeField]
+    private InputField TextoBusquedaSemestre;
+    [SerializeField]
+    private InputField IngresoSala;
+    [SerializeField]
+    private GameObject IngresoIdVersionRamo;
+    private GameObject ImagenPanel;
+    private GameObject Panel;
+    [SerializeField]
+    private Dropdown DropdownDia;
+    [SerializeField]
+    private Dropdown DropdownModuloInicial;
+    [SerializeField]
+    private Dropdown DropdownCantidadModulo;
+    [SerializeField]
+    private Dropdown DropdownEstado;
     public static GameObject Excepcion;
 
 
@@ -24,34 +47,56 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         }
     }
 
-    public void LimpiezaExcepcion()
+    public void busqueda()
     {
-        LugarListado = GameObject.FindWithTag("ListaProfesor").transform;
-        Excepcion = GameObject.Find(EventSystem.current.currentSelectedGameObject.name);
+        string Asignatura = TextoBusquedaAsignatura.text;
+        string Profesor = TextoBusquedaProfesor.text;
+        string Year = TextoBusquedaYear.text;
+        string Semestre = TextoBusquedaSemestre.text;
+        Text[] Componente;
         foreach (Transform child in LugarListado)
         {
-            if (Excepcion != child.gameObject)
+            Componente = child.GetComponentsInChildren<Text>();
+            if (Componente[0].text == Asignatura || Asignatura == "")
+            {
+                if (Componente[2].text == Profesor || Profesor == "")
+                {
+                    if (Componente[4].text == Year || Year == "")
+                    {
+                        if (Componente[5].text == Semestre || Semestre == "")
+                        {
+                        }
+                        else
+                        {
+                            Destroy(child.gameObject);
+                        }
+                    }
+                    else
+                    {
+                        Destroy(child.gameObject);
+                    }
+                }
+                else
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+            else
             {
                 Destroy(child.gameObject);
             }
+            LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, zeteo);
         }
-        LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, 450);
     }
 
-    public void LimpiezaMuestraProfesor()
-    {
-        limpieza();
-        StartCoroutine("MostrarProfesores");
-    }
-
-    private void ICI()
+    public void ICI()
     {
         limpieza();
         TipoMalla = "?id_malla=ICI";
         StartCoroutine("MostrarVersionRamo");
     }
 
-    private void INF()
+    public void INF()
     {
         limpieza();
         TipoMalla = "?id_malla=INF";

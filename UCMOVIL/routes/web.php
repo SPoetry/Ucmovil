@@ -74,3 +74,4 @@ Route::get('/ingresoponderaciones', 'ProfesorController@ingresar_ponderaciones')
 Route::get('/ListaAlumnos', 'ProfesorController@mostrar_lista');
 Route::get('/ObtenerNotas', 'ProfesorController@obtener_notas');
 Route::get('/IngresarNotas', 'ProfesorController@ingresar_notas');
+Route::get('/profesor/enviar_boletin', 'ProfesorController@enviar_boletin');
