@@ -23,5 +23,14 @@ class ProfesoreSeeder extends Seeder
         'telefono' => '+56988888888',
         'apodo'=>'Sak'
       ]);
+
+      DB::table('profesores')->insert([
+        'id' => '7',
+        'ano_ingreso' => '2015',
+        'especialidad' => 'Programador',
+        'nombre' => 'Raziel',
+        'telefono' => '+123123',
+        'apodo'=>'El Ra'
+      ]);
     }
 }

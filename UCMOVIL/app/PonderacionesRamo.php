@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class PonderacionesRamo extends Model
 {
-  public $incrementing = false;
+
   protected $primaryKey = ['id_ramo','N_nota'];
+  public $incrementing = false;
   protected $fillable = [
       'id_ramo', 'N_nota', 'P_nota',
   ];
