@@ -2,10 +2,12 @@
 
 namespace App;
 
+use App\ClavesMultiples;
 use Illuminate\Database\Eloquent\Model;
 
 
-class PonderacionesRamo extends Model
+
+class PonderacionesRamo extends ClavesMultiples
 {
 
   protected $primaryKey = ['id_ramo','N_nota'];

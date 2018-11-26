@@ -2296,16 +2296,8 @@ MonoBehaviour:
   UrlPonderacion: http://localhost:8000/ponderaciones
   UrlIngresoPonderaciones: http://localhost:8000/ingresoponderaciones
   titulo: {fileID: 873845693}
-  Nota1: {fileID: 1990521433}
-  Nota2: {fileID: 886613887}
-  Nota3: {fileID: 1708530634}
-  Nota4: {fileID: 1037826499}
-  Nota5: {fileID: 2114114404}
-  Nota6: {fileID: 76458131}
-  Nota7: {fileID: 1863539391}
-  Nota8: {fileID: 554491873}
-  Nota9: {fileID: 1525919597}
-  Nota10: {fileID: 53827336}
+  panelPonderaciones: {fileID: 2106845054}
+  ponderaciones: []
 --- !u!114 &729301937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2317,6 +2309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa59a5ccc17974044b30293f52a60739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MensajeInput: {fileID: 0}
+  Mensaje: {fileID: 0}
 --- !u!1 &780106708
 GameObject:
   m_ObjectHideFlags: 0
