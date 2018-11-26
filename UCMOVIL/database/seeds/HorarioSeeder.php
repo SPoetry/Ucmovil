@@ -12,7 +12,7 @@ class HorarioSeeder extends Seeder
     public function run()
     {
         DB::table('horarios')->insert([
-	        'id_asignatura' => 'ICI-114',
+	        'id_asignatura' => 'ICI-612',
 	        'modulo' => '1',
 	        'dia' => 'lunes',
 	        'sala' => '24',
@@ -24,7 +24,7 @@ class HorarioSeeder extends Seeder
 	        'sala' => '24',
 	    ]);
 	    DB::table('horarios')->insert([
-	        'id_asignatura' => 'ICI-114',
+	        'id_asignatura' => 'ICI-612',
 	        'modulo' => '2',
 	        'dia' => 'martes',
 	        'sala' => '24',
