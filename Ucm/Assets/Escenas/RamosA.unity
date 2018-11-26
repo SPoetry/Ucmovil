@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37312, g: 0.38074034, b: 0.35872734, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -316,7 +316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194, y: 733}
+  m_AnchoredPosition: {x: 372.5, y: 733}
   m_SizeDelta: {x: 203.3, y: 128.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &328406729
@@ -430,8 +430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 805, y: 825.0001}
-  m_SizeDelta: {x: 4592, y: 2069}
+  m_AnchoredPosition: {x: 0.00012206999, y: 910.74}
+  m_SizeDelta: {x: 0, y: 1821.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &782745261
 MonoBehaviour:
@@ -445,14 +445,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b2df6e87804eaab4eadc49406fa521ee, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -736,8 +736,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -288.075, y: 705}
-  m_SizeDelta: {x: -796.15, y: -1555.5}
+  m_AnchoredPosition: {x: -155, y: 732.5}
+  m_SizeDelta: {x: -410, y: -1535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1212259716
 MonoBehaviour:
@@ -758,7 +758,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ead5bfdff0bc495479f8ae450bb89692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c00d77c84fad9104297df53068667444, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1068,6 +1068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa59a5ccc17974044b30293f52a60739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MensajeInput: {fileID: 0}
+  Mensaje: {fileID: 0}
 --- !u!114 &1984735091
 MonoBehaviour:
   m_ObjectHideFlags: 0
