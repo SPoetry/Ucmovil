@@ -12,7 +12,7 @@ public class nuevosoli : MonoBehaviour {
 	public Transform Ubicacion;
 
 
-	float x = 0, y = -446;
+	float x = 0, y = 455;
 
 	string id;
 	string solicitud;
@@ -44,7 +44,7 @@ public class nuevosoli : MonoBehaviour {
 
 		foreach(Solici Soli in listaSolicitud)
 		{
-			Debug.Log ("entro");
+			
 			GameObject nuevaSolicitud = Instantiate(solicitudesprefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
 			nuevaSolicitud.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
 			y -= 500;
@@ -91,14 +91,14 @@ public class Solici
 			return string.Format ("id_solicitante: {1}   Solicitud:  {2}   Texto:  {3}   Fecha:  {4}", id_solicitante, solicitud, texto,updated_at);
 		}
 	}
-
+[System.Serializable]
 	public class ListaSolicitud
 	{
-		public List<Solici> solicitud;
+		public List<Solici> solicitudes;
 
 		public List<Solici> mostrar()
 		{
-			return solicitud;
+			return solicitudes;
 		}
 	}
 
