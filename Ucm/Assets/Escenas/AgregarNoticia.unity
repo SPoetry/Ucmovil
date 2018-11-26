@@ -451,6 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postURL2: http://localhost:8000/secretaria/agregar_noticia
+  EstaId: {fileID: 0}
   Titulo: {fileID: 1267077498}
   Texto: {fileID: 715178288}
   Estado: {fileID: 230283103}
@@ -663,6 +664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa59a5ccc17974044b30293f52a60739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MensajeInput: {fileID: 0}
+  Mensaje: {fileID: 0}
 --- !u!1 &538573824
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

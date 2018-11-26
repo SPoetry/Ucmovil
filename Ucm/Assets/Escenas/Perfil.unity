@@ -423,6 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa59a5ccc17974044b30293f52a60739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MensajeInput: {fileID: 0}
+  Mensaje: {fileID: 0}
 --- !u!114 &238273183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,7 +635,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 194, y: 733}
+  m_AnchoredPosition: {x: 409, y: 735}
   m_SizeDelta: {x: 203.3, y: 128.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471290405
@@ -707,8 +709,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -288.075, y: 705}
-  m_SizeDelta: {x: -796.15, y: -1555.5}
+  m_AnchoredPosition: {x: -133.25, y: 705}
+  m_SizeDelta: {x: -486.51, y: -1555.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508685652
 MonoBehaviour:
@@ -729,7 +731,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ead5bfdff0bc495479f8ae450bb89692, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c00d77c84fad9104297df53068667444, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1196,7 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1666,6 +1668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa59a5ccc17974044b30293f52a60739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MensajeInput: {fileID: 0}
+  Mensaje: {fileID: 0}
 --- !u!114 &1630313741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1677,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8202e0f0ed88e824aace084429b46110, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UrlConsulta: http://localhost:8000/datos_por_id
+  UrlDatos: http://localhost:8000/datos_d
   Dato1: {fileID: 959056599}
   Dato2: {fileID: 167144998}
   Dato3: {fileID: 1670270076}
