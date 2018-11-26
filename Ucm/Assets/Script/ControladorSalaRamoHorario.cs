@@ -86,5 +86,47 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
             Componente[5].text = VerRam.semestre.ToString();
             Componente[11].text = VerRam.id_ramo.ToString();
         }
+        DropdownCantidadModulo.AddOptions(CantidadModulos);
+    }
+
+    public void EnviarHorario()
+    {
+        StartCoroutine("EnviarHorarioIterador");
+    }
+
+    public IEnumerator EnviarHorarioIterador()
+    {
+        for (int i=0; i<cantidad; i++)
+        {
+
+        }
+        string EnviarHorario = "http://127.0.0.1:8000/d_escuela/enviar_horario";
+        WWW getResultadoEnvio = new WWW(EnviarHorario);
+
+        yield return getResultadoEnvio;
+        string JsonResultadoEnvio = getResultadoEnvio.text;
+    }
+}
+
+[System.Serializable]
+public class HorarioSerializado
+{
+    public string id_asignatura;
+    public int modulo;
+    public string dia;
+    public string sala;
+    public string estado;
+    public object created_at;
+    public object updated_at;
+}
+
+[System.Serializable]
+public class ListaHorarioSerializado
+{
+    public List<HorarioSerializado> horario;
+
+    public List<HorarioSerializado> ObtenerLista()
+    {
+        return horario;
     }
 }

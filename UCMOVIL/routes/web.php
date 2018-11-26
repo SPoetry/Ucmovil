@@ -60,6 +60,12 @@ Route::get('/secretaria/agregar_noticia','SecretariaController@agregar_noticia')
 Route::get('/secretaria/editar_noticia','SecretariaController@editar_noticia')->name('editar_noticia');
 Route::get('/secretarias/Mensajeria', 'SecretariaController@Mensajeria')->name('mensajeria');
 Route::get('/secretarias/Mensajes', 'SecretariaController@Mensajes')->name('mensajes');
+Route::get('/secretaria/mostrar','SecretariaController@mostrar')->name('mostrar');
+Route::get('/secretaria/rechazar','SecretariaController@rechazar')->name('rechazar');
+Route::get('/secretaria/aceptar','SecretariaController@aceptar')->name('aceptar');
+Route::get('/secretaria/solicitudes','SecretariaController@solicitudes')->name('solicitudes');
+Route::get('/secretaria/solicitudesrechazo','SecretariaController@rechazarsolicitud')->name('solicitudesrechazado');
+Route::get('/secretaria/solicitudesaceptado','SecretariaController@aceptarsolicitud')->name('solicitudesaseptada');
 
 
 Route::get('/ramos_impartidos', 'ProfesorController@mostrar_impartidos');
