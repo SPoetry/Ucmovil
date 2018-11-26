@@ -119,12 +119,8 @@ class SecretariaController extends Controller
       'estado'=> $estado
     ]);
     return "ok";
-<<<<<<< HEAD
-  }public function aceptarsolicitud(Request $request)
-=======
   }
   public function aceptarsolicitud(Request $request)
->>>>>>> master
   {
     $id = $request ->id;
     $estado = $request ->estado;
@@ -135,10 +131,4 @@ class SecretariaController extends Controller
   }
 
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> master
 }
