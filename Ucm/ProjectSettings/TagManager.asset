@@ -3,14 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-<<<<<<< HEAD
-  - Notas
-=======
-  - ListaMalla
-  - ListaAsignatura
-  - ListaProfesor
->>>>>>> master
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -20,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - Front
+  - 
   - 
   - 
   - 
@@ -47,13 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Fondo
-    uniqueID: 2892109109
-    locked: 0
-  - name: Medio
-    uniqueID: 3011140197
-    locked: 0
-  - name: Frente
-    uniqueID: 3163721473
     locked: 0
