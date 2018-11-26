@@ -23,10 +23,9 @@ public class Bienvenido : MonoBehaviour {
             bienvenidos[2].SetActive(true);
             Botones[4].SetActive(true);
             Botones[10].SetActive(true);
-<<<<<<< HEAD
-=======
+
             Botones[12].SetActive(true);
->>>>>>> master
+
         }
         if (ControladorLogin.Tipo == "secretarias")
         {
