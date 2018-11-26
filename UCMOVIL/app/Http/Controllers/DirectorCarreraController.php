@@ -144,9 +144,16 @@ class DirectorCarreraController extends Controller
 
   public function busqueda_sala(Request $request){
     $sala = $request->numero_sala;
+    $dia = $request->dia;
     $horario["horario"]= DB::table('horarios')
-                                    ->where(['horarios.sala'=>$sala, 'estado'=>'Aceptada'])
+                                    ->where([ 'horarios.sala'=>$sala,
+                                              'estado'=>'Aceptada',
+                                              'dia'=>$dia])
                                     ->get();  //conexion a la base de datos y ordenados
     return response()->json($horario);  //entrega datos en forma de objeto json
+  }
+
+  public function enviar_horario(Request $request){
+    
   }
 }

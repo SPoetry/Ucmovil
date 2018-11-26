@@ -28,6 +28,14 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
     private GameObject IngresoIdVersionRamo;
     private GameObject ImagenPanel;
     private GameObject Panel;
+    [SerializeField]
+    private Dropdown DropdownDia;
+    [SerializeField]
+    private Dropdown DropdownModuloInicial;
+    [SerializeField]
+    private Dropdown DropdownCantidadModulo;
+    [SerializeField]
+    private Dropdown DropdownEstado;
     public static GameObject Excepcion;
 
 
@@ -154,38 +162,116 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         ImagenPanel.transform.SetParent(LugarListadoPadre.transform);
     }
 
-    public void ConsultaDisponibilidad()
+    public void ConsultaDisponibilidadDiaSala()
     {
         AbrirPestaña();
-        StartCoroutine("ConsultaSala");
+        StartCoroutine("ConsultaDiaSala");
     }
 
-    private IEnumerator ConsultaSala()
+    List<string> ModulosDisponible;
+    public IEnumerator ConsultaDiaSala()
     {
-        string ConsultaSala = "http://127.0.0.1:8000/d_escuela/busqueda_sala?numero_sala=" + IngresoSala;
+        DropdownModuloInicial.ClearOptions();
+        LugarListado = GameObject.FindGameObjectWithTag("ListaVersionRamo").transform;
+        Component[] ComponenteObjeto = LugarListado.GetComponentsInChildren<Component>();//se obtienen los componentes de el lugar listado
+        GameObject OpcionSeleccionada = ComponenteObjeto[0].gameObject; //busco el boton seleccionado a través del componente y lo transformo a gameobject
+        Text[] ComponenteTexto = ComponenteObjeto[0].GetComponentsInChildren<Text>();
+
+        string ConsultaSala = "http://127.0.0.1:8000/d_escuela/busqueda_sala?numero_sala=" + ComponenteTexto[8].text + "&dia=" + DropdownDia.options[DropdownDia.value].text;
+        //Debug.Log(ConsultaSala);
         WWW getResultadoSalas = new WWW(ConsultaSala);
         yield return getResultadoSalas;
+        //Debug.Log(getResultadoSalas.text);
         string JsonResultadoSalas = getResultadoSalas.text;
         ListaHorarioSerializado lista = JsonUtility.FromJson<ListaHorarioSerializado>(JsonResultadoSalas);
-        Text[] Componente;
-
+        //Debug.Log(lista.ObtenerLista());
+        
         float valor;
         valor = 1.0F;
 
+        ModulosDisponible = new List<string>();
+        ModulosDisponible.Add("");
+        for (int i=1; i<=12; i++)
+        {
+            if (i != 5)
+            {
+                ModulosDisponible.Add(i.ToString());
+            }
+        }
         foreach (HorarioSerializado HorSer in lista.ObtenerLista())
         {
-            
+            ModulosDisponible.Remove(HorSer.modulo.ToString());
         }
+        DropdownModuloInicial.AddOptions(ModulosDisponible);
+    }
+
+    public void ConsultaDisponibilidadModulos()
+    {
+        DropdownCantidadModulo.ClearOptions();
+        List<string> CantidadModulos = new List<string>();
+        string ModuloInicioSeleccionado = DropdownModuloInicial.options[DropdownModuloInicial.value].text;
+        int error = 0;
+        int empieza = 0;
+        int cantidad_restante=0;
+        int tamaño_arreglo = ModulosDisponible.Count;
+        //Debug.Log(tamaño_arreglo);
+        int i;
+        for (i = 0; i < tamaño_arreglo; i++) //busca el lugar del array donde empezar
+        {
+            if (ModuloInicioSeleccionado == ModulosDisponible[i])
+            {
+                empieza = i;
+                //Debug.Log(cantidad_restante);
+            }
+        }
+        //Debug.Log(empieza);
+
+        CantidadModulos.Add("");
+        CantidadModulos.Add((1).ToString());
+        for (i = empieza; i<= tamaño_arreglo-2; i++)
+        {
+            if ((int.Parse(ModulosDisponible[i])+1 == int.Parse(ModulosDisponible[i + 1])))
+            {
+                if (error == 0)
+                {
+                    CantidadModulos.Add((i + 2 - empieza).ToString());
+                }
+            }
+            else
+            {
+                error++;
+            }
+        }
+        DropdownCantidadModulo.AddOptions(CantidadModulos);
+    }
+
+    public void EnviarHorario()
+    {
+        StartCoroutine("EnviarHorarioIterador");
+    }
+
+    public IEnumerator EnviarHorarioIterador()
+    {
+
+        for (int i=0; i<cantidad; i++)
+        {
+
+        }
+        string EnviarHorario = "http://127.0.0.1:8000/d_escuela/enviar_horario";
+        WWW getResultadoEnvio = new WWW(EnviarHorario);
+
+        yield return getResultadoEnvio;
+        string JsonResultadoEnvio = getResultadoEnvio.text;
     }
 }
 
 [System.Serializable]
 public class HorarioSerializado
 {
-    public int id_asignatura;
+    public string id_asignatura;
     public int modulo;
     public string dia;
-    public int sala;
+    public string sala;
     public string estado;
     public object created_at;
     public object updated_at;
@@ -194,10 +280,10 @@ public class HorarioSerializado
 [System.Serializable]
 public class ListaHorarioSerializado
 {
-    public List<HorarioSerializado> version_ramo;
+    public List<HorarioSerializado> horario;
 
     public List<HorarioSerializado> ObtenerLista()
     {
-        return version_ramo;
+        return horario;
     }
 }

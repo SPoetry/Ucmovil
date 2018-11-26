@@ -54,6 +54,7 @@ Route::get('/d_escuela/anadir_profesor_ramo', 'DirectorCarreraController@anadir_
 Route::get('/d_escuela/mostrar_version_ramo', 'DirectorCarreraController@mostrar_version_ramo')->name('mostrar_version_ramo');
 Route::get('/d_escuela/borrar_version_ramo', 'DirectorCarreraController@borrar_version_ramo')->name('borrar_version_ramo');
 Route::get('/d_escuela/busqueda_sala', 'DirectorCarreraController@busqueda_sala')->name('busqueda_sala');
+Route::get('/d_escuela/enviar_horario', 'DirectorCarreraController@enviar_horario')->name('enviar_horario');
 
 
 
