@@ -16,9 +16,6 @@ class Asignatura extends Model
   public function malla(){
     return $this->belongsTo(Malla::class, 'id_malla', 'id_malla');
   }
-  public function horario(){
-    return $this->hasMany(Horario::class, 'id_asignatura', 'id_asignatura');
-  }
   public function ramosimpartido(){
     return $this->hasMany(RamosImpartido::class, 'id_asignatura', 'id_asignatura');
   }

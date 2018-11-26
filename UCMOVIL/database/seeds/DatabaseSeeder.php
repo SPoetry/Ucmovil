@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
        $this->call('DirectoresCarreraSeeder');
        $this->call('MallaSeeder');
        $this->call('AsignaturaSeeder');
-       $this->call('HorarioSeeder');
        $this->call('VersionRamoSeeder');
+       $this->call('HorarioSeeder');
        $this->call('RamosActualeSeeder');
        $this->call('NoticiaSeeder');
        $this->call('PonderacionesRamoSeeder');
