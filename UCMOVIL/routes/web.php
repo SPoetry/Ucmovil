@@ -10,8 +10,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/log', 'LoginController@Login');
 
-
 Route::get('/alumno', 'AlumnoController@index')->name('c_alumno');
+Route::get('/alumnos/MensajeriaC', 'AlumnoController@MensajeriaC');
+Route::get('/alumnos/MensajesC', 'AlumnoController@MensajesC');
+Route::get('/BuscarPorIdA', 'AlumnoController@BuscarPorIdA');
 Route::get('/d_escuela', 'DirectorCarreraController@index')->name('c_d_escuela');
 Route::get('/profesor', 'ProfesorController@index')->name('c_profesor');
 Route::get('/secretaria', 'SecretariaController@index')->name('c_secretaria');
@@ -23,6 +25,12 @@ Route::get('/cambioC', 'HomeController@cambioC')->name('cambioC');
 Route::get('/cambioA', 'HomeController@cambioA')->name('cambioA');
 Route::get('/cambioE', 'HomeController@cambioE')->name('cambioE');
 
+Route::get('/profesores/Mensajeria', 'ProfesorController@Mensajeria');
+Route::get('/profesores/Mensajes', 'ProfesorController@Mensajes');
+Route::get('/profesores/MensajeriaC', 'ProfesorController@MensajeriaC');
+Route::get('/profesores/MensajesC', 'ProfesorController@MensajesC');
+Route::get('/HorarioA', 'AsignaturaController@HorarioA')->name('HorarioA');
+Route::get('/Mensaje', 'HomeController@Mensaje')->name('Mensaje');
 
 
 Route::get('/CodigoA', 'AsignaturaController@CodigoA')->name('CodigoA');
@@ -41,17 +49,26 @@ Route::get('/d_escuela/mostrar_asignatura', 'DirectorCarreraController@mostrar_a
 Route::get('/d_escuela/anadir_asignatura', 'DirectorCarreraController@anadir_asignatura')->name('anadir_asignatura');
 Route::get('/d_escuela/modificar_asignatura', 'DirectorCarreraController@modificar_asignatura')->name('modificar_asignatura');
 Route::get('/d_escuela/borrar_asignatura', 'DirectorCarreraController@borrar_asignatura')->name('borrar_asignatura');
+Route::get('/d_escuela/mostrar_profesor', 'DirectorCarreraController@mostrar_profesores')->name('mostrar_profesores');
+Route::get('/d_escuela/anadir_profesor_ramo', 'DirectorCarreraController@anadir_profesor_ramo')->name('anadir_profesor_ramo');
+Route::get('/d_escuela/mostrar_version_ramo', 'DirectorCarreraController@mostrar_version_ramo')->name('mostrar_version_ramo');
+Route::get('/d_escuela/borrar_version_ramo', 'DirectorCarreraController@borrar_version_ramo')->name('borrar_version_ramo');
 
 
 Route::get('/secretaria/mostrar_noticia','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
 Route::get('/secretaria/agregar_noticia','SecretariaController@agregar_noticia')->name('agregar_noticia');
 Route::get('/secretaria/editar_noticia','SecretariaController@editar_noticia')->name('editar_noticia');
+<<<<<<< HEAD
 Route::get('/secretaria/mostrar','SecretariaController@mostrar')->name('mostrar');
 Route::get('/secretaria/rechazar','SecretariaController@rechazar')->name('rechazar');
 Route::get('/secretaria/aceptar','SecretariaController@aceptar')->name('aceptar');
 Route::get('/secretaria/solicitudes','SecretariaController@solicitudes')->name('solicitudes');
 Route::get('/secretaria/solicitudesrechazo','SecretariaController@rechazarsolicitud')->name('solicitudesrechazado');
 Route::get('/secretaria/solicitudesaceptado','SecretariaController@aceptarsolicitud')->name('solicitudesaseptada');
+=======
+Route::get('/secretarias/Mensajeria', 'SecretariaController@Mensajeria')->name('mensajeria');
+Route::get('/secretarias/Mensajes', 'SecretariaController@Mensajes')->name('mensajes');
+>>>>>>> master
 
 
 Route::get('/ramos_impartidos', 'ProfesorController@mostrar_impartidos');

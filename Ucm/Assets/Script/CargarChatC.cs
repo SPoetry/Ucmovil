@@ -45,6 +45,10 @@ public class CargarChatC : MonoBehaviour {
         WWW MensajesChat = new WWW(UrlMensajes);
         yield return MensajesChat;
         string MensajeTextoChat = MensajesChat.text;
+<<<<<<< HEAD
+=======
+        Debug.Log(UrlMensajes);
+>>>>>>> master
         Listachat ChatCompleto = JsonUtility.FromJson<Listachat>(MensajeTextoChat);
         List<Chat> ChatSeleccionar = ChatCompleto.total();
 

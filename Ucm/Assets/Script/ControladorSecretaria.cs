@@ -13,7 +13,11 @@ public class ControladorSecretaria : MonoBehaviour {
     public Transform Ubicacion;
 
 
+<<<<<<< HEAD
     float x = 0, y = 500;
+=======
+    float x = 0, y = 1280;
+>>>>>>> master
 
     string titulo;
     string texto;

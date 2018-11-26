@@ -26,7 +26,11 @@ public class IngresarNotas : MonoBehaviour {
         foreach (Text cuadroPonderacion in ponderaciones){
             if (cuadroPonderacion.CompareTag("Notas"))
             {
+<<<<<<< HEAD
                 cuadroPonderacion.text = "0";
+=======
+                UrlEnvioNotas = UrlEnvioNotas + "&" + nota.name + "=" + nota.text.Replace(",",".");
+>>>>>>> master
             }
         }
 */

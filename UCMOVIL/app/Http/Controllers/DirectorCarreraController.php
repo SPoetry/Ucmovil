@@ -9,11 +9,11 @@ use App\Http\Middleware\Director;
 
 //Todos los modelos que se requeriran para controlar las funciones
 use Auth; //Los valores de user estan en auth
+use App\VersionRamo;
 use App\Asignatura;
-use app\DirectoresCarrera;
-use app\Malla;
-use app\Profesore;
-use app\RamosImpartido;
+use App\DirectoresCarrera;
+use App\Malla;
+use App\Profesore;
 
 class DirectorCarreraController extends Controller
 {
@@ -37,9 +37,15 @@ class DirectorCarreraController extends Controller
       return view('DirectorIndex');
   }
 
-  public function mostrar_asignatura()  //entrega todos los datos de las asignaturas
+  public function mostrar_asignatura(Request $request)  //entrega todos los datos de las asignaturas
   {
-    $asignaturas["asignatura"] = DB::table('asignaturas')->orderBy('nombre')->get();  //conexion a la base de datos y ordenados
+    $busqueda_malla = $request->id_malla;
+    $asignaturas["asignatura"] = DB::table('asignaturas')
+                                    ->join('mallas', 'asignaturas.id_malla','mallas.id_malla')
+                                    ->select('asignaturas.*')
+                                    ->where('asignaturas.id_malla',$busqueda_malla)
+                                    ->orderBy('nombre')
+                                    ->get();  //conexion a la base de datos y ordenados
     return response()->json($asignaturas);  //entrega datos en forma de objeto json
   }
 
@@ -52,6 +58,7 @@ class DirectorCarreraController extends Controller
     $asignatura->prerequisito=$request->prerequisito;
     $asignatura->posicion_x=$request->posicion_x;
     $asignatura->posicion_y=$request->posicion_y;
+    $asignatura->id_malla=$request->id_malla;
     $asignatura->save(); //se guarda en la base de datos todos los valores de la variable
     return "ok";
   }
@@ -67,12 +74,14 @@ class DirectorCarreraController extends Controller
     }
     $posicion_x=$request->posicion_x;
     $posicion_y=$request->posicion_y;
+    $id_malla=$request->id_malla;
     DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->update([
           'nombre'=>$nombre,
           'creditos'=>$creditos,
           'prerequisito'=>$prerequisito,
           'posicion_x'=>$posicion_x,
-          'posicion_y'=>$posicion_y
+          'posicion_y'=>$posicion_y,
+          'id_malla'=>$id_malla
         ]);
     return "ok";
   }
@@ -81,6 +90,55 @@ class DirectorCarreraController extends Controller
   {
     $id_asignatura=$request->id_asignatura; //se ingresan los datos de los request
     DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->delete();
+    return "ok";
+  }
+
+  public function mostrar_profesores(Request $request){
+    if ($request->id_profesor=="") {
+      $profesores["profesor"] =   DB::table('profesores')
+                                      ->orderBy('nombre')
+                                      ->orderBy('especialidad')
+                                      ->get();  //conexion a la base de datos y ordenados
+      return response()->json($profesores);  //entrega datos en forma de objeto json
+    }
+    else {
+      $profesores["profesor"] =   DB::table('profesores')
+                                      ->where('id',$request->id_profesor)
+                                      ->orderBy('nombre')
+                                      ->orderBy('especialidad')
+                                      ->get();  //conexion a la base de datos y ordenados
+      return response()->json($profesores);  //entrega datos en forma de objeto json
+    }
+  }
+
+  public function anadir_profesor_ramo(Request $request)
+  {
+    $ramo = VersionRamo::create([ 'id_asignatura' => $request->id_asignatura,
+                                  'id_profesor' => $request->id_profesor,
+                                  'year' => $request->year,
+                                  'semestre' => $request->semestre]);
+    $ramo->save();
+    return "ok";
+  }
+
+  public function mostrar_version_ramo(Request $request){
+    $busqueda_malla = $request->id_malla;
+    $version_ramo["version_ramo"] = DB::table('version_ramos')
+                                    ->join('profesores', 'version_ramos.id_profesor','profesores.id')
+                                    ->join('asignaturas', 'version_ramos.id_asignatura','asignaturas.id_asignatura')
+                                    ->select('version_ramos.*',
+                                    'profesores.nombre as nombre_profesor',
+                                    'asignaturas.nombre as nombre_asignatura')
+                                    ->where('asignaturas.id_malla',$busqueda_malla)
+                                    ->orderBy('year','desc')
+                                    ->orderBy('semestre','desc')
+                                    ->get();  //conexion a la base de datos y ordenados
+    return response()->json($version_ramo);  //entrega datos en forma de objeto json
+  }
+
+  public function borrar_version_ramo(Request $request){
+    $id_borrar= $request->id_ramo;
+    DB::table("version_ramos")->where('id_ramo',$id_borrar)->delete();
     return "ok";
   }
 }

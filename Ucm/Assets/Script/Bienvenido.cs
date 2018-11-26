@@ -23,6 +23,10 @@ public class Bienvenido : MonoBehaviour {
             bienvenidos[2].SetActive(true);
             Botones[4].SetActive(true);
             Botones[10].SetActive(true);
+<<<<<<< HEAD
+=======
+            Botones[12].SetActive(true);
+>>>>>>> master
         }
         if (ControladorLogin.Tipo == "secretarias")
         {
@@ -36,6 +40,8 @@ public class Bienvenido : MonoBehaviour {
         {
             bienvenidos[3].SetActive(true);
             Botones[0].SetActive(true);
+            Botones[13].SetActive(true);
+            Botones[14].SetActive(true);
         }
     }
 }

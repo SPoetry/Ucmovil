@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Malla extends Model
 {
   protected $fillable = [
-      'id_asignatura', 'semestre', 'nombre',
+      'id_malla', 'nombre_carrera', 'semestre',
   ];
   public function asignatura(){
-    return $this->belongsTo(Asignatura::class, 'id_asignatura', 'id_asignatura');
+    return $this->hasMany(Asignatura::class, 'id_malla', 'id_malla');
   }
 }

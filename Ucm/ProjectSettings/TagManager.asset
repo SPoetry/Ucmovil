@@ -4,7 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Notas
+=======
+  - ListaMalla
+  - ListaAsignatura
+  - ListaProfesor
+>>>>>>> master
   layers:
   - Default
   - TransparentFX
