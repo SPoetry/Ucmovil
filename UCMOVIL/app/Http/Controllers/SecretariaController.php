@@ -28,6 +28,12 @@ class SecretariaController extends Controller
 
     return response()->json($noticias);
   }
+    public function mostrar()
+  {
+  $noticias	["noticias"] = DB::table('noticias')->where("estado","Revision")->get();
+
+  return response()->json($noticias);
+  }
 
   public function agregar_noticia(Request $request)
   {
@@ -70,4 +76,52 @@ class SecretariaController extends Controller
 
     return response()->json($MensajesChat);
   }
+
+    public function aceptar(Request $request)
+  {
+    $id_noticia = $request ->id_noticia;
+    $estado = $request ->estado;
+    DB::table("noticias")->where('id_noticia',$id_noticia)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+
+  public function rechazar(Request $request)
+  {
+    $id_noticia = $request ->id_noticia;
+    $estado = $request ->estado;
+    DB::table("noticias")->where('id_noticia',$id_noticia)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+
+  public function solicitudes(Request $request)
+  {
+    $solicitudes	["solicitudes"] = DB::table('solicitudes')->where("estado","Revision")->get();
+
+    return response()->json($solicitudes);
+  }
+
+  public function rechazarsolicitud(Request $request)
+  {
+    $id = $request ->id;
+    $estado = $request ->estado;
+    DB::table("solicitudes")->where('id',$id)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+  public function aceptarsolicitud(Request $request)
+  {
+    $id = $request ->id;
+    $estado = $request ->estado;
+    DB::table("solicitudes")->where('id',$id)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+
+
 }
