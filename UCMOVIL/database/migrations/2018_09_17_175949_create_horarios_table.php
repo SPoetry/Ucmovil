@@ -18,10 +18,13 @@ class CreateHorariosTable extends Migration
             $table->integer('modulo');
             $table->string('dia', 10);
             $table->string('sala', 10);
+            $table->string('estado',9);
             $table->timestamps();
             $table->primary(['id_asignatura', 'dia', 'modulo']);
             $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
         });
+        DB::statement('ALTER TABLE horarios ADD CONSTRAINT horarios_valores_estado
+        CHECK (estado = "Rechazada" and estado = "Aceptada" and estado = "Revision");');
     }
 
     /**
