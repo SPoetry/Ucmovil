@@ -35,6 +35,7 @@ public class Bienvenido : MonoBehaviour {
         {
             bienvenidos[3].SetActive(true);
             Botones[0].SetActive(true);
+            Botones[13].SetActive(true);
         }
     }
 }
