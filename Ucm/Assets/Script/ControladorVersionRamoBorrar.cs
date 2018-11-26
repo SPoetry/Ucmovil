@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ControladorVersionRamoBorrar : MonoBehaviour {
     public string getURL;
     private string TipoMalla;
+    public int zeteo;
 
     [SerializeField]
     private GameObject ComponenteAsignatura;
@@ -23,7 +24,7 @@ public class ControladorVersionRamoBorrar : MonoBehaviour {
     public void ICI()
     {
         limpieza();
-        LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, 450);
+        LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, zeteo);
         TipoMalla = "?id_malla=ICI";
         StartCoroutine("MostrarVersionRamo");
     }
@@ -31,7 +32,7 @@ public class ControladorVersionRamoBorrar : MonoBehaviour {
     public void INF()
     {
         limpieza();
-        LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, 450);
+        LugarListado.GetComponent<RectTransform>().localPosition = new Vector2(0, zeteo);
         TipoMalla = "?id_malla=INF";
         StartCoroutine("MostrarVersionRamo");
     }
