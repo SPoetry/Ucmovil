@@ -155,7 +155,7 @@ class DirectorCarreraController extends Controller
   }
 
   public function enviar_horario(Request $request){
-    $horario = Horario::create([  'id_version_ramo' => $request->id_version_ramo,
+    $horario = Horario::create([  'id_ramo' => $request->id_ramo,
                                   'modulo' => $request->modulo,
                                   'dia' => $request->dia,
                                   'sala' => $request->sala,

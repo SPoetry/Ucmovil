@@ -207,7 +207,6 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         string ModuloInicioSeleccionado = DropdownModuloInicial.options[DropdownModuloInicial.value].text;
         int error = 0;
         int empieza = 0;
-        int cantidad_restante=0;
         int tamaño_arreglo = ModulosDisponible.Count;
         int i;
         for (i = 0; i < tamaño_arreglo; i++) //busca el lugar del array donde empezar
@@ -215,10 +214,8 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
             if (ModuloInicioSeleccionado == ModulosDisponible[i])
             {
                 empieza = i;
-                //Debug.Log(cantidad_restante);
             }
         }
-        //Debug.Log(empieza);
 
         CantidadModulos.Add("");
         CantidadModulos.Add((1).ToString());
@@ -253,7 +250,7 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         for (int i= ModuloInicial; i<CalculoModulo; i++)
         {
             string EnviarHorario = "http://127.0.0.1:8000/d_escuela/enviar_horario";
-            EnviarHorario = EnviarHorario + "?id_asignatura=" + ComponenteTexto[1].text + "&modulo=" + i.ToString();
+            EnviarHorario = EnviarHorario + "?id_ramo=" + ComponenteTexto[6].text + "&modulo=" + i.ToString();
             EnviarHorario = EnviarHorario + "&dia=" + DropdownDia.options[DropdownDia.value].text + "&sala=" + ComponenteTexto[8].text;
             EnviarHorario = EnviarHorario + "&estado=" + DropdownEstado.options[DropdownEstado.value].text;
             Debug.Log(EnviarHorario);
@@ -275,7 +272,7 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
 [System.Serializable]
 public class HorarioSerializado
 {
-    public string id_asignatura;
+    public int id_ramo;
     public int modulo;
     public string dia;
     public string sala;
