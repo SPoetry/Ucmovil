@@ -1,11 +1,10 @@
-﻿<Properties StartupItem="Ucm.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Ver_Ramos.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\aseptarrechazarnoticia.cs">
     <Files>
-      <File FileName="Assets\Script\CambioEscena.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\AgregarNoticia.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\AsignaturasActuales.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\Ver_Ramos.cs" Line="12" Column="2" />
+      <File FileName="Assets\Script\nuevosoli.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\Ver_Ramos.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\aseptarrechazarnoticia.cs" Line="7" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

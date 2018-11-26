@@ -69,7 +69,7 @@ public class AprobarNoticias : MonoBehaviour {
 
 			foreach(Text Campo in Campos)
 			{
-				if (Campo.name == "id")
+				if (Campo.name == "Idnoticia")
 				{
 					Campo.text = Nota.id_noticia;
 				}

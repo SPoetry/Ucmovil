@@ -54,9 +54,12 @@ public class nuevosoli : MonoBehaviour {
 			{
 				if (Campo.name == "Id")
 				{
+					Campo.text = Soli.id;
+				}
+				if (Campo.name == "Idsolicitante")
+				{
 					Campo.text = Soli.id_solicitante;
 				}
-
 				if(Campo.name == "Solicitud")
 				{
 					Campo.text = Soli.solicitud;

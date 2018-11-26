@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 224899824843805098}
   - component: {fileID: 222325399776541110}
   - component: {fileID: 114276845946462232}
+  - component: {fileID: 114542448354073290}
   m_Layer: 5
   m_Name: Aprobar
   m_TagString: Untagged
@@ -221,7 +222,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114223807313323160}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114542448354073290}
+        m_MethodName: EnvioAseptar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114223807313323160
@@ -322,7 +334,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114371472786618572}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114542448354073290}
+        m_MethodName: Enviorechazo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &114276845946462232
@@ -445,6 +468,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
+--- !u!114 &114542448354073290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1741731776292664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af59e53c889d5040921e3296161f1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextoId: {fileID: 1806590305144136}
 --- !u!114 &114742430895601456
 MonoBehaviour:
   m_ObjectHideFlags: 1
