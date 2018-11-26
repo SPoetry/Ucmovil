@@ -50,7 +50,7 @@ class AsignaturaController extends Controller
 
   public function HorarioA(Request $request){
     $obtenerRamo = DB::table('version_ramos')->where('id_ramo', $request->id)->first();
-  	$horarios["horario"] = DB::table('horarios')->where('id_asignatura', $obtenerRamo->id_asignatura)->get();
+  	$horarios["horario"] = DB::table('horarios')->where('id_asignatura', $obtenerRamo->id_asignatura)->where('estado', "Aceptada")->get();
 	
 	return response()->json($horarios);
   }
