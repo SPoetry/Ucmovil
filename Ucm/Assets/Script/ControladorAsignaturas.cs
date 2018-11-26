@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class ControladorAsignaturas : MonoBehaviour
 {
-    public string getURL;
-    private string TipoMalla;
+    public string getURL = "http://127.0.0.1:8000/d_escuela/mostrar_asignatura";
 
     [SerializeField]
     private GameObject ComponenteAsignatura;
@@ -26,37 +25,20 @@ public class ControladorAsignaturas : MonoBehaviour
     [SerializeField]
     private GameObject PreRequisito;
 
-    public void limpieza()
-    {
-        foreach (Transform child in LugarListado)
-        {
-            Destroy(child.gameObject);
-        }
-    }
 
-    public void ICI()
+    public void Awake()
     {
-        limpieza();
-        TipoMalla = "?id_malla=ICI";
         StartCoroutine("MostrarAsignaturas");
     }
 
-    public void INF()
-    {
-        limpieza();
-        TipoMalla = "?id_malla=INF";
-        StartCoroutine("MostrarAsignaturas");
-    }
 
     private IEnumerator MostrarAsignaturas()
     {
-        getURL = "http://127.0.0.1:8000/d_escuela/mostrar_asignatura";
-        getURL = getURL + TipoMalla;
-        //Debug.Log(getURL);
         WWW getAsignatura = new WWW(getURL);
         yield return getAsignatura;
         string JsonAsignatura = getAsignatura.text;
         ListaAsignatura lista = JsonUtility.FromJson<ListaAsignatura>(JsonAsignatura);
+        //lista.Listar();
         Text[] Componente;
 
         float valor;
@@ -64,6 +46,10 @@ public class ControladorAsignaturas : MonoBehaviour
 
         foreach (Asignatura asign in lista.ObtenerLista())
         {
+            /*NombreAsignatura.GetComponent<Text>().text = asign.nombre;
+            CreditoAsignatura.GetComponent<Text>().text = asign.creditos.ToString();
+            CodigoAsignatura.GetComponent<Text>().text = asign.id_asignatura;*/
+
             GameObject nuevaAsignatura = Instantiate(ComponenteAsignatura) as GameObject;
             nuevaAsignatura.transform.SetParent(LugarListado.transform);
             nuevaAsignatura.GetComponent<RectTransform>().localScale = new Vector2(valor, valor);
@@ -76,7 +62,6 @@ public class ControladorAsignaturas : MonoBehaviour
             Componente[5].text = asign.posicion_x.ToString();
             Componente[6].text = asign.posicion_y.ToString();
             Componente[7].text = asign.prerequisito;
-            Componente[8].text = asign.id_malla;
         }
     }
 
@@ -93,7 +78,6 @@ public class Asignatura
     public object created_at;
     public object updated_at;
     public string prerequisito;
-    public string id_malla;
 
 
     public override string ToString()

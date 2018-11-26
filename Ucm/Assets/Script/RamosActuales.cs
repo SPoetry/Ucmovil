@@ -76,7 +76,6 @@ public class RamosActuales : MonoBehaviour {
                 {
                     yield return StartCoroutine(Horario(ramo.id_ramo));
                     a.text += horario;
-                    Debug.Log(a.text);
                 }
             }
         }

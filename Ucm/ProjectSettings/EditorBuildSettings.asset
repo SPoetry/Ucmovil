@@ -18,8 +18,17 @@ EditorBuildSettings:
     path: Assets/Escenas/AsignaturaEditar.unity
     guid: db096434b49fafb4f9fd191efe51792f
   - enabled: 1
+    path: Assets/Escenas/ChatCurso.unity
+    guid: d1d4f425695f75d4bb079ac4ba70b9b1
+  - enabled: 1
     path: Assets/Escenas/CambioC.unity
     guid: d7fc8d6a13f08b5498a4ba9ca79be1d2
+  - enabled: 1
+    path: Assets/Escenas/Historial.unity
+    guid: 96aa99d4463011b478eafb64c1f8eb67
+  - enabled: 1
+    path: Assets/Escenas/MensajeriaCurso.unity
+    guid: 1792920c3cbdee4469f01cf53f7834a1
   - enabled: 1
     path: Assets/Escenas/RamosA.unity
     guid: 8b641ea08f78d794dbbb5625bb1064e2
@@ -32,6 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Solicitar.unity
     guid: 4abbbd93432bb7147979ef20b5517bc7
+  - enabled: 1
+    path: Assets/Escenas/Chat.unity
+    guid: c318a1aa0622f1c408b4795822c0e153
+  - enabled: 1
+    path: Assets/Escenas/Mensajeria.unity
+    guid: c63ad911e9dd290458aba643428a7c29
   - enabled: 1
     path: Assets/Escenas/VerNotas.unity
     guid: 8c9adb28d183a104ebb5520514097962
@@ -74,3 +89,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/IngresarNotas.unity
     guid: 27df84bc9f1df934ea61da70ae336c59
+  - enabled: 1
+    path: Assets/Escenas/NoticiaxAprob.unity
+    guid: febe7cc914531cb4ab8073e27cd7f55b
+  - enabled: 1
+    path: Assets/Escenas/Solicitudes.unity
+    guid: fccf8c3e08caf6846a639d94a7087895
