@@ -179,16 +179,10 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         ComponenteTexto = ComponenteObjeto[0].GetComponentsInChildren<Text>();
 
         string ConsultaSala = "http://127.0.0.1:8000/d_escuela/busqueda_sala?numero_sala=" + ComponenteTexto[8].text + "&dia=" + DropdownDia.options[DropdownDia.value].text;
-        //Debug.Log(ConsultaSala);
         WWW getResultadoSalas = new WWW(ConsultaSala);
         yield return getResultadoSalas;
-        //Debug.Log(getResultadoSalas.text);
         string JsonResultadoSalas = getResultadoSalas.text;
         ListaHorarioSerializado lista = JsonUtility.FromJson<ListaHorarioSerializado>(JsonResultadoSalas);
-        //Debug.Log(lista.ObtenerLista());
-        
-        float valor;
-        valor = 1.0F;
 
         ModulosDisponible = new List<string>();
         ModulosDisponible.Add("");
@@ -215,7 +209,6 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         int empieza = 0;
         int cantidad_restante=0;
         int tamaño_arreglo = ModulosDisponible.Count;
-        //Debug.Log(tamaño_arreglo);
         int i;
         for (i = 0; i < tamaño_arreglo; i++) //busca el lugar del array donde empezar
         {

@@ -14,14 +14,14 @@ class CreateHorariosTable extends Migration
     public function up()
     {
         Schema::create('horarios', function (Blueprint $table) {
-            $table->string('id_asignatura', 10);
+            $table->integer('id_ramo')->unsigned();
             $table->integer('modulo');
             $table->string('dia', 10);
             $table->string('sala', 10);
             $table->string('estado',9);
             $table->timestamps();
-            $table->primary(['id_asignatura', 'dia', 'modulo']);
-            $table->foreign('id_asignatura')->references('id_asignatura')->on('asignaturas');
+            $table->primary(['id_ramo', 'dia', 'modulo']);
+            $table->foreign('id_ramo')->references('id_ramo')->on('version_ramos');
         });
         DB::statement('ALTER TABLE horarios ADD CONSTRAINT horarios_valores_estado
         CHECK (estado = "Rechazada" and estado = "Aceptada" and estado = "Revision");');

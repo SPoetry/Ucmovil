@@ -16,21 +16,21 @@ class HorarioSeeder extends Seeder
 		DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         DB::table('horarios')->insert([
-	        'id_asignatura' => 'ICI-612',
+	        'id_ramo' => '1',
 	        'modulo' => '1',
 	        'dia' => 'Lunes',
 	        'sala' => '24',
           'estado'=> 'Aceptada'
 	    ]);
 	    DB::table('horarios')->insert([
-	        'id_asignatura' => 'ICI-115',
+	        'id_ramo' => '1',
 	        'modulo' => '2',
 	        'dia' => 'Lunes',
 	        'sala' => '24',
           'estado'=> 'Aceptada'
 	    ]);
 	    DB::table('horarios')->insert([
-	        'id_asignatura' => 'ICI-612',
+	        'id_ramo' => '2',
 	        'modulo' => '2',
 	        'dia' => 'Martes',
 	        'sala' => '24',
