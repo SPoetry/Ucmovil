@@ -7,6 +7,10 @@ TagManager:
   - ListaMalla
   - ListaAsignatura
   - ListaProfesor
+  - ListaVersionRamo
+  - ConsolaModulos
+  - ImagenBuscada
+  - Canvas
   layers:
   - Default
   - TransparentFX

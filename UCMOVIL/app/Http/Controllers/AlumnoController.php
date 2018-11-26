@@ -24,7 +24,7 @@ class AlumnoController extends Controller
 
   public function RamosA(Request $request){
     $Anio = $request->anio;
-    $RamosA["ramosactuale"] = RamosActuale::all()->where('id_alumno', $request->id);
+    $RamosA["ramosactuale"] = DB::table('ramos_actuales')->select('id_ramo', 'id_alumno')->where('id_alumno', $request->id)->groupBy('id_alumno', 'id_ramo')->get();
 
     return response()->json($RamosA);
   }

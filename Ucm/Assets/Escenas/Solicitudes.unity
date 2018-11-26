@@ -431,7 +431,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MensajeInput: {fileID: 0}
   Mensaje: {fileID: 0}
+<<<<<<< HEAD:Ucm/Assets/Escenas/Solicitudes.unity
 --- !u!114 &302333359
+=======
+--- !u!114 &455636802
+>>>>>>> master:Ucm/Assets/Escenas/Noticias.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -803,8 +807,21 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1380259197}
   m_Enabled: 1
+<<<<<<< HEAD:Ucm/Assets/Escenas/Solicitudes.unity
 --- !u!92 &1380259200
 Behaviour:
+=======
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2d47542a1d51b46ac9df1197503044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getURL: http://localhost:8000/secretaria/mostrar_noticia
+  NoticiaPrefab: {fileID: 0}
+  Campos: []
+  Ubicacion: {fileID: 0}
+--- !u!114 &1493906131
+MonoBehaviour:
+>>>>>>> master:Ucm/Assets/Escenas/Noticias.unity
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -906,7 +923,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD:Ucm/Assets/Escenas/Solicitudes.unity
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+=======
+  m_Color: {r: 0.89705884, g: 0.89705884, b: 0.89705884, a: 1}
+>>>>>>> master:Ucm/Assets/Escenas/Noticias.unity
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -28,6 +28,12 @@ class SecretariaController extends Controller
 
     return response()->json($noticias);
   }
+    public function mostrar()
+  {
+  $noticias	["noticias"] = DB::table('noticias')->where("estado","Revision")->get();
+
+  return response()->json($noticias);
+  }
 
     public function mostrar()
   {
@@ -113,7 +119,12 @@ class SecretariaController extends Controller
       'estado'=> $estado
     ]);
     return "ok";
+<<<<<<< HEAD
   }public function aceptarsolicitud(Request $request)
+=======
+  }
+  public function aceptarsolicitud(Request $request)
+>>>>>>> master
   {
     $id = $request ->id;
     $estado = $request ->estado;
@@ -124,7 +135,10 @@ class SecretariaController extends Controller
   }
 
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> master
 }

@@ -31,11 +31,11 @@ public class RamosActuales : MonoBehaviour {
 
         if (Fecha_actualM > Semestre1m && Fecha_actualM >= Semestre2m)
         {
-            UrlRamosActuales = UrlRamosActuales + "?id=" + Ids + "&anio=" + Fecha_actualA + "-08-01";
+            UrlRamosActuales = UrlRamosActuales + "?id=" + ControladorLogin.Id;
         }
         else
         {
-            UrlRamosActuales = UrlRamosActuales + "?id=" + Ids + "&anio=" + Fecha_actualA + "-03-01";
+            UrlRamosActuales = UrlRamosActuales + "?id=" + ControladorLogin.Id;
         }
         StartCoroutine("RamosA");
     }
