@@ -11,16 +11,8 @@ public class Ver_Ponderaciones : MonoBehaviour {
 
     public Text titulo;
 
-    public InputField Nota1;
-    public InputField Nota2;
-    public InputField Nota3;
-    public InputField Nota4;
-    public InputField Nota5;
-    public InputField Nota6;
-    public InputField Nota7;
-    public InputField Nota8;
-    public InputField Nota9;
-    public InputField Nota10;
+    public GameObject panelPonderaciones;
+    public InputField[] ponderaciones;
 
 
     public void Awake()
@@ -43,20 +35,13 @@ public class Ver_Ponderaciones : MonoBehaviour {
         string Datos = ResultadoConsulta.text;
         ListaPonderaciones lista = JsonUtility.FromJson<ListaPonderaciones>(Datos);
 
+        ponderaciones = panelPonderaciones.GetComponentsInChildren<InputField>();
         int i = 0;
         foreach (Ponderacione pondera in lista.Enumerar())
         {
+            Debug.Log(pondera.P_nota);
+            ponderaciones[i].text = pondera.P_nota.ToString();
             i++;
-            if (i == 1) { Nota1.text = pondera.P_nota.ToString(); }
-            if (i == 2) { Nota2.text = pondera.P_nota.ToString(); }
-            if (i == 3) { Nota3.text = pondera.P_nota.ToString(); }
-            if (i == 4) { Nota4.text = pondera.P_nota.ToString(); }
-            if (i == 5) { Nota5.text = pondera.P_nota.ToString(); }
-            if (i == 6) { Nota6.text = pondera.P_nota.ToString(); }
-            if (i == 7) { Nota7.text = pondera.P_nota.ToString(); }
-            if (i == 8) { Nota8.text = pondera.P_nota.ToString(); }
-            if (i == 9) { Nota9.text = pondera.P_nota.ToString(); }
-            if (i == 10) { Nota10.text = pondera.P_nota.ToString(); }
         }
 
 
@@ -66,16 +51,15 @@ public class Ver_Ponderaciones : MonoBehaviour {
     {
         string Id = Ponderaciones.id;
         UrlIngresoPonderaciones = UrlIngresoPonderaciones + "?id=" + Id;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota1=" + Nota1.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota2=" + Nota2.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota3=" + Nota3.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota4=" + Nota4.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota5=" + Nota5.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota6=" + Nota6.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota7=" + Nota7.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota8=" + Nota8.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota9=" + Nota9.text;
-        UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota10=" + Nota10.text;
+
+        ponderaciones = panelPonderaciones.GetComponentsInChildren<InputField>();
+        for (int i = 0; i < 10; i++)
+        {
+            int j = i + 1;
+            if (ponderaciones[i].text == "") { UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota" + j + "=0"; }
+            else {UrlIngresoPonderaciones = UrlIngresoPonderaciones + "&P_nota" + j + "=" + ponderaciones[i].text;}
+            
+        }
         Debug.Log(UrlIngresoPonderaciones);
         WWW ResultadoConsulta = new WWW(UrlIngresoPonderaciones);
         yield return ResultadoConsulta;
@@ -92,7 +76,7 @@ public class Ponderacione
 {
     public int id_ramo;
     public int N_nota;
-    public int P_nota;
+    public float P_nota;
     public object created_at;
     public object updated_at;
 }

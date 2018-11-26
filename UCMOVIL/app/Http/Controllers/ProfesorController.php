@@ -27,15 +27,15 @@ class ProfesorController extends Controller
 
     public function mostrar_ponderaciones(Request $request)  //entrega todos los datos de las ponderaciones
     {
-      $ponderaciones["ponderaciones"] = PonderacionesRamo::all()->where('id_ramo', $request->id);  //conexion a la base de datos y ordenados
+      $ponderaciones["ponderaciones"] = PonderacionesRamo::all()->where('id_ramo', $request->id)->values();  //conexion a la base de datos y ordenados
       return response()->json($ponderaciones);  //entrega datos en forma de json
     }
 
     public function mostrar_lista(Request $request)  //entrega la lista de alumnos pertenecientes a un curso
     {
-      $AlumnosArray = DB::table('ramos_actuales')->select('id_alumno')->where('id_ramo', $request->id)->distinct()->get();
+      $AlumnosArray = DB::table('ramos_actuales')->select('id_alumno')->where('id_ramo', $request->id)->distinct()->get(); //obtiene la lista de alumnos pertenecientes a un ramo
 
-      $alumnos["alumnos"] =   DB::table('alumnos')->select('id','nombre')->whereIn('id', $AlumnosArray->pluck('id_alumno'))->get();  //conexion a la base de datos y ordenados
+      $alumnos["alumnos"] =   DB::table('alumnos')->select('id','nombre')->whereIn('id', $AlumnosArray->pluck('id_alumno'))->get();  //obtiene los datos de cada alumno incluido en el AlumnoArray 
       return response()->json($alumnos);  //entrega datos en forma de json
     }
 
@@ -67,19 +67,10 @@ class ProfesorController extends Controller
     public function ingresar_ponderaciones(Request $request)  //entrega todos los datos de los ramos impartidos
     {
         for ($i=1; $i <=10 ; $i++) {
-            if ($i == 1) {$P_nota = $request->P_nota1;}
-            if ($i == 2) {$P_nota = $request->P_nota2;}
-            if ($i == 3) {$P_nota = $request->P_nota3;}
-            if ($i == 4) {$P_nota = $request->P_nota4;}
-            if ($i == 5) {$P_nota = $request->P_nota5;}
-            if ($i == 6) {$P_nota = $request->P_nota6;}
-            if ($i == 7) {$P_nota = $request->P_nota7;}
-            if ($i == 8) {$P_nota = $request->P_nota8;}
-            if ($i == 9) {$P_nota = $request->P_nota9;}
-            if ($i == 10) {$P_nota = $request->P_nota10;}
-
-            DB::table("ponderaciones_ramos")->where(["id_ramo" => $request->id, "N_nota" => $i])->update(['P_nota' => $P_nota]);
-
+          $P_nota = 'P_nota'.$i;
+          $ponderacion = PonderacionesRamo::firstOrNew(['id_ramo'=> $request->id, 'N_nota' => $i]); 
+          $ponderacion->P_nota = $request->$P_nota;
+          $ponderacion->save();
         }
         return "Success";
     }
