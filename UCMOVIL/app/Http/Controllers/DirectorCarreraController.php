@@ -12,6 +12,7 @@ use Auth; //Los valores de user estan en auth
 use App\VersionRamo;
 use App\Asignatura;
 use App\DirectoresCarrera;
+use App\Horario;
 use App\Malla;
 use App\Profesore;
 
@@ -139,6 +140,27 @@ class DirectorCarreraController extends Controller
   public function borrar_version_ramo(Request $request){
     $id_borrar= $request->id_ramo;
     DB::table("version_ramos")->where('id_ramo',$id_borrar)->delete();
+    return "ok";
+  }
+
+  public function busqueda_sala(Request $request){
+    $sala = $request->numero_sala;
+    $dia = $request->dia;
+    $horario["horario"]= DB::table('horarios')
+                                    ->where([ 'horarios.sala'=>$sala,
+                                              'estado'=>'Aceptada',
+                                              'dia'=>$dia])
+                                    ->get();  //conexion a la base de datos y ordenados
+    return response()->json($horario);  //entrega datos en forma de objeto json
+  }
+
+  public function enviar_horario(Request $request){
+    $horario = Horario::create([  'id_asignatura' => $request->id_asignatura,
+                                  'modulo' => $request->modulo,
+                                  'dia' => $request->dia,
+                                  'sala' => $request->sala,
+                                  'estado' => $request->estado]);
+    $horario->save();
     return "ok";
   }
 }

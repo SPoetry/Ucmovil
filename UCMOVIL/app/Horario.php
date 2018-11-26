@@ -8,7 +8,7 @@ class Horario extends Model
 {
   protected $fillable = [
       'id_asignatura', 'modulo', 'dia',
-      'creditos',
+      'sala','estado'
   ];
   public function asignatura(){
     return $this->belongsTo(Asignatura::class, 'id_asignatura', 'id_asignatura');
