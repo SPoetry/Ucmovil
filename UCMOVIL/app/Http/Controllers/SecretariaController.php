@@ -35,6 +35,7 @@ class SecretariaController extends Controller
   return response()->json($noticias);
   }
 
+
   public function agregar_noticia(Request $request)
   {
     $noticia = new Noticia;
