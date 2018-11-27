@@ -35,12 +35,6 @@ class SecretariaController extends Controller
   return response()->json($noticias);
   }
 
-    public function mostrar()
-  {
-    $noticias	["noticias"] = DB::table('noticias')->where("estado","Revision")->get();
-
-    return response()->json($noticias);
-  }
 
   public function agregar_noticia(Request $request)
   {
