@@ -66,6 +66,7 @@ Route::get('/secretaria/aceptar','SecretariaController@aceptar')->name('aceptar'
 Route::get('/secretaria/solicitudes','SecretariaController@solicitudes')->name('solicitudes');
 Route::get('/secretaria/solicitudesrechazo','SecretariaController@rechazarsolicitud')->name('solicitudesrechazado');
 Route::get('/secretaria/solicitudesaceptado','SecretariaController@aceptarsolicitud')->name('solicitudesaseptada');
+Route::get('/secretaria/mostrar_boletin','SecretariaController@mostrar_boletin')->name('mostrarboletin');
 
 Route::get('/ramos_impartidos', 'ProfesorController@mostrar_impartidos');
 Route::get('/ponderaciones', 'ProfesorController@mostrar_ponderaciones');
