@@ -24,7 +24,6 @@ public class Bienvenido : MonoBehaviour {
             Botones[4].SetActive(true);
             Botones[10].SetActive(true);
             Botones[12].SetActive(true);
-            Botones[16].SetActive(true);
         }
         if (ControladorLogin.Tipo == "secretarias")
         {
@@ -33,6 +32,8 @@ public class Bienvenido : MonoBehaviour {
             Botones[2].SetActive(true);
             Botones[3].SetActive(true);
             Botones[9].SetActive(true);
+            Botones[16].SetActive(true);
+            Botones[17].SetActive(true);
         }
         if (ControladorLogin.Tipo == "directores_carreras")
         {
