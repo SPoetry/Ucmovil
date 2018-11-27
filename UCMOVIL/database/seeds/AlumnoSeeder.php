@@ -23,7 +23,8 @@ class AlumnoSeeder extends Seeder
         'telefono' => '+56999999999',
         'direccion' => 'El campo bien lejos',
         'semestre_actual' => '9',
-        'apodo'=>'Tiano'
+        'apodo'=>'Tiano',
+        'id_malla'=>'ICI'
       ]);
 
       DB::table('alumnos')->insert([
@@ -34,7 +35,8 @@ class AlumnoSeeder extends Seeder
         'telefono' => '9997878',
         'direccion' => 'Mi casa',
         'semestre_actual' => '1',
-        'apodo'=>'Sak'
+        'apodo'=>'Sak',
+        'id_malla'=>'ICI'
       ]);
     }
 }

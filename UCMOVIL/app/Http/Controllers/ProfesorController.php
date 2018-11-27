@@ -107,7 +107,12 @@ class ProfesorController extends Controller
 
       return response()->json($ProfesoresResultado);
     }
+  public function MensajeriaExtra(Request $request)
+    {
+      $ProfesoresResultado["profesores"] = DB::table('directores_carreras')->get();
 
+      return response()->json($ProfesoresResultado);
+    }
     public function Mensajes(Request $request)
     {
       $MensajesChat["chat"] = DB::table('chat')->where('id_remitente', $request->id_remitente)->where('id_destinatario', $request->id_destinatario)->orwhere('id_remitente', $request->id_destinatario)->where('id_destinatario', $request->id_remitente)->get();
