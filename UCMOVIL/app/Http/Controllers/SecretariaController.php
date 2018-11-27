@@ -70,6 +70,12 @@ class SecretariaController extends Controller
 
     return response()->json($ProfesoresResultado);
   }
+  public function MensajeriaE(Request $request)
+  {
+    $ProfesoresResultado["profesores"] = DB::table('directores_carreras')->get();
+
+    return response()->json($ProfesoresResultado);
+  }
 
   public function Mensajes(Request $request)
   {

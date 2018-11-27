@@ -56,14 +56,16 @@ Route::get('/d_escuela/mostrar_version_ramo', 'DirectorCarreraController@mostrar
 Route::get('/d_escuela/borrar_version_ramo', 'DirectorCarreraController@borrar_version_ramo')->name('borrar_version_ramo');
 Route::get('/d_escuela/busqueda_sala', 'DirectorCarreraController@busqueda_sala')->name('busqueda_sala');
 Route::get('/d_escuela/enviar_horario', 'DirectorCarreraController@enviar_horario')->name('enviar_horario');
-Route::get('/directores_carreras/Mensajeria', 'DirectorCarreraController@Mensajeria')->name('enviar_horario');
-Route::get('/directores_carreras/Mensajes', 'DirectorCarreraController@Mensajes')->name('enviar_horario');
+Route::get('/directores_carreras/Mensajeria', 'DirectorCarreraController@Mensajeria');
+Route::get('/directores_carreras/MensajeriaExtra', 'DirectorCarreraController@MensajeriaE');
+Route::get('/directores_carreras/Mensajes', 'DirectorCarreraController@Mensajes');
 
 
 Route::get('/secretaria/mostrar_noticia','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
 Route::get('/secretaria/agregar_noticia','SecretariaController@agregar_noticia')->name('agregar_noticia');
 Route::get('/secretaria/editar_noticia','SecretariaController@editar_noticia')->name('editar_noticia');
 Route::get('/secretarias/Mensajeria', 'SecretariaController@Mensajeria')->name('mensajeria');
+Route::get('/secretarias/MensajeriaExtra', 'SecretariaController@MensajeriaE');
 Route::get('/secretarias/Mensajes', 'SecretariaController@Mensajes')->name('mensajes');
 Route::get('/secretaria/mostrar','SecretariaController@mostrar')->name('mostrar');
 Route::get('/secretaria/rechazar','SecretariaController@rechazar')->name('rechazar');
