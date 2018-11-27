@@ -24,6 +24,7 @@ public class Bienvenido : MonoBehaviour {
             Botones[4].SetActive(true);
             Botones[10].SetActive(true);
             Botones[12].SetActive(true);
+            Botones[18].SetActive(true);
         }
         if (ControladorLogin.Tipo == "secretarias")
         {
