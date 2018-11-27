@@ -56,7 +56,8 @@ Route::get('/d_escuela/mostrar_version_ramo', 'DirectorCarreraController@mostrar
 Route::get('/d_escuela/borrar_version_ramo', 'DirectorCarreraController@borrar_version_ramo')->name('borrar_version_ramo');
 Route::get('/d_escuela/busqueda_sala', 'DirectorCarreraController@busqueda_sala')->name('busqueda_sala');
 Route::get('/d_escuela/enviar_horario', 'DirectorCarreraController@enviar_horario')->name('enviar_horario');
-
+Route::get('/directores_carreras/Mensajeria', 'DirectorCarreraController@Mensajeria')->name('enviar_horario');
+Route::get('/directores_carreras/Mensajes', 'DirectorCarreraController@Mensajes')->name('enviar_horario');
 
 
 Route::get('/secretaria/mostrar_noticia','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
