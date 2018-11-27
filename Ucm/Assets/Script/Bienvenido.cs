@@ -15,6 +15,7 @@ public class Bienvenido : MonoBehaviour {
             Botones[5].SetActive(true);
             Botones[6].SetActive(true);
             Botones[7].SetActive(true);
+            Botones[14].SetActive(true);
             Botones[8].SetActive(true);
             Botones[11].SetActive(true);
         }

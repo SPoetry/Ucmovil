@@ -21,10 +21,12 @@ class CreateAlumnosTable extends Migration
             $table->string('telefono');
             $table->string('direccion');
             $table->string('apodo');
+            $table->string('id_malla', 3);
             $table->integer('semestre_actual');
             $table->timestamps();
             $table->primary('id');
             $table->foreign('id')->references('id')->on('users');
+            $table->foreign('id_malla')->references('id_malla')->on('mallas');
         });
     }
 
