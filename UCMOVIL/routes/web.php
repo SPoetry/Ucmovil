@@ -26,6 +26,7 @@ Route::get('/cambioA', 'HomeController@cambioA')->name('cambioA');
 Route::get('/cambioE', 'HomeController@cambioE')->name('cambioE');
 
 Route::get('/profesores/Mensajeria', 'ProfesorController@Mensajeria');
+Route::get('/profesores/MensajeriaExtra', 'ProfesorController@MensajeriaExtra');
 Route::get('/profesores/Mensajes', 'ProfesorController@Mensajes');
 Route::get('/profesores/MensajeriaC', 'ProfesorController@MensajeriaC');
 Route::get('/profesores/MensajesC', 'ProfesorController@MensajesC');
@@ -53,6 +54,10 @@ Route::get('/d_escuela/mostrar_profesor', 'DirectorCarreraController@mostrar_pro
 Route::get('/d_escuela/anadir_profesor_ramo', 'DirectorCarreraController@anadir_profesor_ramo')->name('anadir_profesor_ramo');
 Route::get('/d_escuela/mostrar_version_ramo', 'DirectorCarreraController@mostrar_version_ramo')->name('mostrar_version_ramo');
 Route::get('/d_escuela/borrar_version_ramo', 'DirectorCarreraController@borrar_version_ramo')->name('borrar_version_ramo');
+Route::get('/d_escuela/busqueda_sala', 'DirectorCarreraController@busqueda_sala')->name('busqueda_sala');
+Route::get('/d_escuela/enviar_horario', 'DirectorCarreraController@enviar_horario')->name('enviar_horario');
+Route::get('/directores_carreras/Mensajeria', 'DirectorCarreraController@Mensajeria')->name('enviar_horario');
+Route::get('/directores_carreras/Mensajes', 'DirectorCarreraController@Mensajes')->name('enviar_horario');
 
 
 Route::get('/secretaria/mostrar_noticia','SecretariaController@mostrar_noticia')->name('mostrar_noticia');
@@ -75,3 +80,5 @@ Route::get('/ListaAlumnos', 'ProfesorController@mostrar_lista');
 Route::get('/ObtenerNotas', 'ProfesorController@obtener_notas');
 Route::get('/IngresarNotas', 'ProfesorController@ingresar_notas');
 Route::get('/profesor/enviar_boletin', 'ProfesorController@enviar_boletin');
+
+Route::get('/ConsultaMalla', 'AlumnoController@ConsultaMalla');

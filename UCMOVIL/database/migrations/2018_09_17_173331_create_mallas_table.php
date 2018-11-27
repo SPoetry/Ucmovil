@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateMallasTable extends Migration
 {
-    /**
+    /**<div></div>
      * Run the migrations.
      *
      * @return void

@@ -58,4 +58,14 @@ class AlumnoController extends Controller
       }
       return;
     }
+    public function ConsultaMalla(Request $request)
+    {
+      $Malla = DB::table('alumnos')->where('id', $request->id)->get();
+
+      foreach ($Malla as $key) {
+        echo $key->id_malla;
+      }
+      //echo $Malla->id_malla;
+      return ;
+    }
 }
