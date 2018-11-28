@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 655db159790c17342907f9e6d9ae3f42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChatPrefab: {fileID: 1494134388848168, guid: 0439f023de507794e9ba851dbdbabd27, type: 2}
+  ChatPrefab: {fileID: 1735082330276144, guid: f55e6cd1bb212324ab62389f6eb25f13, type: 2}
   Ubicacion: {fileID: 447091964}
   Componentes: []
 --- !u!114 &2091286134

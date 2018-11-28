@@ -55,4 +55,10 @@ public class AgregarNoticia : MonoBehaviour {
         Debug.Log(Mensajeria.id_destinatario);
         SceneManager.LoadScene("ChatCurso");
     }
+    public void AccederAChatE()
+    {
+        Mensajeria.id_destinatario = EstaId.text;
+        Debug.Log(Mensajeria.id_destinatario);
+        SceneManager.LoadScene("Chat2");
+    }
 }
