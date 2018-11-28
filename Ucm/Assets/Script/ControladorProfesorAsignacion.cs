@@ -46,7 +46,7 @@ public class ControladorProfesorAsignacion : MonoBehaviour {
 
     private IEnumerator MostrarProfesores()
     {
-        getURL = "http://localhost:8000/d_escuela/mostrar_profesor?id_profesor=";
+        getURL = ControladorLogin.InicioUrl + "d_escuela/mostrar_profesor?id_profesor=";
         WWW getProfesor = new WWW(getURL);
         yield return getProfesor;
         string JsonProfesor = getProfesor.text;

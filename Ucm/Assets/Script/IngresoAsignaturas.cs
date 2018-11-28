@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class IngresoAsignaturas : MonoBehaviour {
 
-    public string CgetURL = "http://localhost:8000/d_escuela/anadir_asignatura";
-    public string pruebaURL = "http://localhost:8000/d_escuela/anadir_asignatura?id_asignatura=ICI-400&nombre=hola&creditos=1000&prerequisito=ICI-200";
+    public string CgetURL = ControladorLogin.InicioUrl + "d_escuela/anadir_asignatura";
+    public string pruebaURL = ControladorLogin.InicioUrl + "d_escuela/anadir_asignatura?id_asignatura=ICI-400&nombre=hola&creditos=1000&prerequisito=ICI-200";
 
     public InputField IdAsignatura;
     public InputField Nombre;

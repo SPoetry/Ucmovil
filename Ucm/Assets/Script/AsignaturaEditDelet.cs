@@ -50,7 +50,7 @@ public class AsignaturaEditDelet : MonoBehaviour {
     public IEnumerator EliminarAsignatura()
     {
         Id = TextoIdObjeto.GetComponent<Text>();
-        string DelGetURL = "http://localhost:8000/d_escuela/borrar_asignatura";
+        string DelGetURL = ControladorLogin.InicioUrl + "d_escuela/borrar_asignatura";
 
         DelGetURL = DelGetURL + "?id_asignatura=" + Id.text;
         WWW getResultado = new WWW(DelGetURL);

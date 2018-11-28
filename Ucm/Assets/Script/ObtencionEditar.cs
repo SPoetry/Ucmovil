@@ -47,7 +47,7 @@ public class ObtencionEditar : MonoBehaviour {
 
     private IEnumerator EditarAsignatura()
     {
-        string EditargetURL = "http://localhost:8000/d_escuela/modificar_asignatura";
+        string EditargetURL = ControladorLogin.InicioUrl + "d_escuela/modificar_asignatura";
         EditargetURL = EditargetURL + "?id_asignatura=" + CampoId.text + "&nombre=" + CampoNombre.text + "&creditos=" + CampoCreditos.text;
         EditargetURL = EditargetURL + "&prerequisito=" + CampoPreRequisito.text + "&id_malla=" + CampoIdMalla.text;
         EditargetURL = EditargetURL + "&posicion_x=" + CampoPosicionX.text + "&posicion_y=" + CampoPosicionY.text;

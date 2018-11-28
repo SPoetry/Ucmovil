@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class CambioC : MonoBehaviour {
 
-    public string UrlCambioC = "http://localhost:8000/cambioC";
+    public string UrlCambioC = ControladorLogin.InicioUrl + "cambioC";
 
     public string Id;
     public string Tipo;

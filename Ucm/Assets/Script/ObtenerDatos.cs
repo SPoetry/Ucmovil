@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ObtenerDatos : MonoBehaviour {
 
-    public string UrlDatos = "http://localhost:8000/datos_d";
+    public string UrlDatos = ControladorLogin.InicioUrl + "datos_d";
 
     public Text Dato1;
     public Text Dato2;
@@ -28,13 +28,13 @@ public class ObtenerDatos : MonoBehaviour {
         Debug.Log(Tipo);
 
         if(Tipo == "secretarias"){
-            UrlDatos = "http://localhost:8000/datos_s";
+            UrlDatos = ControladorLogin.InicioUrl + "datos_s";
         }
         if(Tipo == "alumnos"){
-            UrlDatos = "http://localhost:8000/datos_a";
+            UrlDatos = ControladorLogin.InicioUrl + "datos_a";
         }
         if(Tipo == "profesores"){
-            UrlDatos = "http://localhost:8000/datos_p";
+            UrlDatos = ControladorLogin.InicioUrl + "datos_p";
         }
 
         UrlDatos = UrlDatos + "?id=" + Id;

@@ -12,8 +12,8 @@ public class IngresarNotas : MonoBehaviour {
     public InputField[] notas;
     public Text[] ponderaciones;
     public Text[] ponderacionesNotas;
-    public string UrlObtencionNotas = "http://localhost:8000/ObtenerNotas";
-    public string UrlIngresoNotas = "http://localhost:8000/IngresarNotas";
+    public string UrlObtencionNotas = ControladorLogin.InicioUrl + "ObtenerNotas";
+    public string UrlIngresoNotas = ControladorLogin.InicioUrl + "IngresarNotas";
     public string UrlEnvioNotas;
     private string id_alumno = AlumNotas.id_alumno;
     private string id_ramo = AlumNotas.id;

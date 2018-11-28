@@ -8,6 +8,6 @@ class Noticia extends Model
 {
   protected $fillable = [
       'id_noticia', 'titulo', 'texto', 'estado',
-      'propietario',
+      'propietario','tag',
   ];
 }

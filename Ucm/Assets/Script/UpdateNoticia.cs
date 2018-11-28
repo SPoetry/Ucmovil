@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UpdateNoticia : MonoBehaviour {
 
-	public string postURL2 = "http://localhost:8000/secretaria/editar_noticia";
+	public string postURL2 = ControladorLogin.InicioUrl + "secretaria/editar_noticia";
 
 	public InputField idnoticia;
 	public InputField Titulo;
