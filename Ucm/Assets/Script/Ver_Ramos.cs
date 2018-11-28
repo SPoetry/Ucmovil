@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Ver_Ramos : MonoBehaviour
 {
 
-    public string UrlRamos = "http://localhost:8000/ramos_impartidos";
+    public string UrlRamos = ControladorLogin.InicioUrl + "ramos_impartidos";
     public string Id;
     public Text[] Componentes;
 

@@ -23,7 +23,7 @@ public class AprobarRechazarNoticia : MonoBehaviour {
 	public IEnumerator RechazarNoticia()
 	{
 		Id = TextoIdObjeto.GetComponent<Text>();
-		string GetURL = "http://localhost:8000/secretaria/rechazar";
+		string GetURL = ControladorLogin.InicioUrl + "secretaria/rechazar";
 
 		GetURL = GetURL + "?id_noticia=" + Id.text+"&estado=Rechazada";
 		WWW getResultado = new WWW(GetURL);
@@ -39,7 +39,7 @@ public class AprobarRechazarNoticia : MonoBehaviour {
 	public IEnumerator AceptarNoticia()
 	{
 		Id = TextoIdObjeto.GetComponent<Text>();
-		string GetURL = "http://localhost:8000/secretaria/aceptar";
+		string GetURL = ControladorLogin.InicioUrl + "secretaria/aceptar";
 
 		GetURL = GetURL + "?id_noticia=" + Id.text+"&estado=Aceptada";
 

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class Ver_Ponderaciones : MonoBehaviour {
 
-    public string UrlPonderacion = "http://localhost:8000/ponderaciones";
-    public string UrlIngresoPonderaciones = "http://localhost:8000/ingresoponderaciones";
+    public string UrlPonderacion = ControladorLogin.InicioUrl + "ponderaciones";
+    public string UrlIngresoPonderaciones = ControladorLogin.InicioUrl + "ingresoponderaciones";
 
     public Text titulo;
 

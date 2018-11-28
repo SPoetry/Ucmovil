@@ -8,7 +8,7 @@ public class EnviarBoletin : MonoBehaviour {
 
     public InputField texto;
     public InputField asunto;
-    public string UrlEnvioBoletin = "http://localhost:8000/profesor/enviar_boletin";
+    public string UrlEnvioBoletin = ControladorLogin.InicioUrl + "profesor/enviar_boletin";
     private string Id;
     
 

@@ -49,7 +49,7 @@ public class ControladorMalla : MonoBehaviour {
 
     public IEnumerator MostrarMalla()
     {
-        getURL = "http://127.0.0.1:8000/d_escuela/mostrar_asignatura";
+        getURL = ControladorLogin.InicioUrl + "d_escuela/mostrar_asignatura";
         getURL = getURL + TipoMalla;
         //Debug.Log(getURL);
         WWW GetAsignaturasMalla = new WWW(getURL);

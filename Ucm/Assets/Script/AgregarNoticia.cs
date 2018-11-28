@@ -29,7 +29,7 @@ public class AgregarNoticia : MonoBehaviour {
 
 		WWW getResultado = new WWW (postURL2);
 		yield return getResultado;
-		postURL2 = "http://localhost:8000/secretaria/agregar_noticia";
+		postURL2 = ControladorLogin.InicioUrl + "secretaria/agregar_noticia";
 
         if (getResultado.text == "ok")
         {

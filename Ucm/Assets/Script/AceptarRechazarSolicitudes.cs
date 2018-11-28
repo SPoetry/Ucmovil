@@ -25,8 +25,7 @@ public class AceptarRechazarSolicitudes : MonoBehaviour {
 	public IEnumerator RechazarSolicitud()
 	{
 		Id = TextoIdObjeto.GetComponent<Text>();
-		string GetURL = "http://localhost:8000/secretaria/solicitudesrechazo";
-
+		string GetURL = ControladorLogin.InicioUrl + "secretaria/solicitudesrechazo";
 		GetURL = GetURL + "?id=" + Id.text+"&estado=Rechazada";
 		WWW getResultado = new WWW(GetURL);
 		yield return getResultado;
@@ -41,7 +40,7 @@ public class AceptarRechazarSolicitudes : MonoBehaviour {
 	public IEnumerator AceptarSolicitud()
 	{
 		Id = TextoIdObjeto.GetComponent<Text>();
-		string GetURL = "http://localhost:8000/secretaria/solicitudesaceptado";
+		string GetURL = ControladorLogin.InicioUrl + "secretaria/solicitudesaceptado";
 
 		GetURL = GetURL + "?id=" + Id.text+"&estado=Aceptada";
 
