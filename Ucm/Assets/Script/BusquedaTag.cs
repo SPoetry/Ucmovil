@@ -59,7 +59,7 @@ public class BusquedaTag : MonoBehaviour {
 
     public IEnumerator MostrarNoticias()
     {
-        getURL = "http://127.0.0.1:8000/secretaria/mostrar_noticia";
+        getURL = ControladorLogin.InicioUrl + "secretaria/mostrar_noticia";
         //Debug.Log(getURL);
         WWW getNoticias = new WWW(getURL);
         yield return getNoticias;

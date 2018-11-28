@@ -21,7 +21,7 @@ public class AceptarRechazarBoletin : MonoBehaviour {
 	public IEnumerator AceptarBoletin()
 	{
 		Id = TextoIdObjeto.GetComponent<Text>();
-		string GetURL = "http://localhost:8000/secretaria/aceptarboletines";
+		string GetURL = ControladorLogin.InicioUrl + "secretaria/aceptarboletines";
 
 		GetURL = GetURL + "?id=" + Id.text+"&estado=1";
 
