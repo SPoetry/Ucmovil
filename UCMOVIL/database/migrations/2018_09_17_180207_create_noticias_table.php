@@ -25,7 +25,7 @@ class CreateNoticiasTable extends Migration
         DB::statement('ALTER TABLE noticias ADD CONSTRAINT noticias_tags
         CHECK ( tag = "Oferta laboral"  and tag = "Practica laboral"  and tag = "Tesis" and
                 tag = "Seminario"       and tag = "Sala asignada"     and tag = "Horario asignado"  and
-                tag = "Oferta laboral"  and tag = "Obligatoria"       and tag = "Clase suspendida");');
+                tag = "Obligatoria"     and tag = "Clase suspendida");');
 
     }
 

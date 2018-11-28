@@ -11,8 +11,11 @@ public class AgregarNoticia : MonoBehaviour {
     public Text EstaId;
 	public InputField Titulo;
 	public InputField Texto;
-	public InputField Estado;
-	public InputField Propietario;
+    [SerializeField]
+    private Dropdown DropdownEstado;
+    public InputField Propietario;
+    [SerializeField]
+    private Dropdown DropdownTag;
 
 	public void Enviodedatos()
 	{
@@ -25,7 +28,9 @@ public class AgregarNoticia : MonoBehaviour {
 
 	private IEnumerator GuardarNoticia()
 	{
-		postURL2 = postURL2 + "?titulo=" + Titulo.text + "&texto=" + Texto.text +  "&estado=" + Estado.text + "&propietario=" + Propietario.text;
+        string estado = DropdownEstado.options[DropdownEstado.value].text;
+        string tag = DropdownTag.options[DropdownTag.value].text;
+        postURL2 = postURL2 + "?titulo=" + Titulo.text + "&texto=" + Texto.text +  "&estado=" + estado + "&propietario=" + Propietario.text + "&tag=" + tag;
 
 		WWW getResultado = new WWW (postURL2);
 		yield return getResultado;
@@ -33,7 +38,7 @@ public class AgregarNoticia : MonoBehaviour {
 
         if (getResultado.text == "ok")
         {
-            SceneManager.LoadScene("Lobby");
+            SceneManager.LoadScene("AgregarNoticia");
         }
 	}
 

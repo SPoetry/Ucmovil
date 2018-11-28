@@ -43,6 +43,7 @@ class SecretariaController extends Controller
     $noticia->texto=$request->texto;
     $noticia->estado=$request->estado;
     $noticia->propietario=$request->propietario;
+    $noticia->tag=$request->tag;
     $noticia->save();
     return "ok";
 
