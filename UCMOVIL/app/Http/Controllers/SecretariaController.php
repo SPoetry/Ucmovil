@@ -130,14 +130,25 @@ class SecretariaController extends Controller
     return "ok";
   }
 
+
+
   public function mostrar_boletin()
   {
-    $boletines	["boletines"] = DB::table('boletines')->where("estado",0)->get();
-    $a=DB::table('boletines')->where("estado",0)->count();
-    return response()->json($boletines,$a);
+    $boletines	["boletines"] = DB::table('boletines')->where("estado",'0')->get();
+
+    return response()->json($boletines);
   }
 
+  public function aceptar_boletin(Request $request)
+  {
 
+    $id = $request ->id;
+    $estado = $request ->estado;
+    DB::table("boletines")->where('id',$id)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
 
 
 }

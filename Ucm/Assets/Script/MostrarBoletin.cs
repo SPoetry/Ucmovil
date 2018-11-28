@@ -100,11 +100,11 @@ public class Boletin2
 
 public class ListaBoletin2
 {
-	public List<Boletin2> boletiness;
+	public List<Boletin2> boletines;
 
 	public List<Boletin2> mostrar()
 	{
-		return boletiness;
+		return boletines;
 	}
 
 
