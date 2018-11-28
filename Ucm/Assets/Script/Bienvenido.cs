@@ -12,6 +12,7 @@ public class Bienvenido : MonoBehaviour {
         if (ControladorLogin.Tipo == "alumnos")
         {
             bienvenidos[0].SetActive(true);
+            Botones[1].SetActive(true);
             Botones[5].SetActive(true);
             Botones[6].SetActive(true);
             Botones[7].SetActive(true);
@@ -38,6 +39,7 @@ public class Bienvenido : MonoBehaviour {
             Botones[9].SetActive(true);
             Botones[16].SetActive(true);
             Botones[17].SetActive(true);
+            Botones[19].SetActive(true);
         }
         if (ControladorLogin.Tipo == "directores_carreras")
         {
@@ -47,6 +49,7 @@ public class Bienvenido : MonoBehaviour {
             Botones[14].SetActive(true);
             Botones[15].SetActive(true);
             Botones[20].SetActive(true);
+            Botones[21].SetActive(true);
         }
     }
 }
