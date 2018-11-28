@@ -82,7 +82,7 @@ public class AprobarNoticias : MonoBehaviour {
 				{
 					Campo.text = Nota.texto;
 				}
-				if(Campo.name == "Propietario")
+				if(Campo.name == "propietario")
 				{
 					Campo.text = Nota.propietario;
 				}
