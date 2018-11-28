@@ -131,3 +131,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Boletin.unity
     guid: 221440dddbaab74479b83fed818dd430
+  - enabled: 1
+    path: Assets/Escenas/Boletines.unity
+    guid: 2ed5fe443ee0dc648881ca7b834555d7
