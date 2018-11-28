@@ -34,6 +34,7 @@ public class BusquedaTag : MonoBehaviour {
         }
         else
         {
+
             foreach (Transform child in LugarListado)
             {
                 Componente = child.GetComponentsInChildren<Text>();
