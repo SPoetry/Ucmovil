@@ -18,27 +18,12 @@ use App\Profesore;
 
 class DirectorCarreraController extends Controller
 {
-  /*public function __construct()
-  {
-      $this->middleware('auth');      //revision del usuario conectado
-      $this->middleware('director');  //cortador de paso para usuarios distintos a director
-  }*/
-    /*
-    ❖	Creación malla curricular
-        ➢	Manejo malla nueva
-        ➢	Manejo malla vieja
-    ❖	Crud Perfil:
-        ➢	Editar Correo
-        ➢	Editar Apodo
-        ➢	Editar Horario atención
-    ❖	Crud asignación de profesores con asignaturas
-    */
   public function index()
   {
       return view('DirectorIndex');
   }
 
-  public function mostrar_asignatura(Request $request)  //entrega todos los datos de las asignaturas
+  public function mostrar_asignatura(Request $request)  //entrega todos los datos de las asignaturas, buscando el tipo de malla
   {
     $busqueda_malla = $request->id_malla;
     $asignaturas["asignatura"] = DB::table('asignaturas')
@@ -70,13 +55,13 @@ class DirectorCarreraController extends Controller
     $nombre=$request->nombre;
     $creditos=$request->creditos;
     $prerequisito=$request->prerequisito;
-    if ($prerequisito == '' ){
+    if ($prerequisito == '' ){  //se establece relacion entre valor nulo y sin valor
       $prerequisito = null;
     }
     $posicion_x=$request->posicion_x;
     $posicion_y=$request->posicion_y;
     $id_malla=$request->id_malla;
-    DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->update([
+    DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->update([ //se hace un update en la tabla
           'nombre'=>$nombre,
           'creditos'=>$creditos,
           'prerequisito'=>$prerequisito,
@@ -90,11 +75,11 @@ class DirectorCarreraController extends Controller
   public function borrar_asignatura(Request $request)
   {
     $id_asignatura=$request->id_asignatura; //se ingresan los datos de los request
-    DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->delete();
+    DB::table("asignaturas")->where('id_asignatura',$id_asignatura)->delete();  //se borra el dato de la tabla
     return "ok";
   }
 
-  public function mostrar_profesores(Request $request){
+  public function mostrar_profesores(Request $request){ //se busca un profesor tanto con id_profesor o sin id_profesor
     if ($request->id_profesor=="") {
       $profesores["profesor"] =   DB::table('profesores')
                                       ->orderBy('nombre')
@@ -112,7 +97,7 @@ class DirectorCarreraController extends Controller
     }
   }
 
-  public function anadir_profesor_ramo(Request $request)
+  public function anadir_profesor_ramo(Request $request)  //se crea un nuevo registro de versionramo
   {
     $ramo = VersionRamo::create([ 'id_asignatura' => $request->id_asignatura,
                                   'id_profesor' => $request->id_profesor,
@@ -122,7 +107,7 @@ class DirectorCarreraController extends Controller
     return "ok";
   }
 
-  public function mostrar_version_ramo(Request $request){
+  public function mostrar_version_ramo(Request $request){ //buscamos un registro de version ramo, el nombre del profesor al cual está vinculado y la asignatura.
     $busqueda_malla = $request->id_malla;
     $version_ramo["version_ramo"] = DB::table('version_ramos')
                                     ->join('profesores', 'version_ramos.id_profesor','profesores.id')
@@ -137,24 +122,24 @@ class DirectorCarreraController extends Controller
     return response()->json($version_ramo);  //entrega datos en forma de objeto json
   }
 
-  public function borrar_version_ramo(Request $request){
+  public function borrar_version_ramo(Request $request){  //borra un registro de version ramo
     $id_borrar= $request->id_ramo;
     DB::table("version_ramos")->where('id_ramo',$id_borrar)->delete();
     return "ok";
   }
 
-  public function busqueda_sala(Request $request){
+  public function busqueda_sala(Request $request){  //se hace una busqueda en horarios, dependiendo el numero de sala y dia
     $sala = $request->numero_sala;
     $dia = $request->dia;
     $horario["horario"]= DB::table('horarios')
                                     ->where([ 'horarios.sala'=>$sala,
                                               'estado'=>'Aceptada',
                                               'dia'=>$dia])
-                                    ->get();  //conexion a la base de datos y ordenados
+                                    ->get();  //se obtienen los valores de horarios
     return response()->json($horario);  //entrega datos en forma de objeto json
   }
 
-  public function enviar_horario(Request $request){
+  public function enviar_horario(Request $request){ //se envian los horarios en forma iterativa para crear todas las salas.
     $horario = Horario::create([  'id_ramo' => $request->id_ramo,
                                   'modulo' => $request->modulo,
                                   'dia' => $request->dia,
@@ -163,19 +148,19 @@ class DirectorCarreraController extends Controller
     $horario->save();
     return "ok";
   }
-    public function Mensajeria(Request $request)
+    public function Mensajeria(Request $request)  //busca los registros de secretaria
     {
       $ProfesoresResultado["profesores"] = DB::table('secretarias')->get();
 
       return response()->json($ProfesoresResultado);
     }
-    public function MensajeriaE(Request $request)
+    public function MensajeriaE(Request $request) //busca los registros de profesor
     {
       $ProfesoresResultado["profesores"] = DB::table('profesores')->get();
 
       return response()->json($ProfesoresResultado);
     }
-    public function Mensajes(Request $request)
+    public function Mensajes(Request $request)  //busca el chat de x persona vinculada
     {
       $MensajesChat["chat"] = DB::table('chat') ->where('id_remitente', $request->id_remitente)
                                                 ->where('id_destinatario', $request->id_destinatario)
