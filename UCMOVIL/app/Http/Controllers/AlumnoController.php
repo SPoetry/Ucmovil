@@ -23,10 +23,19 @@ class AlumnoController extends Controller
   }
 
   public function RamosA(Request $request){
-    $Anio = $request->anio;
-    $RamosA["ramosactuale"] = DB::table('ramos_actuales')->select('id_ramo', 'id_alumno')->where('id_alumno', $request->id)->groupBy('id_alumno', 'id_ramo')->get();
+    $RamosA = DB::table('ramos_actuales')
+                            ->where('id_alumno', $request->id)
+                            ->distinct()->pluck('id_ramo');  
 
-    return response()->json($RamosA);
+    $RamosActuale['datosramos'] = DB::table('version_ramos')
+                                    ->join('asignaturas', 'version_ramos.id_asignatura', 'asignaturas.id_asignatura')
+                                    ->join('profesores', 'version_ramos.id_profesor', 'profesores.id')
+                                    ->join('horarios', 'version_ramos.id_ramo', 'horarios.id_ramo')
+                                    ->select('asignaturas.id_asignatura', 'asignaturas.nombre as nombreasig', 'profesores.nombre', 'horarios.modulo', 'horarios.dia', 'horarios.sala')
+                                    ->whereIn('version_ramos.id_ramo', $RamosA)
+                                    ->get();
+
+    return response()->json($RamosActuale);
   }
 
   public function MensajeriaC(Request $request)

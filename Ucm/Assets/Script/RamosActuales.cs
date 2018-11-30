@@ -12,10 +12,11 @@ public class RamosActuales : MonoBehaviour {
     public Text[] componentes;
     string Ids;
 
-    string codigo;
+    string asignatura_anterior = "";
     string nombre;
     string profesor;
     string horario;
+    GameObject nuevaAsignatura;
 
     float x = 497, y = 910.59f;
 
@@ -46,80 +47,107 @@ public class RamosActuales : MonoBehaviour {
         Debug.Log(UrlRamosActuales);
         yield return ResultadoRamos;
         string DatosA = ResultadoRamos.text;
-        Listaramosactuales Actual = JsonUtility.FromJson<Listaramosactuales>(DatosA);
-        List<Ramosactuale> Ramos = Actual.Actuales();
+        Listadatosramos Actual = JsonUtility.FromJson<Listadatosramos>(DatosA);
+        List<Datosramos> Ramos = Actual.Actuales();
 
-        foreach(Ramosactuale ramo in Ramos)
+        foreach(Datosramos ramo in Ramos)
         {
-            GameObject nuevaAsignatura = Instantiate(AsignaturaPrefab, new Vector3(0,0), Quaternion.identity, Ubicacion) as GameObject;
-            nuevaAsignatura.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
-            y -= 480;
-            componentes = nuevaAsignatura.GetComponentsInChildren<Text>();
-            foreach (Text a in componentes)
+            if(asignatura_anterior == ramo.id_asignatura)
             {
-                if (a.name == "Codigo")
+                componentes = nuevaAsignatura.GetComponentsInChildren<Text>();
+                foreach (Text a in componentes)
                 {
-                    yield return StartCoroutine(Casig(ramo.id_ramo));
-                    a.text += codigo;
-                }
-                if (a.name == "Nombre")
-                {
-                    yield return StartCoroutine(Nasig(ramo.id_ramo));
-                    a.text += nombre;
-                }
-                if(a.name == "Profesor")
-                {
-                    yield return StartCoroutine(Nprofe(ramo.id_ramo));
-                    a.text += profesor;
-                }
-                if(a.name == "Horario")
-                {
-                    yield return StartCoroutine(Horario(ramo.id_ramo));
-                    a.text += horario;
-                    Debug.Log(a.text);
+                    if(a.name == "Horario")
+                    {
+                        if (ramo.modulo == 1) a.text += ramo.dia + " 8:30 - 9:30\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 2) a.text += ramo.dia + " 9:35  - 10:35\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 3) a.text += ramo.dia + " 10:50  - 11:50\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 4) a.text += ramo.dia + " 11:55  - 12:55\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 5) a.text += ramo.dia + " 13:10  - 14:10\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 6) a.text += ramo.dia + " 14:30  - 15:30\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 7) a.text += ramo.dia + " 15:35  - 16:35\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 8) a.text += ramo.dia + " 16:50  - 17:50\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 9) a.text += ramo.dia + " 17:55  - 18:55\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 10) a.text += ramo.dia + " 19:10  - 20:10\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 11) a.text += ramo.dia + " 20:15  - 21:15\t Sala: " + ramo.sala;
+                        else a.text += ramo.dia + " 21:20  - 22:20\t Sala: " + ramo.sala;
+                        a.text += "\n\t\t\t\t";
+                    }
                 }
             }
+            else
+            {
+                Debug.Log(ramo);
+                nuevaAsignatura = Instantiate(AsignaturaPrefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
+                nuevaAsignatura.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
+                y -= 480;
+                componentes = nuevaAsignatura.GetComponentsInChildren<Text>();
+                foreach (Text a in componentes)
+                {
+                    if (a.name == "Codigo")
+                    {
+                        a.text += ramo.id_asignatura;
+                        asignatura_anterior = ramo.id_asignatura;
+                    }
+                    if (a.name == "Nombre")
+                    {
+                        a.text += ramo.nombreasig;
+                    }
+                    if (a.name == "Profesor")
+                    {
+
+                        a.text += ramo.nombre;
+                    }
+                    if (a.name == "Horario")
+                    {
+                        a.text += "\t";
+                        if (ramo.modulo == 1) a.text += ramo.dia + " 8:30 - 9:30\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 2) a.text += ramo.dia + " 9:35  - 10:35\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 3) a.text += ramo.dia + " 10:50  - 11:50\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 4) a.text += ramo.dia + " 11:55  - 12:55\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 5) a.text += ramo.dia + " 13:10  - 14:10\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 6) a.text += ramo.dia + " 14:30  - 15:30\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 7) a.text += ramo.dia + " 15:35  - 16:35\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 8) a.text += ramo.dia + " 16:50  - 17:50\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 9) a.text += ramo.dia + " 17:55  - 18:55\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 10) a.text += ramo.dia + " 19:10  - 20:10\t Sala: " + ramo.sala;
+                        else if (ramo.modulo == 11) a.text += ramo.dia + " 20:15  - 21:15\t Sala: " + ramo.sala;
+                        else a.text += ramo.dia + " 21:20  - 22:20\t Sala: " + ramo.sala;
+                        a.text += "\n\t\t\t\t";
+                    }
+                }
+            }
+            
         }
         
     }
+}
 
-    public IEnumerator Casig(string id)
+[System.Serializable]
+public class Datosramos
+{
+    public string id_asignatura;
+    public string nombreasig;
+    public string nombre;
+    public int modulo;
+    public string dia;
+    public string sala;
+
+
+    public override string ToString()
     {
-        string consultas = ControladorLogin.InicioUrl + "CodigoA?id=" + id;
-        WWW ResultadoRamos = new WWW(consultas);
-        yield return ResultadoRamos;
-        Debug.Log(ResultadoRamos.text);
-        codigo = ResultadoRamos.text;
+        return string.Format("el codigo es: {0}", id_asignatura);
     }
+}
 
-    public IEnumerator Nasig(string name)
-    {
-        string consultas = ControladorLogin.InicioUrl + "NameA?id=" + name;
-        WWW ResultadoRamos = new WWW(consultas);
-        yield return ResultadoRamos;
-        Debug.Log(ResultadoRamos.text);
-        nombre = ResultadoRamos.text;
-    }
+[System.Serializable]
+public class Listadatosramos
+{
+    public List<Datosramos> datosramos;
 
-    public IEnumerator Nprofe(string id)
+    public List<Datosramos> Actuales()
     {
-        string nprofe = ControladorLogin.InicioUrl + "ProfesorA?id=" + id;
-        WWW ResultadoRamos = new WWW(nprofe);
-        Debug.Log(nprofe);
-        yield return ResultadoRamos;
-        profesor = ResultadoRamos.text;
-    }
-
-    public IEnumerator Horario(string id)
-    {
-        string ConsultaHorario = ControladorLogin.InicioUrl + "HorarioA?id=" + id;
-        WWW ResultadoRamos = new WWW(ConsultaHorario);
-        Debug.Log(ConsultaHorario);
-        yield return ResultadoRamos;
-        string HorariosA = ResultadoRamos.text;
-        Debug.Log(HorariosA);
-        Listahorario Hora = JsonUtility.FromJson<Listahorario>(HorariosA);
-        horario = Hora.Horas();
+        return datosramos;
     }
 }
 
@@ -196,3 +224,4 @@ public class Listahorario
         return text;
     }
 }
+    
