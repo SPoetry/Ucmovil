@@ -150,6 +150,32 @@ class SecretariaController extends Controller
     ]);
     return "ok";
   }
+  public function aceptar_horario(Request $request)
+  {
 
+    $id_ramo = $request ->id_ramo;
+    $modulo = $request->modulo;
+    $estado = $request ->estado;
+    DB::table("horarios")->where('id_ramo',$id_ramo)->where('modulo',$modulo)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+  public function rechazar_horario(Request $request)
+  {
+
+    $id_ramo = $request ->id_ramo;
+    $estado = $request ->estado;
+    DB::table("horarios")->where('id_ramo',$id_ramo)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+  public function mostrar_horarios()
+  {
+    $horarios	["horarios"] = DB::table('horarios')->where("estado","Revision")->get();
+
+    return response()->json($horarios);
+  }
 
 }
