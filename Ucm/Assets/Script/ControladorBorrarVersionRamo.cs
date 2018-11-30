@@ -18,7 +18,7 @@ public class ControladorBorrarVersionRamo : MonoBehaviour {
     private IEnumerator EliminarAsignatura()
     {
         Id = TextoIdObjeto.GetComponent<Text>();
-        string DelGetURL = "http://localhost:8000/d_escuela/borrar_version_ramo";
+        string DelGetURL = ControladorLogin.InicioUrl + "d_escuela/borrar_version_ramo";
 
         DelGetURL = DelGetURL + "?id_ramo=" + Id.text;
         WWW getResultado = new WWW(DelGetURL);

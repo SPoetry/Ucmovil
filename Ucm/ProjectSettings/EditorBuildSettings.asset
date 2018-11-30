@@ -71,7 +71,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/EditarA.unity
     guid: 25fa23c4671904345a996085d69fb6d7
-  - enabled: 1
+  - enabled: 0
     path: 
     guid: f801510d92568f94a826b0a4902a9019
   - enabled: 1
@@ -131,3 +131,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/Boletin.unity
     guid: 221440dddbaab74479b83fed818dd430
+  - enabled: 1
+    path: Assets/Escenas/Boletines.unity
+    guid: 2ed5fe443ee0dc648881ca7b834555d7
+  - enabled: 1
+    path: Assets/Escenas/AceptarReHorario.unity
+    guid: 0d2d23992e48c014e8fbaf28e1f89fad

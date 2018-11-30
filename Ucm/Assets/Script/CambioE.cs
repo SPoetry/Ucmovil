@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CambioE : MonoBehaviour {
 
 
-    public string UrlCaE = "http://localhost:8000/cambioE";
+    public string UrlCaE = ControladorLogin.InicioUrl + "cambioE";
     public string Id;
     public string Tipo;
     public string Escena;

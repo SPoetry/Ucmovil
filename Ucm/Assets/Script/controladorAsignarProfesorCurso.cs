@@ -25,7 +25,7 @@ public class controladorAsignarProfesorCurso : MonoBehaviour {
         GameObject Profesor = ControladorProfesorAsignacion.Excepcion;
         Text[] ComponenteAsignatura = Asignatura.GetComponentsInChildren<Text>();
         Text[] ComponenteProfesor = Profesor.GetComponentsInChildren<Text>();
-        string getAnadirProfeAsignatura = "http://localhost:8000/d_escuela/anadir_profesor_ramo";
+        string getAnadirProfeAsignatura = ControladorLogin.InicioUrl + "d_escuela/anadir_profesor_ramo";
         getAnadirProfeAsignatura = getAnadirProfeAsignatura + "?id_asignatura=" + ComponenteAsignatura[1].text;
         getAnadirProfeAsignatura = getAnadirProfeAsignatura + "&id_profesor=" + ComponenteProfesor[2].text;
         getAnadirProfeAsignatura = getAnadirProfeAsignatura + "&year=" + YearDropdown.options[YearDropdown.value].text;

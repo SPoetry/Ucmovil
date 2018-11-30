@@ -43,6 +43,7 @@ class SecretariaController extends Controller
     $noticia->texto=$request->texto;
     $noticia->estado=$request->estado;
     $noticia->propietario=$request->propietario;
+    $noticia->tag=$request->tag;
     $noticia->save();
     return "ok";
 
@@ -130,5 +131,51 @@ class SecretariaController extends Controller
     return "ok";
   }
 
+
+
+  public function mostrar_boletin()
+  {
+    $boletines	["boletines"] = DB::table('boletines')->where("estado",'0')->get();
+
+    return response()->json($boletines);
+  }
+
+  public function aceptar_boletin(Request $request)
+  {
+
+    $id = $request ->id;
+    $estado = $request ->estado;
+    DB::table("boletines")->where('id',$id)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+  public function aceptar_horario(Request $request)
+  {
+
+    $id_ramo = $request ->id_ramo;
+    $modulo = $request->modulo;
+    $estado = $request ->estado;
+    DB::table("horarios")->where('id_ramo',$id_ramo)->where('modulo',$modulo)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+  public function rechazar_horario(Request $request)
+  {
+
+    $id_ramo = $request ->id_ramo;
+    $estado = $request ->estado;
+    DB::table("horarios")->where('id_ramo',$id_ramo)->update([
+      'estado'=> $estado
+    ]);
+    return "ok";
+  }
+  public function mostrar_horarios()
+  {
+    $horarios	["horarios"] = DB::table('horarios')->where("estado","Revision")->get();
+
+    return response()->json($horarios);
+  }
 
 }

@@ -39,7 +39,7 @@ public class ControladorVersionRamoBorrar : MonoBehaviour {
 
     private IEnumerator MostrarVersionRamo()
     {
-        getURL = "http://127.0.0.1:8000/d_escuela/mostrar_version_ramo";
+        getURL = ControladorLogin.InicioUrl + "d_escuela/mostrar_version_ramo";
         getURL = getURL + TipoMalla;
         WWW getVersionRamo = new WWW(getURL);
         yield return getVersionRamo;

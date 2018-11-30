@@ -8,7 +8,7 @@ public class ControladorDirector : MonoBehaviour {
     public GameObject Asignatura;
     public GameObject PrefabAsignatura;
 
-    private string AsignaturaURL = "http://localhost:8000/d_escuela/mostrar_asignatura";
+    private string AsignaturaURL = ControladorLogin.InicioUrl + "d_escuela/mostrar_asignatura";
 
     public static string[] Campo1;
     public static string[] Campo2;

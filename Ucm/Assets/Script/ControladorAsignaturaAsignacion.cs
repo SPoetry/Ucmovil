@@ -55,7 +55,7 @@ public class ControladorAsignaturaAsignacion : MonoBehaviour {
 
     private IEnumerator MostrarAsignaturas()
     {
-        getURL = "http://127.0.0.1:8000/d_escuela/mostrar_asignatura";
+        getURL = ControladorLogin.InicioUrl + "d_escuela/mostrar_asignatura";
         getURL = getURL + TipoMalla;
         WWW getAsignatura = new WWW(getURL);
         yield return getAsignatura;

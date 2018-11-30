@@ -40,11 +40,13 @@ public class Bienvenido : MonoBehaviour {
             Botones[16].SetActive(true);
             Botones[17].SetActive(true);
             Botones[19].SetActive(true);
+			Botones[22].SetActive(true);
         }
         if (ControladorLogin.Tipo == "directores_carreras")
         {
             bienvenidos[3].SetActive(true);
             Botones[0].SetActive(true);
+            Botones[2].SetActive(true);
             Botones[13].SetActive(true);
             Botones[14].SetActive(true);
             Botones[15].SetActive(true);

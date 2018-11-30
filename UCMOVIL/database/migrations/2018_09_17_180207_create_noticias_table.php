@@ -19,8 +19,14 @@ class CreateNoticiasTable extends Migration
             $table->string('texto');
             $table->string('estado');
             $table->string ('propietario');
+            $table->string('tag')->nullable();
             $table->timestamps();
         });
+        DB::statement('ALTER TABLE noticias ADD CONSTRAINT noticias_tags
+        CHECK ( tag = "Oferta laboral"  and tag = "Practica laboral"  and tag = "Tesis" and
+                tag = "Seminario"       and tag = "Sala asignada"     and tag = "Horario asignado"  and
+                tag = "Obligatoria"     and tag = "Clase suspendida");');
+
     }
 
     /**

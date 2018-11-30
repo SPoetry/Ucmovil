@@ -62,6 +62,10 @@ public class ControladorSecretaria : MonoBehaviour {
                 {
                     Campo.text = Nota.updated_at;
                 }
+                if(Campo.name == "Tag")
+                {
+                    Campo.text = Nota.tag;
+                }
             }
         }
 	}
@@ -79,6 +83,7 @@ public class Noticia
 	public string texto;
 	public string estado;
 	public string propietario;
+    public string tag;
 	public object created_at; 
 	public string updated_at;
 

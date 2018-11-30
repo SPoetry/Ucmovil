@@ -20,14 +20,16 @@ class NoticiaSeeder extends Seeder
         'titulo'=>'Noticia1',
         'texto' => 'Esta noticia 1',
         'estado' => 'Revision',
-        'propietario' => 'Profesor X'
+        'propietario' => 'Profesor X',
+        'tag' => 'Obligatoria'
       ]);
       DB::table('noticias')->insert([
         'id_noticia' => '4',
         'titulo'=>'Noticia1',
         'texto' => 'Esta noticia 4',
         'estado' => 'Revision',
-        'propietario' => 'Profesor X'
+        'propietario' => 'Profesor X',
+        'tag' => 'Obligatoria'
       ]);
       DB::table('noticias')->insert([
         'id_noticia' => '2',
@@ -35,14 +37,16 @@ class NoticiaSeeder extends Seeder
         'texto' => 'Esta noticia 2',
         'estado' => 'Aprobada',
         'propietario' => 'Profesor Y',
-        'updated_at' => '2018-10-22 14:57:29',
+        'tag' => 'Obligatoria',
+        'updated_at' => '2018-10-22 14:57:29'
       ]);
       DB::table('noticias')->insert([
         'id_noticia' => '3',
         'titulo'=>'Noticia1',
         'texto' => 'Esta noticia 3',
         'estado' => 'Rechazada',
-        'propietario' => 'Profesor Z'
+        'propietario' => 'Profesor Z',
+        'tag' => 'Obligatoria'
       ]);
       DB::table('noticias')->insert([
         'id_noticia' => '5',
@@ -50,14 +54,16 @@ class NoticiaSeeder extends Seeder
         'texto' => 'Esta noticia 5',
         'estado' => 'Aprobada',
         'propietario' => 'Profesor Y',
-        'updated_at' => '2018-10-22 14:57:29',
+        'tag' => 'Obligatoria',
+        'updated_at' => '2018-10-22 14:57:29'
       ]);
       DB::table('noticias')->insert([
         'id_noticia' => '6',
         'titulo'=>'Noticia1',
         'texto' => 'Esta noticia 6',
         'estado' => 'Rechazada',
-        'propietario' => 'Profesor Z'
+        'propietario' => 'Profesor Z',
+        'tag' => 'Obligatoria'
       ]);
     }
 }

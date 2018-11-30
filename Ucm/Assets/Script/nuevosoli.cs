@@ -12,7 +12,7 @@ public class nuevosoli : MonoBehaviour {
 	public Transform Ubicacion;
 
 
-	float x = 0, y = -446;
+	float x = 0, y = 1280;
 
 	string id;
 	string solicitud;
@@ -38,36 +38,36 @@ public class nuevosoli : MonoBehaviour {
 
 
 		ListaSolicitud lista = JsonUtility.FromJson<ListaSolicitud>(JsonSolicitud);
-		List<Solici> listaSolicitud = lista.mostrar();
+		List<Solicitudes> listaSolicituds = lista.mostrar();
 
 
-
-		foreach(Solici Soli in listaSolicitud)
+		foreach(Solicitudes Solic in listaSolicituds)
 		{
 			Debug.Log ("entro");
+
 			GameObject nuevaSolicitud = Instantiate(solicitudesprefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
 			nuevaSolicitud.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
-			y -= 500;
+			y -= 313;
 			Campos = nuevaSolicitud.GetComponentsInChildren<Text>();
 
 			foreach(Text Campo in Campos)
 			{
 				if (Campo.name == "Id")
 				{
-					Campo.text = Soli.id_solicitante;
+					Campo.text = Solic.id_solicitante;
 				}
 
 				if(Campo.name == "Solicitud")
 				{
-					Campo.text = Soli.solicitud;
+					Campo.text = Solic.solicitud;
 				}
 				if(Campo.name == "Texto")
 				{
-					Campo.text = Soli.texto;
+					Campo.text = Solic.texto;
 				}
 				if(Campo.name == "Fecha")
 				{
-					Campo.text = Soli.updated_at;
+					Campo.text = Solic.updated_at;
 				}
 			}
 		}
@@ -77,7 +77,7 @@ public class nuevosoli : MonoBehaviour {
 }
 
 [System.Serializable]
-public class Solici
+public class Solicitudes
 	{
 		public string id;
 		public string id_solicitante;
@@ -94,11 +94,11 @@ public class Solici
 
 	public class ListaSolicitud
 	{
-		public List<Solici> solicitud;
+	public List<Solicitudes> solicitudes;
 
-		public List<Solici> mostrar()
+	public List<Solicitudes> mostrar()
 		{
-			return solicitud;
+			return solicitudes;
 		}
 	}
 

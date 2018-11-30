@@ -105,7 +105,7 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
 
     private IEnumerator MostrarVersionRamo()
     {
-        getURL = "http://127.0.0.1:8000/d_escuela/mostrar_version_ramo";
+        getURL = ControladorLogin.InicioUrl + "d_escuela/mostrar_version_ramo";
         getURL = getURL + TipoMalla;
         WWW getVersionRamo = new WWW(getURL);
         yield return getVersionRamo;
@@ -178,7 +178,7 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         GameObject OpcionSeleccionada = ComponenteObjeto[0].gameObject; //busco el boton seleccionado a través del componente y lo transformo a gameobject
         ComponenteTexto = ComponenteObjeto[0].GetComponentsInChildren<Text>();
 
-        string ConsultaSala = "http://127.0.0.1:8000/d_escuela/busqueda_sala?numero_sala=" + ComponenteTexto[8].text + "&dia=" + DropdownDia.options[DropdownDia.value].text;
+        string ConsultaSala = ControladorLogin.InicioUrl + "d_escuela/busqueda_sala?numero_sala=" + ComponenteTexto[8].text + "&dia=" + DropdownDia.options[DropdownDia.value].text;
         WWW getResultadoSalas = new WWW(ConsultaSala);
         yield return getResultadoSalas;
         string JsonResultadoSalas = getResultadoSalas.text;
@@ -249,7 +249,7 @@ public class ControladorSalaRamoHorario : MonoBehaviour {
         int error=0;
         for (int i= ModuloInicial; i<CalculoModulo; i++)
         {
-            string EnviarHorario = "http://127.0.0.1:8000/d_escuela/enviar_horario";
+            string EnviarHorario = ControladorLogin.InicioUrl + "d_escuela/enviar_horario";
             EnviarHorario = EnviarHorario + "?id_ramo=" + ComponenteTexto[6].text + "&modulo=" + i.ToString();
             EnviarHorario = EnviarHorario + "&dia=" + DropdownDia.options[DropdownDia.value].text + "&sala=" + ComponenteTexto[8].text;
             EnviarHorario = EnviarHorario + "&estado=" + DropdownEstado.options[DropdownEstado.value].text;

@@ -224,8 +224,9 @@ MonoBehaviour:
   EstaId: {fileID: 114618908051449390}
   Titulo: {fileID: 0}
   Texto: {fileID: 0}
-  Estado: {fileID: 0}
+  DropdownEstado: {fileID: 0}
   Propietario: {fileID: 0}
+  DropdownTag: {fileID: 0}
 --- !u!222 &222008984820859462
 CanvasRenderer:
   m_ObjectHideFlags: 1
