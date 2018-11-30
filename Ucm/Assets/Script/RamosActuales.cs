@@ -10,7 +10,6 @@ public class RamosActuales : MonoBehaviour {
     public GameObject AsignaturaPrefab;
     public Transform Ubicacion;
     public Text[] componentes;
-    string Ids;
 
     string asignatura_anterior = "";
     string nombre;
@@ -20,24 +19,11 @@ public class RamosActuales : MonoBehaviour {
 
     float x = 497, y = 910.59f;
 
-    int Fecha_actualA;
-    int Fecha_actualM;
-    int Semestre2m = 1;
-    int Semestre1m = 8;
 
     void Start () {
-        Ids = ControladorLogin.Id;
-        Fecha_actualA = DateTime.Now.Year;
-        Fecha_actualM = DateTime.Now.Month;
-
-        if (Fecha_actualM > Semestre1m && Fecha_actualM >= Semestre2m)
-        {
-            UrlRamosActuales = UrlRamosActuales + "?id=" + ControladorLogin.Id;
-        }
-        else
-        {
-            UrlRamosActuales = UrlRamosActuales + "?id=" + ControladorLogin.Id;
-        }
+        
+        UrlRamosActuales = UrlRamosActuales + "?id=" + ControladorLogin.Id;
+        
         StartCoroutine("RamosA");
     }
 
@@ -151,32 +137,6 @@ public class Listadatosramos
     }
 }
 
-
-[System.Serializable]
-public class Ramosactuale
-{
-    public string id_ramo;
-    public int id_alumno;
-    public float nota;
-    public int n_nota;
-
-
-    public override string ToString()
-    {
-        return string.Format("el codigo es: {0} su nombre: {1}", id_ramo, id_alumno);
-    }
-}
-
-[System.Serializable]
-public class Listaramosactuales
-{
-    public List<Ramosactuale> ramosactuale; 
-
-    public List<Ramosactuale> Actuales()
-    {
-        return ramosactuale;
-    }
-}
 
 
 [System.Serializable]

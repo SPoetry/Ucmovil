@@ -37,6 +37,20 @@ class AlumnoController extends Controller
 
     return response()->json($RamosActuale);
   }
+  public function RamosActuales(Request $request){
+    $RamosA = DB::table('ramos_actuales')
+                            ->where('id_alumno', $request->id)
+                            ->distinct()->pluck('id_ramo');  
+
+    $RamosActuale['ramosactuale'] = DB::table('version_ramos')
+                                    ->join('asignaturas', 'version_ramos.id_asignatura', 'asignaturas.id_asignatura')
+                                    ->join('ramos_actuales', 'version_ramos.id_ramo', 'ramos_actuales.id_ramo')
+                                    ->select('asignaturas.nombre', 'ramos_actuales.nota', 'ramos_actuales.n_nota')
+                                    ->whereIn('version_ramos.id_ramo', $RamosA)
+                                    ->get();
+
+    return response()->json($RamosActuale);
+  }
 
   public function MensajeriaC(Request $request)
     {

@@ -7,27 +7,20 @@ public class NotasRamos : MonoBehaviour {
 
     public GameObject NombrePrefab;
     public GameObject NotaPrefab;
+    public GameObject Cargando;
     public Transform Ubicacion;
 
     Text[] ComponentesNombre;
     Text[] ComponentesNota;
-    string UrlNotas = ControladorLogin.InicioUrl + "RamosA";
+    string UrlNotas = ControladorLogin.InicioUrl + "RamosActuales";
+    string ramoanterior = "";
 
-    string Id;
-    string Nombre;
-    int i= 0;
-    int id_alumno;
-    int Nota;
-
-    int mover = 0;
-    int mover2 = 0;
 
     float x = 0, y = 840;
 
     void Start () {
-        Id = ControladorLogin.Id;
-
-        UrlNotas += "?id=" + Id;
+        Cargando.SetActive(true);
+        UrlNotas += "?id=" + ControladorLogin.Id;
 
         StartCoroutine("AsignaturasParaNotas");
     }
@@ -42,27 +35,40 @@ public class NotasRamos : MonoBehaviour {
 
         foreach (Ramosactuale ramo in Ramos)
         {
-            GameObject nuevaAsignatura = Instantiate(NombrePrefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
-            nuevaAsignatura.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
-            mover = 130;
-            y -= mover;
-            ComponentesNombre = nuevaAsignatura.GetComponentsInChildren<Text>();
-            id_alumno = ramo.id_alumno;
-
-            foreach (Text componente in ComponentesNombre)
+            if(ramoanterior != ramo.nombre)
             {
-                if (componente.name == "Nombre")
+                ramoanterior = ramo.nombre;
+                GameObject nuevaAsignatura = Instantiate(NombrePrefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
+                nuevaAsignatura.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
+
+                ComponentesNombre = nuevaAsignatura.GetComponentsInChildren<Text>();
+
+                foreach (Text componente in ComponentesNombre)
                 {
-                    
-                    yield return StartCoroutine(CodigoA(ramo.id_ramo));
-                    componente.text += Nombre;
-                    yield return StartCoroutine(NotasA(ramo.id_ramo));
-                    Debug.Log("Paso");
+                    if (componente.name == "Nombre")
+                    {
+
+                        componente.text += ramo.nombre;
+                    }
                 }
             }
+            GameObject NuevaNota = Instantiate(NotaPrefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
+            NuevaNota.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
+
+            ComponentesNota = NuevaNota.GetComponentsInChildren<Text>();
+
+            foreach (Text componente1 in ComponentesNota)
+            {
+                if (componente1.name == "Numero")
+                {
+
+                    componente1.text += "Nota " + ramo.n_nota + ": " + ramo.nota;
+                }
+            }
+            Cargando.SetActive(false);
         }
     }
-
+    /**
     public IEnumerator CodigoA(string id)
     {
         string NombreA = ControladorLogin.InicioUrl + "NameA?id="+ id;
@@ -104,5 +110,25 @@ public class NotasRamos : MonoBehaviour {
                 }
             }
         }
+    }
+     **/
+}
+
+[System.Serializable]
+public class Ramosactuale
+{
+    public string nombre;
+    public float nota;
+    public int n_nota;
+}
+
+[System.Serializable]
+public class Listaramosactuales
+{
+    public List<Ramosactuale> ramosactuale;
+
+    public List<Ramosactuale> Actuales()
+    {
+        return ramosactuale;
     }
 }
