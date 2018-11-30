@@ -12,12 +12,14 @@ public class ControladorLogin : MonoBehaviour {
     public InputField Correo;
     public InputField Contrasena;
     public GameObject ErrorLogin;
+    public GameObject Cargando;
 
     public static string Id;
     public static string Tipo;
 
     public void EnvioDatos()
     {
+        Cargando.SetActive(true);
         StartCoroutine("Logear");
     }
     private IEnumerator Logear()
@@ -44,26 +46,31 @@ public class ControladorLogin : MonoBehaviour {
             if (Tipo == "alumno")
             {
                 Tipo = "alumnos";
+                Cargando.SetActive(false);
                 SceneManager.LoadScene("Lobby");
             }
             else if (Tipo == "secretaria")
             {
                 Tipo = "secretarias";
+                Cargando.SetActive(false);
                 SceneManager.LoadScene("Lobby");
             }
             else if (Tipo == "profesor")
             {
                 Tipo = "profesores";
+                Cargando.SetActive(false);
                 SceneManager.LoadScene("Lobby");
             }
             else if (Tipo == "director_carrera")
             {
                 Tipo = "directores_carreras";
+                Cargando.SetActive(false);
                 SceneManager.LoadScene("Lobby");
             }
         }
         else
         {
+            Cargando.SetActive(false);
             ErrorLogin.SetActive(true);
         }
     }
