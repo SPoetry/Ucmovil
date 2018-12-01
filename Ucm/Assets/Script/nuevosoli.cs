@@ -43,7 +43,7 @@ public class nuevosoli : MonoBehaviour {
 
 		foreach(Solicitudes Solic in listaSolicituds)
 		{
-			Debug.Log ("entro");
+			
 
 			GameObject nuevaSolicitud = Instantiate(solicitudesprefab, new Vector3(0, 0), Quaternion.identity, Ubicacion) as GameObject;
 			nuevaSolicitud.GetComponent<Transform>().localPosition = new Vector3(x, y, 0);
@@ -55,6 +55,10 @@ public class nuevosoli : MonoBehaviour {
 				if (Campo.name == "Id")
 				{
 					Campo.text = Solic.id_solicitante;
+				}
+				if (Campo.name == "id")
+				{
+					Campo.text = Solic.id;
 				}
 
 				if(Campo.name == "Solicitud")

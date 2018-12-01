@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   getURL: http://localhost:8000/
-  solicitudesprefab: {fileID: 1284808401791432, guid: 8ff6d6a60dfd4944d8a6b6863d9f84b0,
+  solicitudesprefab: {fileID: 1997642272669852, guid: 8ff6d6a60dfd4944d8a6b6863d9f84b0,
     type: 2}
   Campos: []
   Ubicacion: {fileID: 1604090796}

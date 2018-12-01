@@ -33,7 +33,7 @@ public class AceptarRechazarSolicitudes : MonoBehaviour {
 
 		if (getResultado.text == "ok")
 		{
-			SceneManager.LoadScene("NoticiaxAprob");
+			SceneManager.LoadScene("Solicitudes");
 		}
 	}
 
@@ -51,7 +51,7 @@ public class AceptarRechazarSolicitudes : MonoBehaviour {
 
 		if (getResultado.text == "ok")
 		{
-			SceneManager.LoadScene("NoticiaxAprob");
+			SceneManager.LoadScene("Solicitudes");
 		}
 	}
 }
