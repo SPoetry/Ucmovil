@@ -11,6 +11,7 @@ TagManager:
   - ConsolaModulos
   - ImagenBuscada
   - Canvas
+  - Descripcion
   layers:
   - Default
   - TransparentFX
