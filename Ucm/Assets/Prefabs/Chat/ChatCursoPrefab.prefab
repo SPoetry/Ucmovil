@@ -79,8 +79,9 @@ MonoBehaviour:
   EstaId: {fileID: 114501023839525304}
   Titulo: {fileID: 0}
   Texto: {fileID: 0}
-  Estado: {fileID: 0}
+  DropdownEstado: {fileID: 0}
   Propietario: {fileID: 0}
+  DropdownTag: {fileID: 0}
 --- !u!114 &114357347385257376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -178,7 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 1, a: 0.392}
+  m_Color: {r: 0.18247189, g: 0.59035337, b: 0.99264705, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -205,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -214,11 +215,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 0
+    m_FontSize: 60
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 4
-    m_MaxSize: 40
+    m_MaxSize: 60
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
