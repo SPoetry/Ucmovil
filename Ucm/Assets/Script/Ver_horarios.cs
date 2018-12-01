@@ -75,8 +75,8 @@ public class Ver_horarios : MonoBehaviour
         Text[] campos = boton.GetComponentsInChildren<Text>();
         Descripcion = GameObject.FindWithTag("Descripcion");
         Atributos = Descripcion.GetComponentsInChildren<Text>();
-        Atributos[3].text = campos[0].text;
-        Atributos[4].text = campos[1].text;
+        Atributos[4].text = campos[0].text;
+        Atributos[3].text = campos[1].text;
         Atributos[5].text = campos[2].text;
         Descripcion.transform.localScale = Size1;
 
