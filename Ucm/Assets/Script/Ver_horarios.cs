@@ -42,7 +42,7 @@ public class Ver_horarios : MonoBehaviour
 
     public IEnumerator CargarHorario()
     {
-        UrlObtencionHorario = UrlObtencionHorario + "?id_profe=2";
+        UrlObtencionHorario = UrlObtencionHorario + "?id_profe=" + id_profe;
         WWW request = new WWW(UrlObtencionHorario);
         yield return request;
         string datos = request.text;
