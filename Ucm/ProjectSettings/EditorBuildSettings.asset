@@ -137,3 +137,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/AceptarReHorario.unity
     guid: 0d2d23992e48c014e8fbaf28e1f89fad
+  - enabled: 1
+    path: Assets/Escenas/VerHorariosProfesor.unity
+    guid: 82c45ac6ea6a7034ab8b48eee75d1d95

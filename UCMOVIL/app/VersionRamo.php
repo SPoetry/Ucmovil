@@ -14,7 +14,7 @@ class VersionRamo extends Model
     return $this->belongsTo('App\Profesore');
   }
   public function asignatura(){
-    return $this->belongsTo('App\Asignatura');
+    return $this->belongsTo(Asignatura::class, 'id_asignatura', 'id_asignatura');
   }
   public function horario(){
     return $this->hasMany(Horario::class, 'id_ramo', 'id_ramo');
