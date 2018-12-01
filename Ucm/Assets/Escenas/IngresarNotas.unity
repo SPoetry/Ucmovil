@@ -542,13 +542,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 152092046}
   m_TextComponent: {fileID: 1474695750}
   m_Placeholder: {fileID: 1737623776}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -1295,13 +1295,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 486957122}
   m_TextComponent: {fileID: 415061911}
   m_Placeholder: {fileID: 296333643}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -1952,13 +1952,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 678489945}
   m_TextComponent: {fileID: 1965580808}
   m_Placeholder: {fileID: 837168519}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -2222,13 +2222,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 720838418}
   m_TextComponent: {fileID: 1863900882}
   m_Placeholder: {fileID: 1377490114}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -2705,13 +2705,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 759898037}
   m_TextComponent: {fileID: 966425304}
   m_Placeholder: {fileID: 2037509301}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -4808,13 +4808,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474750205}
   m_TextComponent: {fileID: 918319723}
   m_Placeholder: {fileID: 1466079600}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -5016,13 +5016,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1590196164}
   m_TextComponent: {fileID: 2075755019}
   m_Placeholder: {fileID: 1014948136}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -5150,13 +5150,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1675155892}
   m_TextComponent: {fileID: 503827155}
   m_Placeholder: {fileID: 558173167}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -5654,13 +5654,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1839563023}
   m_TextComponent: {fileID: 4770393}
   m_Placeholder: {fileID: 1805371598}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -6006,13 +6006,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1870918686}
   m_TextComponent: {fileID: 722305340}
   m_Placeholder: {fileID: 1137547763}
-  m_ContentType: 0
+  m_ContentType: 3
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 2
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 2
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
