@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ControladorAsignaturas : MonoBehaviour
 {
-    public string getURL;   //se crea una variable string que interactuará con la url
+    string getURL = ControladorLogin.InicioUrl;   //se crea una variable string que interactuará con la url
     private string TipoMalla;   //se crea una variable string que tomará el valor del codigo de la malla
 
     [SerializeField]

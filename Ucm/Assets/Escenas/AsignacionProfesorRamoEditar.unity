@@ -1216,8 +1216,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 223513491}
-        m_MethodName: CambioEscena
+      - m_Target: {fileID: 1122971361}
+        m_MethodName: CambioVista
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1617,6 +1617,7 @@ GameObject:
   - component: {fileID: 1122971359}
   - component: {fileID: 1122971358}
   - component: {fileID: 1122971357}
+  - component: {fileID: 1122971361}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1705,6 +1706,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1122971361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1122971356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa59a5ccc17974044b30293f52a60739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MensajeInput: {fileID: 0}
+  Mensaje: {fileID: 0}
 --- !u!1 &1144150884
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,8 +3079,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 223513491}
-        m_MethodName: CambioEscena
+      - m_Target: {fileID: 1122971361}
+        m_MethodName: CambioVista
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

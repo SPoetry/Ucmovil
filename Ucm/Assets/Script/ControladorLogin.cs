@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class ControladorLogin : MonoBehaviour {
 
-    public static string InicioUrl = "http://localhost:8000/";
-    public string getURL = InicioUrl + "log";
+    [SerializeField]
+    public static string InicioUrl = "http://192.168.43.138:8000/";
+
+    string getURL = InicioUrl + "log";
 
     public InputField Correo;
     public InputField Contrasena;
@@ -31,7 +33,7 @@ public class ControladorLogin : MonoBehaviour {
         WWW getResultado = new WWW(getURL);
         Debug.Log(getURL);
         yield return getResultado;
-        getURL = "http://localhost:8000/log";
+        getURL = "http://192.168.43.138:8000/log";
 
         Debug.Log(getResultado.text);
 
