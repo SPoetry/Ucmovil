@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class nuevosoli : MonoBehaviour {
 
-	public string getURL = ControladorLogin.InicioUrl;
+	string getURL = ControladorLogin.InicioUrl;
 
 	public GameObject solicitudesprefab;
 	public Text[] Campos;

@@ -3007,7 +3007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2648ac42943dce841bbdaf0f479ec95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UrlCaE: http://localhost:8000/cambioE
   Id: 
   Tipo: 
   Escena: 
@@ -4995,7 +4994,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: c00d77c84fad9104297df53068667444, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

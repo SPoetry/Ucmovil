@@ -43,7 +43,7 @@ public class AprobarRechazarNoticia : MonoBehaviour {
 		Id = TextoIdObjeto.GetComponent<Text>();
 		string GetURL = ControladorLogin.InicioUrl + "secretaria/aceptar";
 
-		GetURL = GetURL + "?id_noticia=" + Id.text+"&estado=Aceptada";
+		GetURL = GetURL + "?id_noticia=" + Id.text+"&estado=Aprobada";
 
 		Debug.Log (GetURL);
 		WWW getResultado = new WWW(GetURL);

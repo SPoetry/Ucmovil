@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ControladorMalla : MonoBehaviour {
-    public string getURL;
+    string getURL;
     private string TipoMalla;
 
     [SerializeField]
@@ -104,7 +104,7 @@ public class ControladorMalla : MonoBehaviour {
                     TamañoXMax = TamañoXMax - 250;
                     TamañoXMax = TamañoXMax * 1.73F;
                     TamañoXMax = TamañoXMax + 250;
-                    TamañoXMax = TamañoXMax + 500;
+                    TamañoXMax = TamañoXMax + 900;
                 }
             }
         }

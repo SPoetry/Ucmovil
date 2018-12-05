@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HorariosporAprobar : MonoBehaviour {
 
-	public string getURL = ControladorLogin.InicioUrl;
+	string getURL = ControladorLogin.InicioUrl;
 
 	public GameObject horariosPrefab;
 	public Text[] Campos;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Ver_ListaAlumnos : MonoBehaviour {
 
-    public string UrlListaAlumnos = ControladorLogin.InicioUrl + "ListaAlumnos";
+    string UrlListaAlumnos = ControladorLogin.InicioUrl + "ListaAlumnos";
     public Text[] Componentes;
     public Text titulo;
 

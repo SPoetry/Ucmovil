@@ -18,7 +18,7 @@ public class Ver_horarios : MonoBehaviour
     public Text[] Atributos;
 
     private readonly string id_profe = ControladorLogin.Id;
-    public string UrlObtencionHorario = ControladorLogin.InicioUrl + "profesor/obtener_horario";
+    string UrlObtencionHorario = ControladorLogin.InicioUrl + "profesor/obtener_horario";
     Vector3 newSize = new Vector3(1.423022f, 1.423022f, 1.423022f);
     Color32 newColor = new Color32(0, 208, 227, 255);
     Vector3 Size0 = new Vector3(0, 0, 0);

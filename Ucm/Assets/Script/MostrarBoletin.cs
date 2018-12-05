@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MostrarBoletin : MonoBehaviour {
-
-
-
-	public string getURL = ControladorLogin.InicioUrl;
+    
+	string getURL = ControladorLogin.InicioUrl;
 
 	public GameObject BoletinPrefab;
 	public Text[] Campos;

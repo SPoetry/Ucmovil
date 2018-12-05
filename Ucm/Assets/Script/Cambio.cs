@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class Cambio : MonoBehaviour {
 
-    public string UrlCambioC = ControladorLogin.InicioUrl + "cambioC";
-    public string UrlCA = ControladorLogin.InicioUrl + "cambioA";
-    public string UrlCaE = ControladorLogin.InicioUrl + "cambioE";
+    string UrlCambioC = ControladorLogin.InicioUrl + "cambioC";
+    string UrlCA = ControladorLogin.InicioUrl + "cambioA";
+    string UrlCaE = ControladorLogin.InicioUrl + "cambioE";
 
     public string Id;
     public string Tipo;

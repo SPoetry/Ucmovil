@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ControladorSecretaria : MonoBehaviour {
 
-    public string getURL = ControladorLogin.InicioUrl;
+    string getURL = ControladorLogin.InicioUrl;
 
     public GameObject NoticiaPrefab;
     public Text[] Campos;

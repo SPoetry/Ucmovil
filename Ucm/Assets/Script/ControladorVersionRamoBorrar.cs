@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ControladorVersionRamoBorrar : MonoBehaviour {
-    public string getURL;
+    string getURL;
     private string TipoMalla;
     public int zeteo;
 

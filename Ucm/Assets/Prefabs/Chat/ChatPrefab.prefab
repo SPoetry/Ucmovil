@@ -220,7 +220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2c3d90638eefcc4682fa1587905a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  postURL2: http://localhost:8000/secretaria/agregar_noticia
   EstaId: {fileID: 114618908051449390}
   Titulo: {fileID: 0}
   Texto: {fileID: 0}
@@ -298,6 +297,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328.33685, y: 712.85236}
+  m_AnchoredPosition: {x: -0.000030518, y: 96.35}
   m_SizeDelta: {x: 963, y: 192.7}
   m_Pivot: {x: 0.5, y: 0.5}

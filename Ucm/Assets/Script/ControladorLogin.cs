@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class ControladorLogin : MonoBehaviour {
 
-    [SerializeField]
     public static string InicioUrl = "http://192.168.43.138:8000/";
 
     string getURL = InicioUrl + "log";

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public class ControladorAsignaturaAsignacion : MonoBehaviour {
-    public string getURL;
+    string getURL;
     private string TipoMalla;
 
     [SerializeField]

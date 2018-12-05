@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AprobarNoticias : MonoBehaviour {
 
-	public string getURL = ControladorLogin.InicioUrl;
+	string getURL = ControladorLogin.InicioUrl;
 
 	public GameObject Aprobarpref;
 	public Text[] Campos;

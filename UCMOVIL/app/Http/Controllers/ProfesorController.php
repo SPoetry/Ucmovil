@@ -79,6 +79,7 @@ class ProfesorController extends Controller
       ->join('asignaturas', ['version_ramos.id_asignatura' => 'asignaturas.id_asignatura'])
       ->select('nombre', 'asignaturas.id_asignatura', 'modulo', 'sala', 'dia')
       ->whereIn('horarios.id_ramo', $RamosArray)
+      ->where('horarios.estado', 'Aceptada')
       ->get();
       return $Horarios;
     }

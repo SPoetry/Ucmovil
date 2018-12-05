@@ -6,7 +6,7 @@ using System;
 
 public class RamosActuales : MonoBehaviour {
 
-    public string UrlRamosActuales = ControladorLogin.InicioUrl + "RamosA";
+    string UrlRamosActuales = ControladorLogin.InicioUrl + "RamosA";
     public GameObject AsignaturaPrefab;
     public Transform Ubicacion;
     public Text[] componentes;

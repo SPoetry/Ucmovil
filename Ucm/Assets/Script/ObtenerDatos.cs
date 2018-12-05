@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ObtenerDatos : MonoBehaviour {
 
-    public string UrlDatos = ControladorLogin.InicioUrl + "datos_d";
+    string UrlDatos = ControladorLogin.InicioUrl + "datos_d";
 
     public Text Dato1;
     public Text Dato2;
@@ -40,6 +40,7 @@ public class ObtenerDatos : MonoBehaviour {
         UrlDatos = UrlDatos + "?id=" + Id;
         UrlDatos = UrlDatos + "&tipo=" + Tipo;
         WWW ResultadoConsulta = new WWW(UrlDatos);
+        Debug.LogWarning(UrlDatos);
 
         yield return ResultadoConsulta;
 
