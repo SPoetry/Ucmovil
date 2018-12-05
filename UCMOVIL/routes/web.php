@@ -13,6 +13,7 @@ Route::get('/log', 'LoginController@Login');
 Route::get('/alumno', 'AlumnoController@index')->name('c_alumno');
 Route::get('/alumnos/MensajeriaC', 'AlumnoController@MensajeriaC');
 Route::get('/alumnos/MensajesC', 'AlumnoController@MensajesC');
+Route::get('/alumnos/Solicitud', 'AlumnoController@Solicitud');
 Route::get('/BuscarPorIdA', 'AlumnoController@BuscarPorIdA');
 Route::get('/d_escuela', 'DirectorCarreraController@index')->name('c_d_escuela');
 Route::get('/profesor', 'ProfesorController@index')->name('c_profesor');

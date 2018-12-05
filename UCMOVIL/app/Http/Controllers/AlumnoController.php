@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Middleware\Alumno;
 use App\RamosActuale;
+use App\Solicitude;
 use Auth;
 
 class AlumnoController extends Controller
@@ -90,5 +91,22 @@ class AlumnoController extends Controller
       }
       //echo $Malla->id_malla;
       return ;
+    }
+    public function Solicitud(Request $request)
+    {
+      $id_solicitante = $request->id;
+      $solicitud = $request->solicitud;
+      $texto = $request->texto;
+      $estado = $request->estado;
+
+      $solicitudes = new Solicitude;
+      $solicitudes->id_solicitante = $id_solicitante;
+      $solicitudes->tipo = $solicitud;
+      $solicitudes->solicitud = $solicitud;
+      $solicitudes->texto = $texto;
+      $solicitudes->estado = $estado;
+      $solicitudes->save();
+
+      return "ok";
     }
 }

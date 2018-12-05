@@ -263,7 +263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texto: {fileID: 1869323830}
   asunto: {fileID: 1776809841}
-  UrlEnvioBoletin: http://localhost:8000/profesor/enviar_boletin
 --- !u!114 &115919172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,8 +834,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.6, y: 0}
-  m_SizeDelta: {x: -9.2, y: 0}
+  m_AnchoredPosition: {x: -2.9, y: -0.1}
+  m_SizeDelta: {x: -45.4, y: -37.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480298063
 MonoBehaviour:
@@ -867,7 +866,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
@@ -944,7 +943,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Salir
+  m_Text: Volver
 --- !u!222 &1515081308
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1237,10 +1236,10 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 0
+  m_LineType: 2
   m_HideMobileInput: 0
   m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterLimit: 123
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []

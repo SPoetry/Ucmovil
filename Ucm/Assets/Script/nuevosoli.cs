@@ -60,7 +60,6 @@ public class nuevosoli : MonoBehaviour {
 				{
 					Campo.text = Solic.id;
 				}
-
 				if(Campo.name == "Solicitud")
 				{
 					Campo.text = Solic.solicitud;

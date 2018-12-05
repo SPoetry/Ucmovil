@@ -9,7 +9,8 @@ public class Solicitud : MonoBehaviour {
     string Id;
     public Text Texto;
     public Text Solicitar;
-    string estado = "Pendiente";
+    public Text Tipo;
+    string estado = "Revision";
     string UrlSolicitud;
 
     void Start () {
@@ -18,7 +19,7 @@ public class Solicitud : MonoBehaviour {
 	
     public void EnviarSolicitud()
     {
-        UrlSolicitud = ControladorLogin.InicioUrl + "Solicitud?id=" + Id +"&solicitud="+ Solicitar.text + "&texto=" +Texto.text + "&estado=" + estado;
+        UrlSolicitud = ControladorLogin.InicioUrl + "Solicitud?id=" + Id +"&solicitud="+ Tipo.text + "&texto=" +Texto.text + "&estado=" + estado;
 
         StartCoroutine("SolicitudNoticia");
     }

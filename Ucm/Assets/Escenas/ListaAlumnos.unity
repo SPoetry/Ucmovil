@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -600,7 +600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fe33dfa02c33ab46ac0841af8d67685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UrlListaAlumnos: http://localhost:8000/ListaAlumnos
   Componentes: []
   titulo: {fileID: 510483550}
   PanelAlumno: {fileID: 1615357345268778, guid: a04a82a25c14529479c8cb70ab765ffb,
